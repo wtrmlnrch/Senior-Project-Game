@@ -386,3 +386,8 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 *.generated.props
+
+
+# Godot editor files
+.godot/editor/script_editor_cache.cfg
+.godot/editor/editor_layout.cfg
