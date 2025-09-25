@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=4 uid="uid://cgdaabrg2obj4"]
+
+[ext_resource type="TileSet" uid="uid://cisthpvkuboug" path="res://AI_Stuff/Assets/Environment/basicEnv.tres" id="1_lnrpn"]
+[ext_resource type="PackedScene" uid="uid://k50rn2ik83wv" path="res://AI_Stuff/Scenes/CharacterController/ai_cc.tscn" id="2_5nq8q"]
+
+[node name="TestingMap1" type="Node2D"]
+
+[node name="Ground layer" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAADAP3/AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAD///3/AAAAAAAAAAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAA=")
+tile_set = ExtResource("1_lnrpn")
+rendering_quadrant_size = 32
+
+[node name="Trees" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAP//AAACAAAAAAAAAP7/AAADAAAAAAABAP7/AAADAAAAAAACAP7/AAADAAAAAAADAP7/AAADAAAAAAABAP//AAACAAAAAAACAP//AAACAAAAAAADAP//AAACAAAAAAA=")
+tile_set = ExtResource("1_lnrpn")
+
+[node name="Bush" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAAAAAEAAQAAAAAAAAACAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAA=")
+tile_set = ExtResource("1_lnrpn")
+
+[node name="AI_CC" parent="." instance=ExtResource("2_5nq8q")]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1eudu7py5fmo"]
+
+[ext_resource type="Script" uid="uid://ckr05ja13px8n" path="res://AI_Stuff/Scenes/EnvironmentThings/bush.gd" id="1_0i6xf"]
+[ext_resource type="Texture2D" uid="uid://d3rdpt1o5pktp" path="res://AI_Stuff/Assets/Environment/Bush.png" id="1_jtxwb"]
+
+[node name="Bush" type="Node2D"]
+script = ExtResource("1_0i6xf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_jtxwb")

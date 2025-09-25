@@ -1,0 +1,22 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://cisthpvkuboug"]
+
+[ext_resource type="Texture2D" uid="uid://cye7rjnbuubtp" path="res://AI_Stuff/Assets/Environment/BasicSprites.png" id="1_gnrvm"]
+[ext_resource type="Texture2D" uid="uid://d3rdpt1o5pktp" path="res://AI_Stuff/Assets/Environment/Bush.png" id="2_b7cev"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7cev"]
+texture = ExtResource("1_gnrvm")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rt1qf"]
+texture = ExtResource("2_b7cev")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_b7cev")
+sources/1 = SubResource("TileSetAtlasSource_rt1qf")
