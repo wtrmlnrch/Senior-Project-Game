@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bno2kl0bvufes"]
+[gd_scene load_steps=20 format=3 uid="uid://bno2kl0bvufes"]
 
 [ext_resource type="Texture2D" uid="uid://nv0gudilh5fw" path="res://new folder/Graphics/MainCharacterSprite/backward-stand-mc.PNG" id="1_bab6t"]
 [ext_resource type="Texture2D" uid="uid://cv3iao26b2786" path="res://new folder/Graphics/MainCharacterSprite/forward-stand-mc.PNG" id="1_f4wgu"]
@@ -20,6 +20,12 @@ radius = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ifkjs"]
 radius = 12.0416
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmal1"]
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mk52a"]
+radius = 9.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2bdb7"]
 animations = [{
@@ -93,6 +99,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 63
 script = ExtResource("1_kmal1")
 
 [node name="CollisionWhenForward" type="CollisionShape2D" parent="."]
@@ -105,13 +112,30 @@ position = Vector2(0, 12)
 shape = SubResource("CircleShape2D_ifkjs")
 disabled = true
 
+[node name="CollisionWhenLeft" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 14)
+shape = SubResource("CircleShape2D_kmal1")
+disabled = true
+
+[node name="CollisionWhenRight" type="CollisionShape2D" parent="."]
+position = Vector2(3, 14)
+shape = SubResource("CircleShape2D_mk52a")
+disabled = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2bdb7")
-animation = &"walkingleft"
+animation = &"walkingright"
 speed_scale = 0.95
 
 [node name="WalkingSoundWood" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ifkjs")
 volume_db = 0.2
 autoplay = true
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
