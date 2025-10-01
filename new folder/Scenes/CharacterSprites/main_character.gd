@@ -12,6 +12,7 @@ var is_facing_left: bool = false
 func _process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	check_input_movement(direction)
+	check_collision_shape()
 
 # Handles player movement, plays the correct animation
 func check_input_movement(direction):
@@ -61,3 +62,25 @@ func check_input_movement(direction):
 	else:
 		$AnimatedSprite2D.stop()
 		$WalkingSoundWood.playing = false
+
+func check_collision_shape():
+	if is_facing_front == true:
+		$CollisionWhenForward.disabled = false
+		$CollisionWhenBackwards.disabled = true
+		$CollisionWhenLeft.disabled = true
+		$CollisionWhenRight.disabled = true
+	elif is_facing_back == true:
+		$CollisionWhenForward.disabled = true
+		$CollisionWhenBackwards.disabled = false
+		$CollisionWhenLeft.disabled = true
+		$CollisionWhenRight.disabled = true
+	elif is_facing_left == true:
+		$CollisionWhenForward.disabled = true
+		$CollisionWhenBackwards.disabled = true
+		$CollisionWhenLeft.disabled = false
+		$CollisionWhenRight.disabled = true
+	elif is_facing_right == true:
+		$CollisionWhenForward.disabled = true
+		$CollisionWhenBackwards.disabled = true
+		$CollisionWhenLeft.disabled = true
+		$CollisionWhenRight.disabled = false

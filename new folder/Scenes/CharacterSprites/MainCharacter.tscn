@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bno2kl0bvufes"]
+[gd_scene load_steps=20 format=3 uid="uid://dbvb0tv5xe1aq"]
 
 [ext_resource type="Texture2D" uid="uid://nv0gudilh5fw" path="res://new folder/Graphics/MainCharacterSprite/backward-stand-mc.PNG" id="1_bab6t"]
 [ext_resource type="Texture2D" uid="uid://cv3iao26b2786" path="res://new folder/Graphics/MainCharacterSprite/forward-stand-mc.PNG" id="1_f4wgu"]
