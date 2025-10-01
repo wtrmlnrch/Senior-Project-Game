@@ -1,0 +1,6 @@
+res://AI_Stuff/Scenes/Enemies/wolf_ai.tscn
+res://AI_Stuff/Assets/Environment/basicEnv.tres
+res://AI_Stuff/Scenes/TestingMaps/testing_map_1.tscn
+res://AI_Stuff/Scenes/CharacterController/ai_cc.tscn
+res://AI_Stuff/Scenes/EnvironmentThings/bush.tscn
+res://AI_Stuff/Scenes/Enemies/wolf_ai.gd
