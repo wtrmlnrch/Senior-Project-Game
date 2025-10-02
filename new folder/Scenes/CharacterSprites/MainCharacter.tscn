@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dbvb0tv5xe1aq"]
+[gd_scene load_steps=18 format=3 uid="uid://dbvb0tv5xe1aq"]
 
 [ext_resource type="Texture2D" uid="uid://nv0gudilh5fw" path="res://new folder/Graphics/MainCharacterSprite/backward-stand-mc.PNG" id="1_bab6t"]
 [ext_resource type="Texture2D" uid="uid://cv3iao26b2786" path="res://new folder/Graphics/MainCharacterSprite/forward-stand-mc.PNG" id="1_f4wgu"]
@@ -16,16 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://c0pvb6uvg8daj" path="res://new folder/Graphics/MainCharacterSprite/right-walk-left-mc.PNG" id="12_n8vo6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f4wgu"]
-radius = 18.0
+radius = 22.0227
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ifkjs"]
-radius = 12.0416
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_kmal1"]
-radius = 9.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_mk52a"]
-radius = 9.0
+radius = 18.0278
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2bdb7"]
 animations = [{
@@ -103,29 +97,20 @@ collision_mask = 63
 script = ExtResource("1_kmal1")
 
 [node name="CollisionWhenForward" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_f4wgu")
 disabled = true
 
 [node name="CollisionWhenBackwards" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_ifkjs")
-disabled = true
-
-[node name="CollisionWhenLeft" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 14)
-shape = SubResource("CircleShape2D_kmal1")
-disabled = true
-
-[node name="CollisionWhenRight" type="CollisionShape2D" parent="."]
-position = Vector2(3, 14)
-shape = SubResource("CircleShape2D_mk52a")
 disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2bdb7")
-animation = &"walkingright"
+animation = &"walkingfront"
+frame_progress = 0.312947
 speed_scale = 0.95
 
 [node name="WalkingSoundWood" type="AudioStreamPlayer2D" parent="."]
