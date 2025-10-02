@@ -3,6 +3,8 @@ extends Node2D
 @onready var camera = $CharacterBody2D/PlayerCamera
 @onready var tilemap = $FloorLayer
 
+# Comment to let me merge
+
 func _ready():
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
