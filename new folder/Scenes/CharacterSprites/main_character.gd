@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var max_speed: int = 200
+@export var max_speed: int = 100
 var speed: int = max_speed
 
 # check character facing
@@ -13,6 +13,7 @@ func _process(_delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	check_input_movement(direction)
 	check_collision_shape()
+	check_z_index()
 
 # Handles player movement, plays the correct animation
 func check_input_movement(direction):
@@ -67,20 +68,12 @@ func check_collision_shape():
 	if is_facing_front == true:
 		$CollisionWhenForward.disabled = false
 		$CollisionWhenBackwards.disabled = true
-		$CollisionWhenLeft.disabled = true
-		$CollisionWhenRight.disabled = true
-	elif is_facing_back == true:
+	else:
 		$CollisionWhenForward.disabled = true
 		$CollisionWhenBackwards.disabled = false
-		$CollisionWhenLeft.disabled = true
-		$CollisionWhenRight.disabled = true
-	elif is_facing_left == true:
-		$CollisionWhenForward.disabled = true
-		$CollisionWhenBackwards.disabled = true
-		$CollisionWhenLeft.disabled = false
-		$CollisionWhenRight.disabled = true
-	elif is_facing_right == true:
-		$CollisionWhenForward.disabled = true
-		$CollisionWhenBackwards.disabled = true
-		$CollisionWhenLeft.disabled = true
-		$CollisionWhenRight.disabled = false
+
+func check_z_index():
+	if is_facing_back == true:
+		z_index = 2
+	else:
+		z_index = 0
