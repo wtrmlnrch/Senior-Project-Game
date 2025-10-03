@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://xkxscdt40433"]
+[gd_scene load_steps=16 format=4 uid="uid://bx0l0tby8bxsu"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_sy7jo"]
 [ext_resource type="Script" uid="uid://c8w3261ft0iwy" path="res://new folder/Scenes/MinimumViableProduct/level_0_snow.gd" id="1_t2y2r"]
