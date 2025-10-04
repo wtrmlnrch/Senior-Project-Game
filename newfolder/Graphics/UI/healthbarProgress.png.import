@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvhydm3ajy1op"
-path="res://.godot/imported/right-stand-mc.PNG-11e1e09e873d6d8917c18a910ddf6589.ctex"
+uid="uid://dpxsnwlbjfkce"
+path="res://.godot/imported/healthbarProgress.png-2a2b492cd35fc6d391c1cf04e3ee5fb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://new folder/Graphics/MainCharacterSprite/right-stand-mc.PNG"
-dest_files=["res://.godot/imported/right-stand-mc.PNG-11e1e09e873d6d8917c18a910ddf6589.ctex"]
+source_file="res://newfolder/Graphics/UI/healthbarProgress.png"
+dest_files=["res://.godot/imported/healthbarProgress.png-2a2b492cd35fc6d391c1cf04e3ee5fb0.ctex"]
 
 [params]
 

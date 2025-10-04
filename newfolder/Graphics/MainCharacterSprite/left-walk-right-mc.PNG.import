@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsf1l707ingdj"
-path="res://.godot/imported/left-walk-right-mc.PNG-ba17ac865801069166335f1f19e0d3aa.ctex"
+path="res://.godot/imported/left-walk-right-mc.PNG-f661eded7d51b74a8a6943a60e353943.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://new folder/Graphics/MainCharacterSprite/left-walk-right-mc.PNG"
-dest_files=["res://.godot/imported/left-walk-right-mc.PNG-ba17ac865801069166335f1f19e0d3aa.ctex"]
+source_file="res://newfolder/Graphics/MainCharacterSprite/left-walk-right-mc.PNG"
+dest_files=["res://.godot/imported/left-walk-right-mc.PNG-f661eded7d51b74a8a6943a60e353943.ctex"]
 
 [params]
 

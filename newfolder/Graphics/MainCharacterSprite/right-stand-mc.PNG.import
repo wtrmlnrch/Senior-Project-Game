@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsi4s47w8vfi3"
-path="res://.godot/imported/right-walk-right-mc.PNG-50c2e1af7612b5c83e73ac5f12d70035.ctex"
+uid="uid://cvhydm3ajy1op"
+path="res://.godot/imported/right-stand-mc.PNG-7833c84539aafde6399e0d558db4b5df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://new folder/Graphics/MainCharacterSprite/right-walk-right-mc.PNG"
-dest_files=["res://.godot/imported/right-walk-right-mc.PNG-50c2e1af7612b5c83e73ac5f12d70035.ctex"]
+source_file="res://newfolder/Graphics/MainCharacterSprite/right-stand-mc.PNG"
+dest_files=["res://.godot/imported/right-stand-mc.PNG-7833c84539aafde6399e0d558db4b5df.ctex"]
 
 [params]
 

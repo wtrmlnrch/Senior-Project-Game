@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://viadwfdixbk5"
-path="res://.godot/imported/left-stand-mc.PNG-09d2122317c60dff803b7e53ff3fcc42.ctex"
+path="res://.godot/imported/left-stand-mc.PNG-9ad20f4edbf6738fb62c7187cc726545.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://new folder/Graphics/MainCharacterSprite/left-stand-mc.PNG"
-dest_files=["res://.godot/imported/left-stand-mc.PNG-09d2122317c60dff803b7e53ff3fcc42.ctex"]
+source_file="res://newfolder/Graphics/MainCharacterSprite/left-stand-mc.PNG"
+dest_files=["res://.godot/imported/left-stand-mc.PNG-9ad20f4edbf6738fb62c7187cc726545.ctex"]
 
 [params]
 

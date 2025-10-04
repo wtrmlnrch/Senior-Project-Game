@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nv0gudilh5fw"
-path="res://.godot/imported/backward-stand-mc.PNG-4cde1d844eb7ee6bec608cfce0d7d6fe.ctex"
+uid="uid://b07o78rf7f5y7"
+path="res://.godot/imported/forward-right-walk-mc.PNG-df68ade7a3a6732727396e3fc87b2c92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://new folder/Graphics/MainCharacterSprite/backward-stand-mc.PNG"
-dest_files=["res://.godot/imported/backward-stand-mc.PNG-4cde1d844eb7ee6bec608cfce0d7d6fe.ctex"]
+source_file="res://newfolder/Graphics/MainCharacterSprite/forward-right-walk-mc.PNG"
+dest_files=["res://.godot/imported/forward-right-walk-mc.PNG-df68ade7a3a6732727396e3fc87b2c92.ctex"]
 
 [params]
 

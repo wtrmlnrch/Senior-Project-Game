@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv3iao26b2786"
-path="res://.godot/imported/forward-stand-mc.PNG-45ef12b4b819948d6fd1a197407555a1.ctex"
+uid="uid://dsi4s47w8vfi3"
+path="res://.godot/imported/right-walk-right-mc.PNG-746b806173228049469e5322c8375976.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://new folder/Graphics/MainCharacterSprite/forward-stand-mc.PNG"
-dest_files=["res://.godot/imported/forward-stand-mc.PNG-45ef12b4b819948d6fd1a197407555a1.ctex"]
+source_file="res://newfolder/Graphics/MainCharacterSprite/right-walk-right-mc.PNG"
+dest_files=["res://.godot/imported/right-walk-right-mc.PNG-746b806173228049469e5322c8375976.ctex"]
 
 [params]
 
