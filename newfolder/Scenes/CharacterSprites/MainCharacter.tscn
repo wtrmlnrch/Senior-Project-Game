@@ -1,0 +1,126 @@
+[gd_scene load_steps=18 format=3 uid="uid://dbvb0tv5xe1aq"]
+
+[ext_resource type="Texture2D" uid="uid://nv0gudilh5fw" path="res://newfolder/Graphics/MainCharacterSprite/backward-stand-mc.PNG" id="1_bab6t"]
+[ext_resource type="Texture2D" uid="uid://cv3iao26b2786" path="res://newfolder/Graphics/MainCharacterSprite/forward-stand-mc.PNG" id="1_f4wgu"]
+[ext_resource type="Script" uid="uid://dyfxlk5serx67" path="res://newfolder/Scenes/CharacterSprites/main_character.gd" id="1_kmal1"]
+[ext_resource type="Texture2D" uid="uid://b07o78rf7f5y7" path="res://newfolder/Graphics/MainCharacterSprite/forward-right-walk-mc.PNG" id="2_ifkjs"]
+[ext_resource type="Texture2D" uid="uid://b6be5gy7co7h3" path="res://newfolder/Graphics/MainCharacterSprite/backward-right-walk-mc.PNG" id="2_kmal1"]
+[ext_resource type="Texture2D" uid="uid://nvu4xn4xrphw" path="res://newfolder/Graphics/MainCharacterSprite/forward-left-walk-mc.PNG" id="3_grjch"]
+[ext_resource type="Texture2D" uid="uid://c684w55f0lpqw" path="res://newfolder/Graphics/MainCharacterSprite/backward-left-walk-mc.PNG" id="3_mk52a"]
+[ext_resource type="AudioStream" uid="uid://c3nmm15i77fwe" path="res://newfolder/Graphics/Sound Effects/CharacterSounds/Walking/Walking sound effect.wav" id="4_ifkjs"]
+[ext_resource type="Texture2D" uid="uid://viadwfdixbk5" path="res://newfolder/Graphics/MainCharacterSprite/left-stand-mc.PNG" id="7_6yrw3"]
+[ext_resource type="Texture2D" uid="uid://dsf1l707ingdj" path="res://newfolder/Graphics/MainCharacterSprite/left-walk-right-mc.PNG" id="8_ciijl"]
+[ext_resource type="Texture2D" uid="uid://cfp5qiy752l2k" path="res://newfolder/Graphics/MainCharacterSprite/left-walk-left-mc.PNG" id="9_islcf"]
+[ext_resource type="Texture2D" uid="uid://cvhydm3ajy1op" path="res://newfolder/Graphics/MainCharacterSprite/right-stand-mc.PNG" id="10_j4li0"]
+[ext_resource type="Texture2D" uid="uid://dsi4s47w8vfi3" path="res://newfolder/Graphics/MainCharacterSprite/right-walk-right-mc.PNG" id="11_q8ufc"]
+[ext_resource type="Texture2D" uid="uid://c0pvb6uvg8daj" path="res://newfolder/Graphics/MainCharacterSprite/right-walk-left-mc.PNG" id="12_n8vo6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4wgu"]
+radius = 22.0227
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifkjs"]
+radius = 18.0278
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2bdb7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bab6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kmal1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_bab6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mk52a")
+}],
+"loop": true,
+"name": &"walkingback",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f4wgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ifkjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_f4wgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_grjch")
+}],
+"loop": true,
+"name": &"walkingfront",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6yrw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ciijl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6yrw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_islcf")
+}],
+"loop": true,
+"name": &"walkingleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_j4li0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_q8ufc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j4li0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_n8vo6")
+}],
+"loop": true,
+"name": &"walkingright",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 63
+script = ExtResource("1_kmal1")
+
+[node name="CollisionWhenForward" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_f4wgu")
+disabled = true
+
+[node name="CollisionWhenBackwards" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_ifkjs")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_2bdb7")
+animation = &"walkingfront"
+frame_progress = 0.312947
+speed_scale = 0.95
+
+[node name="WalkingSoundWood" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ifkjs")
+volume_db = 0.2
+autoplay = true
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
