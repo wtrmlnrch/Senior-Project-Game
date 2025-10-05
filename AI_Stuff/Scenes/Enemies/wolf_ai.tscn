@@ -67,16 +67,15 @@ hframes = 3
 frame = 2
 
 [node name="LineOfSight" type="ShapeCast2D" parent="Wolf"]
-rotation = 1.5708
-scale = Vector2(2, 1)
+scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_qmfs0")
-target_position = Vector2(0, 200)
+target_position = Vector2(-200, 0)
+collide_with_areas = true
 
 [node name="BackSight" type="ShapeCast2D" parent="Wolf"]
-rotation = -1.5708
-scale = Vector2(2, 1)
+scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_fqayw")
-target_position = Vector2(0, 75)
+target_position = Vector2(75, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Wolf"]
 libraries = {

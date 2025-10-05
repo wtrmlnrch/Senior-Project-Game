@@ -1,30 +1,31 @@
-[gd_scene load_steps=4 format=4 uid="uid://cgdaabrg2obj4"]
+[gd_scene load_steps=5 format=4 uid="uid://cgdaabrg2obj4"]
 
 [ext_resource type="TileSet" uid="uid://cisthpvkuboug" path="res://AI_Stuff/Assets/Environment/basicEnv.tres" id="1_lnrpn"]
-[ext_resource type="PackedScene" uid="uid://k50rn2ik83wv" path="res://AI_Stuff/Scenes/CharacterController/ai_cc.tscn" id="2_5nq8q"]
+[ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://new folder/Scenes/CharacterSprites/MainCharacter.tscn" id="3_mdhsb"]
 [ext_resource type="PackedScene" uid="uid://dd5colxo1ug6b" path="res://AI_Stuff/Scenes/Enemies/wolf_ai.tscn" id="3_sowny"]
+[ext_resource type="PackedScene" uid="uid://b1eudu7py5fmo" path="res://AI_Stuff/Scenes/EnvironmentThings/bush.tscn" id="4_mdhsb"]
 
 [node name="TestingMap1" type="Node2D"]
 
 [node name="Ground layer" type="TileMapLayer" parent="."]
 texture_filter = 1
+scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAAAAP//AAABAAAAAAABAP//AAABAAAAAAACAP//AAABAAAAAAADAP//AAABAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAADAP3/AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAD///3/AAAAAAAAAAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAA=")
 tile_set = ExtResource("1_lnrpn")
 rendering_quadrant_size = 32
 
 [node name="Trees" type="TileMapLayer" parent="."]
 texture_filter = 1
+scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAAAP//AAACAAAAAAAAAP7/AAADAAAAAAABAP7/AAADAAAAAAACAP7/AAADAAAAAAADAP7/AAADAAAAAAABAP//AAACAAAAAAACAP//AAACAAAAAAADAP//AAACAAAAAAA=")
 tile_set = ExtResource("1_lnrpn")
 
-[node name="Bush" type="TileMapLayer" parent="."]
-texture_filter = 1
-tile_map_data = PackedByteArray("AAAAAAEAAQAAAAAAAAACAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAA=")
-tile_set = ExtResource("1_lnrpn")
-
-[node name="AI_CC" parent="." instance=ExtResource("2_5nq8q")]
-position = Vector2(12, 43)
-
 [node name="wolf_ai" parent="." instance=ExtResource("3_sowny")]
 position = Vector2(137, 0)
-scale = Vector2(0.5, 0.5)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_mdhsb")]
+position = Vector2(7, 69)
+
+[node name="Bush" parent="." instance=ExtResource("4_mdhsb")]
+position = Vector2(35, 48)
+scale = Vector2(1.5, 1.5)
