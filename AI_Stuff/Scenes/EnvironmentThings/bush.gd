@@ -1,24 +1,15 @@
 extends Node2D
 
-var body_inside = false
-var hide_player = false
-var my_body
+@export var is_tutorial: bool = false
 
-func _on_area_2d_body_entered(body):
-	body_inside = true
-	my_body = body
+func _on_hide_region_body_entered(body):
+	body.can_hide = true
+	if is_tutorial:
+		$RichTextLabel.visible = true
 
-func _on_area_2d_body_exited(_body):
-	body_inside = false
-	
-func _process(_delta):
-	if body_inside:
-		if Input.is_key_pressed(KEY_E):
-			hide_player = true
-		else:
-			hide_player = false
-	
-	if hide_player and $Area2D.get_overlapping_bodies()[0] == my_body:
-		pass # make invisible and make sure can't move
-	elif $Area2D.has_overlapping_bodies(): 
-		pass # make visible and make sure can move
+func _on_hide_region_body_exited(body):
+	body.can_hide = false
+	body.is_hidden = false
+	body.get_child(2).visible = true
+	if is_tutorial:
+		$RichTextLabel.visible = false
