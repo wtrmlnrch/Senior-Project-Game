@@ -50,9 +50,11 @@ func _physics_process(_delta):
 		$Wolf.scale.x = -1
 		$Wolf/LineOfSight.target_position.x = -200
 	
-	
-	$Wolf.velocity.x = direction * speed
-	if $Wolf.velocity.y != 0:
-		$Wolf.velocity.y = 0
-	$Wolf.global_position.y = y_value
-	$Wolf.move_and_slide()
+	if $Wolf.get_slide_collision_count() > 0 and $Wolf.get_last_slide_collision().get_collider().is_class("CharacterBody2D"):
+		get_tree().change_scene_to_file("res://newfolder/Scenes/MinimumViableProduct/death_screen.tscn")
+	else:
+		$Wolf.velocity.x = direction * speed
+		if $Wolf.velocity.y != 0:
+			$Wolf.velocity.y = 0
+		$Wolf.global_position.y = y_value
+		$Wolf.move_and_slide()
