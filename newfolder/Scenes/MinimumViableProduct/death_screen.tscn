@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b23l62uysorw0"]
+[gd_scene load_steps=2 format=3 uid="uid://b23l62uysorw0"]
+
+[ext_resource type="Texture2D" uid="uid://k1fru022172x" path="res://newfolder/Graphics/UI/scary_temp_image.png" id="1_8ce3b"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,6 +18,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0383972, 0.0383972, 0.0383972, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.5
+offset_top = -244.5
+offset_right = 215.5
+offset_bottom = 244.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8ce3b")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 texture_filter = 1
