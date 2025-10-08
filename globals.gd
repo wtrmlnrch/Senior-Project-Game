@@ -1,5 +1,9 @@
 extends Node
 
+# hunger I guess
+var hunger: float = 100.0
+var max_hunger: int = 100
+var hunger_loss: float = 1.0
 # inventory moment
 var inventory1active = false
 var inventory2active = false

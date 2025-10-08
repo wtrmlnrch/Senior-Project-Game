@@ -3,12 +3,10 @@ extends CharacterBody2D
 @export var max_speed: int = 100
 var speed: int
 
-#hunger Bar
-@export var max_hunger: int = 100
-var hunger: float
 
-#hunger losing fullness
-@export var hunger_loss: float = 1.0
+
+
+
 @export var hunger_bar: TextureProgressBar
 
 # movement and hiding variables
@@ -18,7 +16,7 @@ var is_hidden: bool = false
 
 func _ready():
 	speed = max_speed
-	hunger = max_hunger
+	Globals.hunger = Globals.max_hunger
 
 func _process(delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -41,13 +39,13 @@ func _process(delta: float) -> void:
 		check_z_index()
 	
 	
-	hunger -= hunger_loss * delta
-	hunger = clamp(hunger, 0, max_hunger)
+	Globals.hunger -= Globals.hunger_loss * delta
+	Globals.hunger = clamp(Globals.hunger, 0, Globals.max_hunger)
 	
 	
 	#print(hunger)
 	if hunger_bar:
-		hunger_bar.value = hunger
+		hunger_bar.value = Globals.hunger
 		
 	
 # check character facing
