@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bx0l0tby8bxsu"]
+[gd_scene load_steps=21 format=4 uid="uid://rhjbupl30vdg"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_sy7jo"]
 [ext_resource type="Script" uid="uid://c8w3261ft0iwy" path="res://newfolder/Scenes/MinimumViableProduct/level_0_snow.gd" id="1_t2y2r"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://0dft7bs21alh" path="res://newfolder/Graphics/UI/healthbarUnder.png" id="4_lcryt"]
 [ext_resource type="Texture2D" uid="uid://dpxsnwlbjfkce" path="res://newfolder/Graphics/UI/healthbarProgress.png" id="5_21ef1"]
 [ext_resource type="Script" uid="uid://bplef70jujh6m" path="res://newfolder/Scenes/MinimumViableProduct/hunger_bar.gd" id="6_21ef1"]
+[ext_resource type="PackedScene" uid="uid://cmvqsqbvlv6ub" path="res://newfolder/Scenes/MinimumViableProduct/hotbar.tscn" id="7_6llk3"]
+[ext_resource type="PackedScene" uid="uid://gpu24fuiaevo" path="res://newfolder/Scenes/MinimumViableProduct/blueberry_bush.tscn" id="8_3sgog"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmxhs"]
 texture = ExtResource("1_sy7jo")
@@ -4659,6 +4661,9 @@ shape = SubResource("RectangleShape2D_hpa2n")
 position = Vector2(903.5, 238)
 shape = SubResource("RectangleShape2D_vghvt")
 
+[node name="BlueberryBush" parent="." instance=ExtResource("8_3sgog")]
+position = Vector2(505, 409)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HungerBar" type="TextureProgressBar" parent="CanvasLayer"]
@@ -4675,3 +4680,5 @@ value = 100.0
 texture_under = ExtResource("4_lcryt")
 texture_progress = ExtResource("5_21ef1")
 script = ExtResource("6_21ef1")
+
+[node name="Hotbar" parent="CanvasLayer" instance=ExtResource("7_6llk3")]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmvqsqbvlv6ub"]
+
+[ext_resource type="Script" uid="uid://cio8s24jog8p6" path="res://newfolder/Scenes/MinimumViableProduct/hotbar.gd" id="1_hra1a"]
+[ext_resource type="PackedScene" uid="uid://dbwolix1dv6sg" path="res://newfolder/Scenes/MinimumViableProduct/inventory_slot.tscn" id="1_u8sm8"]
+
+[node name="Hotbar" type="CanvasLayer"]
+script = ExtResource("1_hra1a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -258.0
+offset_top = -100.0
+offset_right = 258.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="InventorySlot" parent="HBoxContainer" instance=ExtResource("1_u8sm8")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="HBoxContainer" instance=ExtResource("1_u8sm8")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="HBoxContainer" instance=ExtResource("1_u8sm8")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="HBoxContainer" instance=ExtResource("1_u8sm8")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="HBoxContainer" instance=ExtResource("1_u8sm8")]
+layout_mode = 2

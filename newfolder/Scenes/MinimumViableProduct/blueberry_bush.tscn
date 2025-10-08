@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://gpu24fuiaevo"]
+
+[ext_resource type="PackedScene" uid="uid://bd3rijkisf7b5" path="res://newfolder/Scenes/MinimumViableProduct/interactable_object.tscn" id="1_2yl5n"]
+[ext_resource type="Script" uid="uid://bgjuc1fy7jm4j" path="res://newfolder/Scenes/MinimumViableProduct/blueberry_bush.gd" id="2_ccxey"]
+[ext_resource type="Texture2D" uid="uid://c0cebckpjceav" path="res://newfolder/Graphics/UI/blueberrybush.PNG" id="2_xqg6n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2yl5n"]
+radius = 14.0357
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqg6n"]
+size = Vector2(84, 74)
+
+[node name="BlueberryBush" instance=ExtResource("1_2yl5n")]
+script = ExtResource("2_ccxey")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_2yl5n")
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_xqg6n")
+
+[node name="Sprite2D" parent="." index="2"]
+texture_filter = 1
+texture = ExtResource("2_xqg6n")
