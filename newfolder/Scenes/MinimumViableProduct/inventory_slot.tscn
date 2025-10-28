@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbwolix1dv6sg"]
+[gd_scene load_steps=5 format=3 uid="uid://dbwolix1dv6sg"]
 
 [ext_resource type="Texture2D" uid="uid://cum6un4873ihv" path="res://newfolder/Graphics/UI/Inventory_Selected.PNG" id="1_d2q24"]
 [ext_resource type="Texture2D" uid="uid://slup1h6f342g" path="res://newfolder/Graphics/UI/Inventory_Unselected.PNG" id="2_echtt"]
+[ext_resource type="PackedScene" uid="uid://bwlndny60ofub" path="res://newfolder/Scenes/MinimumViableProduct/blueberry.tscn" id="3_echtt"]
+[ext_resource type="Script" uid="uid://caybq5vgyhqns" path="res://newfolder/Scenes/MinimumViableProduct/inventory_slot.gd" id="3_pi0h3"]
 
 [node name="TextureButton" type="TextureButton"]
 texture_filter = 1
@@ -10,3 +12,9 @@ offset_bottom = 40.0
 toggle_mode = true
 texture_normal = ExtResource("2_echtt")
 texture_pressed = ExtResource("1_d2q24")
+script = ExtResource("3_pi0h3")
+
+[node name="Blueberry" parent="." instance=ExtResource("3_echtt")]
+visible = false
+position = Vector2(49, 50)
+scale = Vector2(0.35, 0.35)

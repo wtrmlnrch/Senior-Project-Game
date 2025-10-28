@@ -2,6 +2,7 @@ extends CanvasLayer
 
 var active_index = -1
 var slots = []
+var items = []
 var globals_keys = [
 	"inventory1active",
 	"inventory2active",
@@ -18,7 +19,10 @@ func _ready():
 		$HBoxContainer/InventorySlot4,
 		$HBoxContainer/InventorySlot5
 	]
-
+	
+	for i in range(slots.size()):
+		slots[i].slot_index = i
+		
 	for i in range(slots.size()):
 		slots[i].toggle_mode = true
 		slots[i].pressed.connect(func(): _on_slot_pressed(i))
