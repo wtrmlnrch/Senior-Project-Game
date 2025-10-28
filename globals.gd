@@ -12,3 +12,5 @@ var inventory2item = ""
 var inventory3item = ""
 var inventory4item = ""
 var inventory5item = ""
+
+var inventory_full = false

@@ -1,4 +1,5 @@
 extends InteractableObject
 
+
 func interact():
-	print("Blueberry eaten!")
+	pick_inventory_slot('blueberry')

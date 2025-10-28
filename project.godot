@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SeniorGameProject"
-run/main_scene="uid://b7uospufpxaj5"
+run/main_scene="uid://rhjbupl30vdg"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
