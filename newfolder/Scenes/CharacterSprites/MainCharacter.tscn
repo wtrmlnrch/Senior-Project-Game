@@ -93,6 +93,7 @@ animations = [{
 }]
 
 [node name="MainCharacter" type="CharacterBody2D"]
+z_index = 1
 collision_mask = 63
 script = ExtResource("1_kmal1")
 
@@ -102,9 +103,9 @@ shape = SubResource("CircleShape2D_f4wgu")
 disabled = true
 
 [node name="CollisionWhenBackwards" type="CollisionShape2D" parent="."]
+z_index = 1
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_ifkjs")
-disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

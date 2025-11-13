@@ -35,8 +35,6 @@ func _process(delta: float) -> void:
 	
 	if can_move:
 		check_input_movement(direction)
-		check_collision_shape()
-		check_z_index()
 	
 	
 	Globals.hunger -= Globals.hunger_loss * delta
@@ -105,19 +103,7 @@ func check_input_movement(direction):
 		$AnimatedSprite2D.stop()
 		$WalkingSoundWood.playing = false
 
-func check_collision_shape():
-	if is_facing_front == true:
-		$CollisionWhenForward.disabled = false
-		$CollisionWhenBackwards.disabled = true
-	else:
-		$CollisionWhenForward.disabled = true
-		$CollisionWhenBackwards.disabled = false
 
-func check_z_index():
-	if is_facing_back == true:
-		z_index = 2
-	else:
-		z_index = 0
 
 func make_invisible():
 	$AnimatedSprite2D.visible = false
