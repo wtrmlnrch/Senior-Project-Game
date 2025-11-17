@@ -4,9 +4,6 @@ extends CharacterBody2D
 var speed: int
 
 
-
-
-
 @export var hunger_bar: TextureProgressBar
 
 # movement and hiding variables
