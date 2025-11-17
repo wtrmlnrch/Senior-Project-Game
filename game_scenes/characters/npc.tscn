@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://clsfldaxuk7qt"]
+[gd_scene load_steps=3 format=3 uid="uid://dn8yg13b2cubb"]
 
-[ext_resource type="Script" uid="uid://q7noqw43a6fq" path="res://game_scenes/characters/npc.gd" id="1_uigbd"]
+[ext_resource type="Script" path="res://game_scenes/characters/npc.gd" id="1_uigbd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fpidf"]
 animations = [{
