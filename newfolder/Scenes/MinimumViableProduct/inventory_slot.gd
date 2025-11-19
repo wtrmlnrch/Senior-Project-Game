@@ -1,6 +1,7 @@
 extends TextureButton
 
 @onready var blueberry = $Blueberry
+@onready var pill = $Pill
 
 
 
@@ -13,7 +14,8 @@ var globals_keys = [
 ]
 
 var items_that_exist = [
-	"blueberry"
+	"blueberry",
+	"pill"
 ]
 
 var items = [
@@ -26,7 +28,8 @@ var slot_index: int = 0
 
 func _ready():
 	items = [
-		blueberry
+		blueberry,
+		pill
 	]
 
 
