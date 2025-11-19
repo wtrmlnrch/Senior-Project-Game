@@ -4,6 +4,9 @@ extends Node
 var hunger: float = 100.0
 var max_hunger: int = 100
 var hunger_loss: float = 1.0
+# health 
+var health: float = 100.0
+var max_health: int = 100
 # inventory moment
 var inventory1active = false
 var inventory2active = false

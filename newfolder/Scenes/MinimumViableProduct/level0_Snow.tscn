@@ -4695,6 +4695,23 @@ step = 0.0
 value = 100.0
 texture_under = ExtResource("4_lcryt")
 texture_progress = ExtResource("5_21ef1")
+tint_under = Color(0, 1, 1, 1)
+tint_progress = Color(0.0588235, 0, 1, 1)
 script = ExtResource("6_21ef1")
 
 [node name="Hotbar" parent="CanvasLayer" instance=ExtResource("7_6llk3")]
+
+[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.185
+anchor_bottom = 0.205
+offset_left = -1.0
+offset_top = -7.0
+offset_right = -1.12
+offset_bottom = -6.84001
+scale = Vector2(3, 3)
+value = 100.0
+texture_under = ExtResource("4_lcryt")
+texture_progress = ExtResource("5_21ef1")
+tint_under = Color(0.164706, 1, 1, 1)
+tint_progress = Color(1, 0, 1, 1)

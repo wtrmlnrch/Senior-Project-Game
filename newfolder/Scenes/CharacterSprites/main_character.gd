@@ -8,6 +8,7 @@ var speed: int
 
 
 @export var hunger_bar: TextureProgressBar
+@export var health_bar: TextureProgressBar
 
 # movement and hiding variables
 var can_move: bool = true
