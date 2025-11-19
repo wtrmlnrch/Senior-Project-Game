@@ -19,3 +19,9 @@ var inventory2item = ""
 var inventory3item = ""
 var inventory4item = ""
 var inventory5item = ""
+
+var inventory_full = false
+
+# stuff for npcs
+var is_talking_to_npc = false
+var npc_interacting_with = ""

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwlndny60ofub"]
+
+[ext_resource type="PackedScene" uid="uid://b6oia18pvk0yj" path="res://newfolder/Scenes/MinimumViableProduct/inventory_item.tscn" id="1_en5qd"]
+[ext_resource type="Texture2D" uid="uid://ci5tx0wwrd3c4" path="res://newfolder/Graphics/InventoryItems/blueberry.png" id="2_ip7wi"]
+
+[node name="Blueberry" instance=ExtResource("1_en5qd")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ip7wi")

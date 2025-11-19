@@ -14,4 +14,3 @@ func _ready():
 	camera.limit_right = (used_rect.position.x + used_rect.size.x) * cell_size.x
 	camera.limit_bottom = (used_rect.position.y + used_rect.size.y) * cell_size.y
  
-	print("let me push damnit")

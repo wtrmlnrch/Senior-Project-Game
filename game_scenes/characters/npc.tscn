@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn8yg13b2cubb"]
+
+[ext_resource type="Script" path="res://game_scenes/characters/npc.gd" id="1_uigbd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fpidf"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[node name="NPC" type="CharacterBody2D"]
+script = ExtResource("1_uigbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fpidf")
+animation = &"walking-right"
+
+[node name="talk-area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="talk-area"]
+
+[connection signal="body_entered" from="talk-area" to="." method="_on_talkarea_body_entered"]
+[connection signal="body_exited" from="talk-area" to="." method="_on_talkarea_body_exited"]
