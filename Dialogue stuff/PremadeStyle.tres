@@ -30,7 +30,8 @@ overrides = {}
 script = ExtResource("2_uewmc")
 scene = ExtResource("5_nheg7")
 overrides = {
-"custom_normal_font": "\"res://Dialogue stuff/Magic Sound.ttf\""
+"custom_normal_font": "\"res://Dialogue stuff/Quicksand-VariableFont_wght.ttf\"",
+"name_label_customfont": "\"res://Dialogue stuff/Quicksand-VariableFont_wght.ttf\""
 }
 
 [sub_resource type="Resource" id="Resource_jba46"]
@@ -69,4 +70,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_uewmc")]([])
-metadata/_latest_layer = "12"
+metadata/_latest_layer = "11"
