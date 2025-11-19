@@ -16,6 +16,7 @@ var can_hide: bool = false
 var is_hidden: bool = false
 
 func _ready():
+	Dialogic.start("dialogueA")
 	speed = max_speed
 	Globals.hunger = Globals.max_hunger
 
@@ -55,6 +56,15 @@ var is_facing_back: bool = false
 var is_facing_right: bool = false
 var is_facing_left: bool = false
 
+# for dialogue I think
+func _input(event: InputEvent):
+	if Dialogic.current_timeline != null:
+		return
+	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
+		Dialogic.start('dialogueA')
+		get_viewport().set_input_as_handled()
+	
+		
 
 
 # Handles player movement, plays the correct animation

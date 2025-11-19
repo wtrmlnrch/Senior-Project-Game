@@ -11,16 +11,36 @@ config_version=5
 [application]
 
 config/name="SeniorGameProject"
-run/main_scene="uid://b7uospufpxaj5"
+run/main_scene="uid://rhjbupl30vdg"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
 Globals="*res://globals.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+
+[dialogic]
+
+directories/dch_directory={
+"characterA": "res://Dialogue stuff/characterA.dch"
+}
+directories/dtl_directory={
+"dialogueA": "res://Dialogue stuff/dialogueA.dtl"
+}
+layout/style_directory={
+"": "res://Dialogue stuff/PremadeStyle.tres",
+"PremadeStyle": "res://Dialogue stuff/PremadeStyle.tres"
+}
+layout/style_list=["res://Dialogue stuff/PremadeStyle.tres"]
+layout/default_style="res://Dialogue stuff/PremadeStyle.tres"
 
 [dotnet]
 
 project/assembly_name="SeniorGameProject"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [input]
 
@@ -52,6 +72,15 @@ right={
 Interact={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
 

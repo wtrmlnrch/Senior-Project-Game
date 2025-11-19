@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "Kamille",
+&"description": "",
+&"display_name": "Erm Does our character Have a Name?",
+&"mirror": true,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Kamille": {
+"export_overrides": {
+"image": "\"res://Dialogue stuff/kamille_portrait.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
