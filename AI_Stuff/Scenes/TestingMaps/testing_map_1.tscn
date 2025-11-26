@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://cgdaabrg2obj4"]
+[gd_scene load_steps=7 format=4 uid="uid://cgdaabrg2obj4"]
 
 [ext_resource type="TileSet" uid="uid://cisthpvkuboug" path="res://AI_Stuff/Assets/Environment/basicEnv.tres" id="1_lnrpn"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="3_mdhsb"]
 [ext_resource type="PackedScene" uid="uid://dd5colxo1ug6b" path="res://AI_Stuff/Scenes/Enemies/wolf_ai.tscn" id="3_sowny"]
 [ext_resource type="PackedScene" uid="uid://b1eudu7py5fmo" path="res://AI_Stuff/Scenes/EnvironmentThings/bush.tscn" id="4_mdhsb"]
+[ext_resource type="PackedScene" uid="uid://4qsysr8g31q6" path="res://AI_Stuff/Scenes/Enemies/squirrel_ai.tscn" id="5_0n41p"]
+[ext_resource type="PackedScene" uid="uid://cgsxyiv6bo4yh" path="res://AI_Stuff/Scenes/Enemies/evil_squirrel_ai.tscn" id="6_db0f7"]
 
 [node name="TestingMap1" type="Node2D"]
 
@@ -26,3 +28,11 @@ max_speed = 125
 [node name="wolf_ai" parent="." instance=ExtResource("3_sowny")]
 position = Vector2(137, 0)
 scale = Vector2(1, 1.01205)
+left_x = -600
+right_x = 600
+
+[node name="SquirrelAi" parent="." instance=ExtResource("5_0n41p")]
+position = Vector2(50, 94)
+
+[node name="EvilSquirrelAi" parent="." instance=ExtResource("6_db0f7")]
+position = Vector2(-8, 175)
