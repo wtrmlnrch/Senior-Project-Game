@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://5mr4vvokfo6a"]
+
+[ext_resource type="PackedScene" uid="uid://b6oia18pvk0yj" path="res://newfolder/Scenes/MinimumViableProduct/inventory_item.tscn" id="1_jc52r"]
+[ext_resource type="Texture2D" uid="uid://di76pskg4025u" path="res://newfolder/Graphics/InventoryItems/pill.png" id="2_hae6n"]
+
+[node name="Pill" instance=ExtResource("1_jc52r")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture_filter = 1
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_hae6n")

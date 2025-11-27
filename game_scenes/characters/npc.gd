@@ -1,10 +1,18 @@
 extends CharacterBody2D
+class_name npc
 
 # npc code examples
 #npc.move(Vector2(1, 0))  # move right
 #npc.move(Vector2(0, -1)) # move up
 #npc.move(Vector2.ZERO)   # stop
 
+var globals_keys = [
+	"inventory1item",
+	"inventory2item",
+	"inventory3item",
+	"inventory4item",
+	"inventory5item"
+]
 
 @export var max_speed: int = 100
 var speed: int
@@ -55,6 +63,7 @@ func play_animation():
 func talk():
 	Globals.is_talking_to_npc = true
 	Globals.npc_interacting_with = npc_name
+	special_talk_function()
 
 
 func _on_talkarea_body_entered(body: Node2D) -> void:
@@ -62,3 +71,20 @@ func _on_talkarea_body_entered(body: Node2D) -> void:
 
 func _on_talkarea_body_exited(body: Node2D) -> void:
 	player_near = false
+
+func special_talk_function():
+	pass
+
+
+func pick_inventory_slot(item: String) -> void:
+	var item_added = false
+	for i in range(globals_keys.size()):
+		if (Globals.get(globals_keys[i]) == ""):
+			Globals.set(globals_keys[i], item)
+			item_added = true
+			print(item + ' added')
+			break
+	
+	if (item_added == false):
+		Globals.inventory_full = true
+		print('inventory is full')

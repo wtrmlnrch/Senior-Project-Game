@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=3 uid="uid://ctuohewi60foc"]
+
+[ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_25gq6"]
+[ext_resource type="Script" uid="uid://byskd8fhmdcrg" path="res://game_scenes/characters/doctor.gd" id="2_07uux"]
+[ext_resource type="Texture2D" uid="uid://gdiadyw7gajj" path="res://Assets/NPCS/Villagers/doctor/Doctor-forward-stand.PNG" id="2_jvv5m"]
+[ext_resource type="Texture2D" uid="uid://d1jsfbmsrj1i3" path="res://Assets/NPCS/Villagers/doctor/doctor-back-stand.PNG" id="2_lbu62"]
+[ext_resource type="Texture2D" uid="uid://ck7dkme8m4c5c" path="res://Assets/NPCS/Villagers/doctor/doctor-back-walk-left.PNG" id="3_07uux"]
+[ext_resource type="Texture2D" uid="uid://d8e465vnpjrf" path="res://Assets/NPCS/Villagers/doctor/Doctor-forward-walk-left.PNG" id="3_solot"]
+[ext_resource type="Texture2D" uid="uid://esbpj8ss1wrv" path="res://Assets/NPCS/Villagers/doctor/doctor-forward-walk-right.PNG" id="4_1ess5"]
+[ext_resource type="Texture2D" uid="uid://7bptrsydljwf" path="res://Assets/NPCS/Villagers/doctor/doctor-back-walk-right.PNG" id="4_ea2kg"]
+[ext_resource type="Texture2D" uid="uid://cflc2bqyvik5c" path="res://Assets/NPCS/Villagers/doctor/doctor-left-stand.PNG" id="8_0cogn"]
+[ext_resource type="Texture2D" uid="uid://c32o0j8v4q0nm" path="res://Assets/NPCS/Villagers/doctor/doctor-left-walk-left.PNG" id="9_ekryc"]
+[ext_resource type="Texture2D" uid="uid://dfw8vgfr376qj" path="res://Assets/NPCS/Villagers/doctor/doctor-left-walk-right.PNG" id="10_aiva0"]
+[ext_resource type="Texture2D" uid="uid://bfmp71qkly5pt" path="res://Assets/NPCS/Villagers/doctor/doctor-right-stand.PNG" id="11_20akn"]
+[ext_resource type="Texture2D" uid="uid://cv8wiqxtci44h" path="res://Assets/NPCS/Villagers/doctor/doctor-right-walk-left.PNG" id="12_lbl2i"]
+[ext_resource type="Texture2D" uid="uid://fdch40jgaou5" path="res://Assets/NPCS/Villagers/doctor/doctor-right-walk-right.PNG" id="13_vk4kc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqxbb"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lbu62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_07uux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_lbu62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ea2kg")
+}],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jvv5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_solot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jvv5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1ess5")
+}],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0cogn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ekryc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0cogn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aiva0")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_20akn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lbl2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_20akn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vk4kc")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_07uux"]
+radius = 67.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lbu62"]
+radius = 17.0
+
+[node name="Doctor" instance=ExtResource("1_25gq6")]
+script = ExtResource("2_07uux")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_tqxbb")
+
+[node name="CollisionShape2D" parent="talk-area" index="0"]
+shape = SubResource("CircleShape2D_07uux")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_lbu62")
