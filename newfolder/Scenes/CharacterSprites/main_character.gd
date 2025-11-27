@@ -13,7 +13,7 @@ var can_hide: bool = false
 var is_hidden: bool = false
 
 func _ready():
-	Dialogic.start("dialogueA")
+	
 	speed = max_speed
 	Globals.hunger = Globals.max_hunger
 

@@ -22,11 +22,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Doctor": "res://Dialogue stuff/Doctor.dch",
+"Main_Char": "res://Dialogue stuff/Main_Char.dch",
 "characterA": "res://Dialogue stuff/characterA.dch",
 "characterB": "res://Dialogue stuff/characterB.dch"
 }
 directories/dtl_directory={
-"dialogueA": "res://Dialogue stuff/dialogueA.dtl"
+"dialogueA": "res://Dialogue stuff/dialogueA.dtl",
+"doctalk": "res://Dialogue stuff/doctalk.dtl",
+"waking": "res://Dialogue stuff/waking.dtl"
 }
 layout/style_directory={
 "": "res://Dialogue stuff/PremadeStyle.tres",

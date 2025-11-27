@@ -5,7 +5,17 @@ extends Node2D
 
 # Comment to let me merge
 
+	
+func _input(event: InputEvent):
+	if Dialogic.current_timeline != null:
+		return
+	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
+		Dialogic.start('dialogueA')
+		get_viewport().set_input_as_handled()
+	
+		
 func _ready():
+	Dialogic.start("dialogueA")
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
 
