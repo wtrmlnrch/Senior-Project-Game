@@ -8,6 +8,5 @@ Doctor: Now now, all will be revealed...in due time. For now all you need to kno
 update Doctor [animation="Shake X"]
 Doctor: As for your sibling, they woke up before you and are out waiting with some of the others.
 Doctor: Though...before you go, take this pill. It will help with the pain.
-[background arg="res://Dialogue stuff/Pill.png" fade="0.0"]
 Main_Char: But I'm not in any pain...
 Doctor: Yes, because of the medication, but its going to wear off in about 20 minutes and when it does, it won't feel to nice.
