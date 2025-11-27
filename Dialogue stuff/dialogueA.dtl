@@ -1,4 +1,5 @@
 audio music "res://Dialogue stuff/Kyle Preston - Duality.mp3"
+[background arg="res://Dialogue stuff/Screenshot 2025-04-13 at 12.14.23 AM copy.png" fade="0.0"]
 characterA (Kamille): ...Where am I?
 characterA (Kamille): What is this place?
 characterA (smug): I have find a way out of here

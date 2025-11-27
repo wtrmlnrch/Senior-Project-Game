@@ -4696,7 +4696,7 @@ value = 100.0
 texture_under = ExtResource("4_lcryt")
 texture_progress = ExtResource("5_21ef1")
 tint_under = Color(0, 1, 1, 1)
-tint_progress = Color(0.0588235, 0, 1, 1)
+tint_progress = Color(0.528344, 0.246167, 0.0979219, 1)
 script = ExtResource("6_21ef1")
 
 [node name="Hotbar" parent="CanvasLayer" instance=ExtResource("7_6llk3")]
