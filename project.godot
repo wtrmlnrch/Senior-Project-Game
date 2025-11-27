@@ -39,6 +39,10 @@ layout/style_directory={
 layout/style_list=["res://Dialogue stuff/PremadeStyle.tres"]
 layout/default_style="res://Dialogue stuff/PremadeStyle.tres"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="SeniorGameProject"

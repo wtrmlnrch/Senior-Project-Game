@@ -1,0 +1,107 @@
+[gd_scene load_steps=16 format=3 uid="uid://de0ik1lx1mq3r"]
+
+[ext_resource type="Script" uid="uid://bp8cekkgv8v2h" path="res://MainMenu/main_menu.gd" id="1_7t2hb"]
+[ext_resource type="Texture2D" uid="uid://w78qwxk3a6gj" path="res://MainMenu/Graphics/Group 1 (1).png" id="1_lbqne"]
+[ext_resource type="FontFile" uid="uid://cs2g2exw5v6ga" path="res://MainMenu/Fonts/Micro5-Regular.ttf" id="1_npjie"]
+[ext_resource type="Texture2D" uid="uid://b8jub6rt1ute4" path="res://MainMenu/Graphics/Group 2 (1).png" id="2_430ii"]
+[ext_resource type="Texture2D" uid="uid://l37rb4u08lb0" path="res://MainMenu/Graphics/Group 1.png" id="2_bsanu"]
+[ext_resource type="Texture2D" uid="uid://d0mmcyfnsaqpd" path="res://MainMenu/Graphics/Group 12.png" id="2_g1826"]
+[ext_resource type="Texture2D" uid="uid://2jnxd6fpgswh" path="res://MainMenu/Graphics/Group 3 (1).png" id="3_3p42x"]
+[ext_resource type="Texture2D" uid="uid://dij1cs8iuft43" path="res://MainMenu/Graphics/Group 4 (1).png" id="4_3clmd"]
+[ext_resource type="Texture2D" uid="uid://biyj6cr2w7eph" path="res://MainMenu/Graphics/Group 2.png" id="4_kftou"]
+[ext_resource type="Texture2D" uid="uid://bpa6uyhxole8f" path="res://MainMenu/Graphics/Group 22.png" id="5_npjie"]
+[ext_resource type="Texture2D" uid="uid://cjer2t0d8rm4m" path="res://MainMenu/Graphics/Group 3.png" id="6_nre7b"]
+[ext_resource type="Texture2D" uid="uid://dmaaw7n2y23e0" path="res://MainMenu/Graphics/Group 32.png" id="8_7t2hb"]
+[ext_resource type="Texture2D" uid="uid://mphbcfs3b04m" path="res://MainMenu/Graphics/Group 4.png" id="8_nxm3p"]
+[ext_resource type="Texture2D" uid="uid://bupw2o8045ucx" path="res://MainMenu/Graphics/Group 42.png" id="11_gej64"]
+
+[sub_resource type="Theme" id="Theme_npjie"]
+default_font = ExtResource("1_npjie")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7t2hb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.077, 0.0800667, 0.1, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.77
+offset_top = -70.0
+offset_right = 438.77
+offset_bottom = 71.0
+grow_vertical = 2
+theme = SubResource("Theme_npjie")
+theme_override_font_sizes/normal_font_size = 60
+text = "Game Title"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -460.72
+offset_top = -229.0
+offset_right = -61.72
+offset_bottom = 229.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Start" type="TextureButton" parent="GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("1_lbqne")
+texture_pressed = ExtResource("2_g1826")
+texture_hover = ExtResource("2_bsanu")
+
+[node name="Continue" type="TextureButton" parent="GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_430ii")
+texture_pressed = ExtResource("5_npjie")
+texture_hover = ExtResource("4_kftou")
+
+[node name="Settings" type="TextureButton" parent="GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("3_3p42x")
+texture_pressed = ExtResource("8_7t2hb")
+texture_hover = ExtResource("6_nre7b")
+
+[node name="Quit" type="TextureButton" parent="GridContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("4_3clmd")
+texture_pressed = ExtResource("11_gej64")
+texture_hover = ExtResource("8_nxm3p")
+
+[connection signal="pressed" from="GridContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="GridContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="GridContainer/Quit" to="." method="_on_quit_pressed"]

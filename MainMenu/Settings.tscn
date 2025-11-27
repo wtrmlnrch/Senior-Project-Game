@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://csqpcgwoq7o7y"]
+
+[ext_resource type="Script" uid="uid://fjldrmama12w" path="res://MainMenu/settings.gd" id="1_j1who"]
+[ext_resource type="FontFile" uid="uid://cs2g2exw5v6ga" path="res://MainMenu/Fonts/Micro5-Regular.ttf" id="2_6bf22"]
+[ext_resource type="AudioStream" uid="uid://lpbb71m6raoi" path="res://MainMenu/Kyle Preston - Duality.mp3" id="2_yubl2"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j1who")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.156675, 0.156675, 0.156675, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 412.0
+offset_top = 83.0
+offset_right = -381.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="VolumeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6bf22")
+theme_override_font_sizes/font_size = 40
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = -20.0
+max_value = 20.0
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6bf22")
+theme_override_font_sizes/font_size = 40
+text = "Mute"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6bf22")
+theme_override_font_sizes/font_size = 40
+text = "Resolution"
+
+[node name="Resolutions" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6bf22")
+theme_override_font_sizes/font_size = 30
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1152x648"
+popup/item_2/id = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6bf22")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yubl2")
+volume_db = 2.342
+autoplay = true
+
+[connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="VBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="item_selected" from="VBoxContainer/Resolutions" to="." method="_on_resolutions_item_selected"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
