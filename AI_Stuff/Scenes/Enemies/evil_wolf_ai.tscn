@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bx5lc4py85ape"]
+
+[node name="Evil Wolf AI" type="Node2D"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
