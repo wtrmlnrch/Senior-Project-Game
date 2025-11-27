@@ -28,7 +28,7 @@ directories/dch_directory={
 "characterB": "res://Dialogue stuff/characterB.dch"
 }
 directories/dtl_directory={
-"dialogueA": "res://Dialogue stuff/dialogueA.dtl",
+"ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "waking": "res://Dialogue stuff/waking.dtl"
 }
