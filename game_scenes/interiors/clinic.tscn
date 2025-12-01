@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="6_6m1p4"]
 [ext_resource type="Texture2D" uid="uid://dmj0pw0uk3qy1" path="res://Assets/Interiors/TopDownHouse_SmallItems.png" id="6_l4ylf"]
 [ext_resource type="PackedScene" uid="uid://llqhuogioxy8" path="res://game_scenes/interiors/bed.tscn" id="7_pdftk"]
+
 [ext_resource type="PackedScene" uid="uid://sfabo2bukdli" path="res://game_scenes/characters/doctor.tscn" id="9_xb3uh"]
+
 [ext_resource type="Texture2D" uid="uid://b8blbantwne0i" path="res://Assets/Interiors/black-bg.png" id="10_ds78w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15ep2"]
