@@ -22,8 +22,11 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Daniel": "res://Dialogue stuff/Daniel.dch",
 "Doctor": "res://Dialogue stuff/Doctor.dch",
-"Main_Char": "res://Dialogue stuff/Main_Char.dch"
+"Main_Char": "res://Dialogue stuff/Main_Char.dch",
+"leader": "res://Dialogue stuff/leader.dch",
+"sibling": "res://Dialogue stuff/sibling.dch"
 }
 directories/dtl_directory={
 "ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dqa2p1ubdx7w5"]
+[gd_scene load_steps=17 format=3 uid="uid://drer0w854l0m1"]
 
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_58vpm"]
 [ext_resource type="Texture2D" uid="uid://dm0v8pc8ipejo" path="res://Assets/NPCS/Villagers/daniel/daniel-forward-stand.PNG" id="2_d3t7v"]
