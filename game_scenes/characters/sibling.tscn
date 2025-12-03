@@ -1,0 +1,105 @@
+[gd_scene load_steps=17 format=3 uid="uid://bj5kb4jl0jijv"]
+
+[ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_gcbbe"]
+[ext_resource type="Texture2D" uid="uid://c0y4hb1kkb00y" path="res://Assets/NPCS/Villagers/sibling/sibling-back-stand.PNG" id="2_odjco"]
+[ext_resource type="Texture2D" uid="uid://pva1rxq1x1or" path="res://Assets/NPCS/Villagers/sibling/sibling-back-walk-left.PNG" id="3_xelgk"]
+[ext_resource type="Texture2D" uid="uid://dui5l5ugy18p5" path="res://Assets/NPCS/Villagers/sibling/sibling-back-walk-right.PNG" id="4_0a3gj"]
+[ext_resource type="Texture2D" uid="uid://bjan702540uu2" path="res://Assets/NPCS/Villagers/sibling/sibling-forward-stand.PNG" id="5_2urj1"]
+[ext_resource type="Texture2D" uid="uid://d4ec31s720xnd" path="res://Assets/NPCS/Villagers/sibling/sibling-forward-walk-left.PNG" id="6_2dfpj"]
+[ext_resource type="Texture2D" uid="uid://bar55eoxsyku7" path="res://Assets/NPCS/Villagers/sibling/sibling-forward-walk-right.PNG" id="7_igtuy"]
+[ext_resource type="Texture2D" uid="uid://cmnip86h2n8ow" path="res://Assets/NPCS/Villagers/sibling/sibling-left-stand.PNG" id="8_cuapu"]
+[ext_resource type="Texture2D" uid="uid://buw3qhne4ct1v" path="res://Assets/NPCS/Villagers/sibling/sibling-left-walk-1.PNG" id="9_booop"]
+[ext_resource type="Texture2D" uid="uid://chjvyyvoku2qa" path="res://Assets/NPCS/Villagers/sibling/sibling-left-walk-2.PNG" id="10_r57cp"]
+[ext_resource type="Texture2D" uid="uid://2huhl3vxl3pd" path="res://Assets/NPCS/Villagers/sibling/sibling-right-stand.PNG" id="11_d3l67"]
+[ext_resource type="Texture2D" uid="uid://cx3hhnu5v3hno" path="res://Assets/NPCS/Villagers/sibling/sibling-right-walk-1.PNG" id="12_3voqm"]
+[ext_resource type="Texture2D" uid="uid://cmiqe5gltjwsj" path="res://Assets/NPCS/Villagers/sibling/sibling-right-walk-2.PNG" id="13_hjye2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrout"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_odjco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xelgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_odjco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0a3gj")
+}],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2urj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2dfpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2urj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_igtuy")
+}],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cuapu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_booop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cuapu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r57cp")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_d3l67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3voqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d3l67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hjye2")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gcbbe"]
+radius = 44.0454
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_odjco"]
+radius = 16.4924
+
+[node name="Sibling" instance=ExtResource("1_gcbbe")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_vrout")
+
+[node name="CollisionShape2D" parent="talk-area" index="0"]
+shape = SubResource("CircleShape2D_gcbbe")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_odjco")

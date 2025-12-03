@@ -27,6 +27,10 @@ func _process(delta: float) -> void:
 	if player_near == true and Input.is_action_just_pressed("Interact"):
 		talk()
 
+func _physics_process(delta):
+	move_and_slide()
+
+
 func move(new_pos: Vector2):
 	# If new_pos is ZERO, NPC should stop
 	if new_pos == Vector2.ZERO:
@@ -34,9 +38,6 @@ func move(new_pos: Vector2):
 	else:
 		# Normalize direction so diagonal movement isn't faster
 		velocity = new_pos.normalized() * max_speed
-
-	# Apply velocity
-	move_and_slide()
 
 	# Play correct animation only when moving
 	if velocity != Vector2.ZERO:

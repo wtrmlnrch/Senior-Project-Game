@@ -1,0 +1,106 @@
+[gd_scene load_steps=17 format=3 uid="uid://dqa2p1ubdx7w5"]
+
+[ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_58vpm"]
+[ext_resource type="Texture2D" uid="uid://dm0v8pc8ipejo" path="res://Assets/NPCS/Villagers/daniel/daniel-forward-stand.PNG" id="2_d3t7v"]
+[ext_resource type="Texture2D" uid="uid://b2mgv6spptn37" path="res://Assets/NPCS/Villagers/daniel/daniel-back-stand.PNG" id="2_j8ba4"]
+[ext_resource type="Texture2D" uid="uid://b7bvph2enso7c" path="res://Assets/NPCS/Villagers/daniel/daniel-back-walk-left.PNG" id="3_pvmod"]
+[ext_resource type="Texture2D" uid="uid://cwfhehefygt8s" path="res://Assets/NPCS/Villagers/daniel/daniel-forward-walk-left.PNG" id="3_vf7cw"]
+[ext_resource type="Texture2D" uid="uid://47fmm7r467e7" path="res://Assets/NPCS/Villagers/daniel/daniel-back-walk-righ.PNG" id="4_a0v73"]
+[ext_resource type="Texture2D" uid="uid://lxov1a377e8c" path="res://Assets/NPCS/Villagers/daniel/daniel-forward-walk-right.PNG" id="4_l7dk5"]
+[ext_resource type="Texture2D" uid="uid://fgnddnh2vsnf" path="res://Assets/NPCS/Villagers/daniel/daniel-left-stand.PNG" id="8_ee25i"]
+[ext_resource type="Texture2D" uid="uid://dpa60kekggrpn" path="res://Assets/NPCS/Villagers/daniel/daniel-left-walk-left.PNG" id="9_s82dy"]
+[ext_resource type="Texture2D" uid="uid://b0o0ae4oord2" path="res://Assets/NPCS/Villagers/daniel/daniel-left-walk-right.PNG" id="10_yj1nn"]
+[ext_resource type="Texture2D" uid="uid://y2hry2ohaxne" path="res://Assets/NPCS/Villagers/daniel/daniel-right-stand.PNG" id="11_gt6r3"]
+[ext_resource type="Texture2D" uid="uid://b4kihveaqclvx" path="res://Assets/NPCS/Villagers/daniel/daniel-right-walk-left.PNG" id="12_4mutr"]
+[ext_resource type="Texture2D" uid="uid://dq4pky7r527de" path="res://Assets/NPCS/Villagers/daniel/daniel-right-walk-right.PNG" id="13_sp8sw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ij06q"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j8ba4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pvmod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j8ba4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a0v73")
+}],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d3t7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vf7cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_d3t7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l7dk5")
+}],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ee25i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_s82dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ee25i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yj1nn")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_gt6r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4mutr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gt6r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sp8sw")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8ba4"]
+radius = 66.0303
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvmod"]
+radius = 16.0
+
+[node name="Daniel" instance=ExtResource("1_58vpm")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_ij06q")
+
+[node name="CollisionShape2D" parent="talk-area" index="0"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_j8ba4")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_pvmod")

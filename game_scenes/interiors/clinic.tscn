@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bvavqk6f0i0wf"]
+[gd_scene load_steps=28 format=3 uid="uid://bvavqk6f0i0wf"]
 
 [ext_resource type="Script" uid="uid://c2rjc65dkgmjn" path="res://game_scenes/interiors/clinic.gd" id="1_l4ylf"]
 [ext_resource type="Texture2D" uid="uid://crn0bwpel81ma" path="res://Assets/Interiors/TopDownHouse_FloorsAndWalls.png" id="1_y5f0y"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="6_6m1p4"]
 [ext_resource type="Texture2D" uid="uid://dmj0pw0uk3qy1" path="res://Assets/Interiors/TopDownHouse_SmallItems.png" id="6_l4ylf"]
 [ext_resource type="PackedScene" uid="uid://llqhuogioxy8" path="res://game_scenes/interiors/bed.tscn" id="7_pdftk"]
-[ext_resource type="PackedScene" uid="uid://sfabo2bukdli" path="res://game_scenes/characters/doctor.tscn" id="9_xb3uh"]
+[ext_resource type="PackedScene" uid="uid://ctuohewi60foc" path="res://game_scenes/characters/doctor.tscn" id="9_xb3uh"]
 [ext_resource type="Texture2D" uid="uid://b8blbantwne0i" path="res://Assets/Interiors/black-bg.png" id="10_ds78w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15ep2"]
@@ -948,9 +948,6 @@ texture = ExtResource("6_l4ylf")
 [sub_resource type="TileSet" id="TileSet_pdftk"]
 sources/1 = SubResource("TileSetAtlasSource_xwn6j")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y87o"]
-size = Vector2(38, 48)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15ep2"]
 size = Vector2(690, 69)
 
@@ -1005,14 +1002,6 @@ position = Vector2(160, 119)
 z_index = 1
 position = Vector2(229, 163)
 
-[node name="Area2D" type="Area2D" parent="Doctor"]
-collision_layer = 7
-collision_mask = 7
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doctor/Area2D"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_5y87o")
-
 [node name="Bed" parent="." instance=ExtResource("7_pdftk")]
 position = Vector2(159, 118)
 
@@ -1058,10 +1047,8 @@ shape = SubResource("RectangleShape2D_oq07s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(180, 47)
+position = Vector2(139.5, 39.4704)
 scale = Vector2(1.1395, 1.05926)
 texture = ExtResource("10_ds78w")
 
-[connection signal="area_entered" from="Doctor/Area2D" to="Doctor" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Doctor/Area2D" to="Doctor" method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]
