@@ -5,8 +5,9 @@ var player_in_range = false
 
 func _ready():
 	npc_name = "Dr.Land"
-	$Area2D.area_entered.connect(_on_area_entered)
-	$Area2D.area_exited.connect(_on_area_exited)
+	#$Area2D.area_entered.connect(_on_area_entered)
+	#$Area2D.area_exited.connect(_on_area_exited)
+	
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("Interact"):
 		interact()
