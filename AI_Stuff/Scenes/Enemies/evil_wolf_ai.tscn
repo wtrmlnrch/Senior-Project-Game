@@ -1,5 +1,17 @@
-[gd_scene format=3 uid="uid://bx5lc4py85ape"]
+[gd_scene load_steps=3 format=3 uid="uid://bx5lc4py85ape"]
+
+[ext_resource type="Script" uid="uid://bbaohbvceewgs" path="res://AI_Stuff/Scenes/Enemies/evil_wolf_ai.gd" id="1_1wf28"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1wf28"]
+vertices = PackedVector2Array(696.891, 537, -445, 537, -445, -80.1172, 690.102, -94.8594)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(700, -105, 707, 547, -455, 547, -455, -90)])
 
 [node name="Evil Wolf AI" type="Node2D"]
+script = ExtResource("1_1wf28")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+[node name="Wolves" type="Node2D" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(455, 104)
+navigation_polygon = SubResource("NavigationPolygon_1wf28")

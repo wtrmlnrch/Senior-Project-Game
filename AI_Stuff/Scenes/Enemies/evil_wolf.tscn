@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5ni42t63o4ji"]
+[gd_scene load_steps=9 format=3 uid="uid://c5ni42t63o4ji"]
 
+[ext_resource type="Script" uid="uid://b1pvcqgoevab4" path="res://AI_Stuff/Scenes/Enemies/evil_wolf.gd" id="1_6yoy0"]
 [ext_resource type="Texture2D" uid="uid://dfqty4g6xusce" path="res://AI_Stuff/Assets/Enemy Sprites/evil_wolf_ss.png" id="1_f2wbu"]
 
 [sub_resource type="Animation" id="Animation_6yoy0"]
@@ -135,6 +136,7 @@ size = Vector2(36, 74)
 size = Vector2(91, 40)
 
 [node name="Evil Wolf" type="Node2D"]
+script = ExtResource("1_6yoy0")
 
 [node name="Evil Wolf" type="CharacterBody2D" parent="."]
 position = Vector2(0, -15)
@@ -157,3 +159,7 @@ shape = SubResource("RectangleShape2D_o1tnq")
 [node name="Side" type="CollisionShape2D" parent="Evil Wolf"]
 position = Vector2(1.5, 7)
 shape = SubResource("RectangleShape2D_f2wbu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Evil Wolf"]
+avoidance_enabled = true
+debug_enabled = true
