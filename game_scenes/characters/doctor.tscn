@@ -95,7 +95,7 @@ radius = 17.0
 
 [node name="Doctor" instance=ExtResource("1_25gq6")]
 script = ExtResource("2_07uux")
-dialogic_timeline = "doctalk"
+dialogic_timeline = "res://Dialogue stuff/doctalk.dtl"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_tqxbb")

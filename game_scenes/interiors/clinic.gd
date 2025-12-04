@@ -11,7 +11,7 @@ func _ready():
 	camera.limit_right = 750
 	camera.limit_top = -15
 	camera.limit_bottom = -15
-	# doctor.move(Vector2.RIGHT)
+	#doctor.move(Vector2.RIGHT)
 
 
 

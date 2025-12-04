@@ -1,12 +1,13 @@
 extends npc
 
 var player_in_range = false
-@export var dialogic_timeline: String = "doctalk"
+@export var dialogic_timeline: String = "res://Dialogue stuff/doctalk.dtl"
 
 func _ready():
 	npc_name = "Dr.Land"
-	#$Area2D.area_entered.connect(_on_area_entered)
-	#$Area2D.area_exited.connect(_on_area_exited)
+	$"talk-area".body_entered.connect(_on_area_entered)
+	$"talk-area".body_exited.connect(_on_area_exited)
+
 	
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("Interact"):

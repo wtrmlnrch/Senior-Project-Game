@@ -1001,6 +1001,7 @@ position = Vector2(160, 119)
 [node name="Doctor" parent="." instance=ExtResource("9_xb3uh")]
 z_index = 1
 position = Vector2(229, 163)
+dialogic_timeline = "res://Dialogue stuff/doctalk.dtl"
 
 [node name="Bed" parent="." instance=ExtResource("7_pdftk")]
 position = Vector2(159, 118)
