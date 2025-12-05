@@ -1,0 +1,14 @@
+Main_Char: (This looks like the person I'm supposed to talk to...)
+Main_Char: Um...hello? I think I'm supposed to talk to you?
+leader (idle): Oh! You're up an about, thats great!
+leader (idle): I didn't expect you to be out of bed yet, how are you feeling!
+Main_Char: Nice to meet you...? I'm feeling alright...I think...? Who exactly are you?
+Main_Char: (looking at her, she looks harmless and kind...but I feel something...off?)
+leader (idle): Well well thats good hear! As for who I am what you might call the mayor of this little town.
+leader (idle): Thank you for coming to find me! I am pleased to see you doing well!
+Main_Char: It's nice to meet you, but what do I do now? Will I be able to see my sibling and leave anytime soon?
+leader (thinking): ....leave? Whyever would you do that? Was our hospitality not enough?
+Main_Char: No no I didn't mean it like that sorry, you and your village have been really kind to me and I'd love to help pay you back somehow...
+leader (smile): Well thats great to hear! Since you're already up and about, we'll put you to work, only small tasks though don't worry.
+Main_Char: I appreciate it, truly, thank you.
+leader (idle): As for leaving...don't worry about that for now child.

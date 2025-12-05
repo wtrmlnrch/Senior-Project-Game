@@ -1,0 +1,37 @@
+Main_Char: (The doc told me to speak to someone and have them give me some more information, I should do that now.)
+Main_Char: (That guy over there looks like he'd know something.)
+Main_Char: Excuse me! I'm kind of confused where I am right now, could you help?
+Daniel (happy): Oh hello there, you must be one of the folk from the crash, how do you do!
+Daniel (happy): Lets see here...you haven't been filled in on your situation yet have you?
+Main_Char: No sir, could you maybe help a bit please?
+Daniel (happy): Yes of course! Well lets start off with the basics, I'm the town Butcher, but you can call me Daniel.
+Main_Char: Nice to meet you Mr. Daniel!
+Daniel (passive): Nice to meet you too kid, now you know about the crash right?
+Main_Char: A little bit...? Not really sure on what happened
+Daniel (happy): Alright so as you might imagine, the plane crashed for some reason or another, and we found you and some others and wanted to help.
+- Thank you for the help...
+	Main_Char: I appreciate the help. My sibling was with me on plane, are they alright?
+	Main_Char: The Doc said something about it and I really want to find them...
+	Daniel (thinking): Hmmm...yeah as far as I know there is someone who look like you, they're alright.
+- When can I leave...
+	Main_Char: When can I leave? I want to go home...
+	Daniel (shock): Leave? why would you want to do that?
+	Main_Char: I don't want to be here forever, I have a family and friends, I miss them.
+	Daniel (angry): Kid...like it or not but this is your home for a while now.
+	- TAKE ME HOME NOW
+		Main_Char: No! NO!
+		Main_Char: I want to go home!
+		Daniel (angry): no.
+		Main_Char: please...
+		Daniel (angry): No.
+		Main_Char: I don't want to be here! Let me LEAVE
+		Daniel (thinking): I'd stop trying to leave if I was you...
+		- alright fine.
+			Main_Char: ok...I understand...
+			Daniel (happy): I knew you'd come around kid haha.
+		- please...
+			Main_Char: NO...please let me leave!
+			Daniel (thinking): It seems you don't understand...
+			[background arg="res://Assets/NPCS/Villagers/daniel/daniel-smile-dialogue.PNG" fade="0.0"]
+			Daniel (smile): YOU WILL NEVER LEAVE
+	- ...I understand
