@@ -22,7 +22,7 @@ scale = Vector2(1.5, 1.5)
 is_tutorial = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_mdhsb")]
-position = Vector2(146, 75)
+position = Vector2(17, 61)
 max_speed = 125
 
 [node name="wolf_ai" parent="." instance=ExtResource("3_sowny")]
@@ -30,9 +30,16 @@ position = Vector2(137, 0)
 scale = Vector2(1, 1.01205)
 left_x = -600
 right_x = 600
+metadata/_edit_lock_ = true
 
 [node name="SquirrelAi" parent="." instance=ExtResource("5_0n41p")]
-position = Vector2(50, 94)
+position = Vector2(164, 85)
+
+[node name="SquirrelAi2" parent="." instance=ExtResource("5_0n41p")]
+position = Vector2(-84, 110)
+
+[node name="SquirrelAi3" parent="." instance=ExtResource("5_0n41p")]
+position = Vector2(-155, 74)
 
 [node name="EvilSquirrelAi" parent="." instance=ExtResource("6_db0f7")]
-position = Vector2(-8, 175)
+position = Vector2(266, 59)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dd5colxo1ug6b"]
+[gd_scene load_steps=13 format=3 uid="uid://dd5colxo1ug6b"]
 
 [ext_resource type="Script" uid="uid://gy6q2qpmtsj" path="res://AI_Stuff/Scenes/Enemies/wolf_ai.gd" id="1_di4ya"]
 [ext_resource type="Texture2D" uid="uid://dwkp607ksq6fv" path="res://AI_Stuff/Assets/Enemy Sprites/wolf_spritesheet.png" id="2_di4ya"]
@@ -24,6 +24,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [2]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 4)]
+}
 
 [sub_resource type="Animation" id="Animation_ni0r0"]
 resource_name = "Walking_wolf"
@@ -42,16 +66,103 @@ tracks/0/keys = {
 "values": [2, 1, 2, 0]
 }
 
+[sub_resource type="Animation" id="Animation_qmfs0"]
+resource_name = "Left Walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 1, 2, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_fqayw"]
+resource_name = "Right Walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, 1, 2, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 4)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qmfs0"]
 _data = {
+&"Left Walk": SubResource("Animation_qmfs0"),
 &"RESET": SubResource("Animation_di4ya"),
+&"Right Walk": SubResource("Animation_fqayw"),
 &"Walking_wolf": SubResource("Animation_ni0r0")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_di4ya"]
+radius = 207.348
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni0r0"]
 size = Vector2(20, 57)
 
-[node name="wolf_ai" type="Node2D"]
+[node name="wolf_ai" type="Node2D" groups=["Enemies"]]
 script = ExtResource("1_di4ya")
 
 [node name="Wolf" type="CharacterBody2D" parent="."]
@@ -71,17 +182,26 @@ frame = 2
 scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_qmfs0")
 target_position = Vector2(-200, 0)
+collision_mask = 3
 collide_with_areas = true
 
 [node name="BackSight" type="ShapeCast2D" parent="Wolf"]
 scale = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_fqayw")
 target_position = Vector2(75, 0)
+collision_mask = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Wolf"]
 libraries = {
 &"": SubResource("AnimationLibrary_qmfs0")
 }
+
+[node name="ListeningArea" type="Area2D" parent="Wolf"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wolf/ListeningArea"]
+shape = SubResource("CircleShape2D_di4ya")
 
 [node name="Walls" type="Node2D" parent="."]
 
@@ -100,3 +220,6 @@ collision_mask = 2
 [node name="RW_Collision" type="CollisionShape2D" parent="Walls/RightWall"]
 position = Vector2(300, 3.5)
 shape = SubResource("RectangleShape2D_ni0r0")
+
+[connection signal="area_entered" from="Wolf/ListeningArea" to="." method="_on_listening_area_area_entered"]
+[connection signal="area_exited" from="Wolf/ListeningArea" to="." method="_on_listening_area_area_exited"]

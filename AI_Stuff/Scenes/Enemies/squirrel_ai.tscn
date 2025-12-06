@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://4qsysr8g31q6"]
+[gd_scene load_steps=13 format=3 uid="uid://4qsysr8g31q6"]
 
 [ext_resource type="Texture2D" uid="uid://csm8kr7w4krjg" path="res://AI_Stuff/Assets/Enemy Sprites/johnson_sprites.png" id="1_ah6fq"]
 [ext_resource type="Script" uid="uid://cuya208qp2bdf" path="res://AI_Stuff/Scenes/Enemies/squirrel_ai.gd" id="1_k5dbl"]
+[ext_resource type="AudioStream" uid="uid://b1xxu4vd3me1m" path="res://AI_Stuff/Assets/Sounds/SquirrelShortNoise.wav" id="3_x3joj"]
 
 [sub_resource type="Animation" id="Animation_k5dbl"]
 length = 0.001
@@ -433,10 +434,15 @@ size = Vector2(24, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3joj"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3joj"]
+radius = 185.173
+
 [node name="SquirrelAi" type="Node2D"]
 script = ExtResource("1_k5dbl")
 
 [node name="Squirrel" type="CharacterBody2D" parent="."]
+collision_layer = 257
+collision_mask = 257
 
 [node name="Sprite2D" type="Sprite2D" parent="Squirrel"]
 position = Vector2(0, -16)
@@ -461,3 +467,13 @@ shape = SubResource("RectangleShape2D_k5dbl")
 position = Vector2(9, -20)
 shape = SubResource("RectangleShape2D_x3joj")
 target_position = Vector2(50, -75)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_x3joj")
+
+[node name="EmittingArea" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmittingArea" groups=["Enemies"]]
+shape = SubResource("CircleShape2D_x3joj")

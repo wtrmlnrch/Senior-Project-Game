@@ -424,7 +424,7 @@ _data = {
 &"Scanning": SubResource("Animation_eucya")
 }
 
-[node name="EvilSquirrelAi" instance=ExtResource("1_tegyt")]
+[node name="EvilSquirrelAi" groups=["Enemies"] instance=ExtResource("1_tegyt")]
 
 [node name="Sprite2D" parent="Squirrel" index="0"]
 frame = 3
