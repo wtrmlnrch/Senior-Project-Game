@@ -4629,6 +4629,7 @@ tile_set = SubResource("TileSet_5oot1")
 texture_filter = 1
 position = Vector2(729, 412)
 scale = Vector2(0.75, 0.75)
+max_speed = 100
 hunger_bar = NodePath("../CanvasLayer/HungerBar")
 
 [node name="CollisionBorders" type="Node" parent="."]

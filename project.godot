@@ -33,6 +33,7 @@ directories/dtl_directory={
 "butchertalk": "res://Assets/NPCS/Villagers/leader/butchertalk.dtl",
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "leadertalk": "res://Dialogue stuff/leadertalk.dtl",
+"siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
 "waking": "res://Dialogue stuff/waking.dtl"
 }
 layout/style_directory={

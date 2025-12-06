@@ -1,0 +1,103 @@
+Main_Char: (wait...is that...?)
+Main_Char: Charlotte!! You're alright! I'm awake now!
+sibling (idle): ...?
+sibling (happy): [Char Name] You're awake!!! I was so worried!
+sibling (thinking): After the crash I had no diea what happened to you but these kind people saved us!
+Main_Char: I guess we got lucky, are there any other survivors?
+sibling (thinking): Yeah theres one, but I'm not sure where they are right now.
+sibling (happy): But that's not important right now, you should come help me some work!
+Main_Char: Work?
+sibling (happy): Yeah! I've been helping the townsfolk with some stuff around the village, they saved us after all, it's the least I can do!
+Main_Char: So you think I should help them as well?
+sibling (happy): That'd be great!
+Main_Char: (hmm so I could either help, or not help....)
+- help them...
+	Main_Char: Yeah, of course! Tell me what you need me to do!
+	sibling (happy): Yay!! Thats great!
+	sibling (thinking): Well...hm...I'm supposed to go out and get herbs and fruit.
+	sibling (happy): I can go get the herbs, and you can go get fruit!
+	Main_Char: Yeah I can do that, where can I get fruit and what type of fruit?
+	sibling (happy): If you go out into the forest right outside the village you should find some blueberries, just bring some back!
+	Main_Char: Will do!
+- refuse to help...
+	Main_Char: I don't think I will right now...
+	sibling (shock): Why? They saved our lives!
+	Main_Char: (what can I say to  make this better...)
+	- feel ill...
+		Main_Char: I'm sorry...I just don't feel that good...
+		sibling (sad): oh...are you still feeling bad from the crash? Have you not healed up enough?
+		Main_Char: Yeah that, I think I'm not fully healed...
+		sibling (idle): You've taken your pill right?
+		Main_Char: No...Was I supposed to?
+		sibling (shock): You  need to take your pills! They will help you!
+		Main_Char: But...I don't know what it is? Is it safe?
+		sibling (shock): Of COURSE it's safe! Trust hem! You need the pill.
+		Main_Char: (should I take the pills...)
+		- refuse...
+			Main_Char: No.
+			sibling (sad): take.the.pill.
+			Main_Char: No, I don't want to.
+			sibling (shock): Just take the pill!
+			- refuse...
+				Main_Char: NO! I don't want to...just drop it already ok.
+				sibling (shock): ...
+				sibling (shock): ......
+				sibling (sad): Sister Mary!!!!
+				Main_Char: (I see Mary walk over slowly)
+				leader (idle): Yes Sister Charlotte? How can I help you.
+				sibling (thinking): They won't take their meds Sister.
+				leader (idle): Now now, that won't do. You must take them child.
+				Main_Char: ....I'm skeptical...I don't even know what the pill is...
+				leader (smile): OH well...if thats the issue then I can solve that!
+				leader (smile): This here is a very strong painkiller, designed specially by our Doctor.
+				Main_Char: (as she says that she grabs my hand softly and leaves the pill there motioning for me to take it)
+				Main_Char: That....sounds too good to be true...
+				leader (thinking): It is, there is one major problem with it...it doesn't last too long, honestly it's a miracle your current dose hasn't worn off yet.
+				Main_Char: I...see...alright, I'll take it.
+				leader (smile): Once you take the pill, if you would can you go fetch some blueberries from out front please?
+				Main_Char: (Mary pats me on the head softly, like a proud parent before beckoning Charlotte to come with her.)
+				Main_Char: (I take the pill...)
+			- accept...
+				Main_Char: All right all right fine I'll take it.
+				sibling (smile): Good, you can be healed sooner now!
+				Main_Char: (I sigh and take the pill)
+				sibling (happy): Ok well, I'm going to go pick some herbs, you should go right outside the village and get some blueberries!
+				Main_Char: Will do Char!
+		- accept...
+			Main_Char: alright fine I'll take them.
+			sibling (happy): Yay! You can get healed faster now!
+			sibling (happy): Well I'm going to get going, going to pick some herbs, you should go get some blueberries in the forest area outside the village!
+			Main_Char: Will do! See you later Char!
+	- don't care...
+		Main_Char: I'll honest Char...I don't feel like it.
+		sibling (shock): Why....THEY SAVED US.
+		Main_Char: It's...The right thing to do to save us. But I just am tired right now, we were just in a crash.
+		sibling (sad): But they saved us...we have to help them in return.
+		Main_Char: Even still we aren't indepted to them for that...
+		sibling (shock): We literally are, they SAVED our lives, what can't you understand about that.
+		Main_Char: Charlotte...Calm down dude-
+		sibling (sad): Calm down? You're being a prick ugh I don't understand you.
+		Main_Char: (as Charlotte keeps getting louder, someone walks over)
+		Daniel (thinking): Now Now...Whats all the commotion about? Charlotte whats wrong?
+		sibling (sad): Brother Bobby-
+		sibling (sad): They refuse to help...They don't feel like its their job.
+		Main_Char: Uh-I-
+		Daniel (shock): We helped you...why do you feel like use asking for help back is a stretch?
+		Daniel (shock): C'mon kid, you may be young but trust me helping is the best thing you can do.
+		Main_Char: But....why?
+		Daniel (angry): Why...? Because we brought you back from the brink of death, because we will feed you, clothe you, and give you shelter.
+		Daniel (thinking): So...the least you can do is help us out a bit.
+		Main_Char: (do I help them...or not?)
+		- help them...
+			Main_Char: ...
+			Main_Char: alright, I understand, I'm sorry I was being rude.
+			Daniel (happy): There you go kid, I knew you had it in you.
+			Daniel (happy): Alright, Charlotte, go get some herbs from the forest, and you, you can go get some blueberries from out front, alright?
+			Main_Char: (Charlotte nodded and ran off. I nodded and Robert walked away.
+		- refuse...
+			Main_Char: No. I don't want to.
+			Daniel (angry): Kid...what don't you get...
+			Daniel (angry): Either you help...
+			[background arg="res://Assets/NPCS/Villagers/daniel/daniel-smile-dialogue.PNG" fade="0.0"]
+			Daniel (smile): Or you're gone.
+			[end_timeline]
