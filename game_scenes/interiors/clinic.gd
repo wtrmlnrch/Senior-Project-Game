@@ -5,7 +5,7 @@ extends Node2D
 
 var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
 
-func _ready():
+func _ready():	
 	Dialogic.start("waking")
 	camera.limit_left = 750
 	camera.limit_right = 750
