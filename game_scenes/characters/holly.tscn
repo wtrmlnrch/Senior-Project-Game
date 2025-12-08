@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=3 uid="uid://c7kpv18f6i7xt"]
+
+[ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_xk2wo"]
+[ext_resource type="Script" uid="uid://benc7vhm1ss65" path="res://game_scenes/characters/holly.gd" id="2_4qkdo"]
+[ext_resource type="Texture2D" uid="uid://dvc04q7ff4c7d" path="res://Assets/NPCS/Villagers/julia/julia-backwards-stand.PNG" id="2_j5y3i"]
+[ext_resource type="Texture2D" uid="uid://b4iep2c2diyaf" path="res://Assets/NPCS/Villagers/julia/julia-backwards-walk-left.PNG" id="3_4qkdo"]
+[ext_resource type="Texture2D" uid="uid://bgfleh0bbwokk" path="res://Assets/NPCS/Villagers/julia/julia-backwards-walk-right.PNG" id="4_svb0g"]
+[ext_resource type="Texture2D" uid="uid://d1ugaulsukh34" path="res://Assets/NPCS/Villagers/julia/julia-forward-stand.PNG" id="5_s5c48"]
+[ext_resource type="Texture2D" uid="uid://dqgbu0ieubflt" path="res://Assets/NPCS/Villagers/julia/julia-forward-walk-left.PNG" id="6_yaw85"]
+[ext_resource type="Texture2D" uid="uid://5jg6ij1o8n5p" path="res://Assets/NPCS/Villagers/julia/julia-forward-walk-right.PNG" id="7_uxclx"]
+[ext_resource type="Texture2D" uid="uid://cs5ym5hxg2h3i" path="res://Assets/NPCS/Villagers/julia/julia-left-stand.PNG" id="8_jn11t"]
+[ext_resource type="Texture2D" uid="uid://cim0rd37bhenv" path="res://Assets/NPCS/Villagers/julia/julia-left-walk2.PNG" id="9_niv7v"]
+[ext_resource type="Texture2D" uid="uid://bly7xjvyw6me4" path="res://Assets/NPCS/Villagers/julia/julia-left-walk-1.PNG" id="10_g1b53"]
+[ext_resource type="Texture2D" uid="uid://ctl7w1kxaasgs" path="res://Assets/NPCS/Villagers/julia/julia-right-stand.PNG" id="11_jqj1o"]
+[ext_resource type="Texture2D" uid="uid://bqgntq5h20e5s" path="res://Assets/NPCS/Villagers/julia/julia-right-walk-1.PNG" id="12_lg7xs"]
+[ext_resource type="Texture2D" uid="uid://boefaxdg71vu4" path="res://Assets/NPCS/Villagers/julia/julia-right-walk-2.PNG" id="13_a50sp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sml3n"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j5y3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4qkdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j5y3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_svb0g")
+}],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_s5c48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yaw85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s5c48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uxclx")
+}],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_jn11t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_niv7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jn11t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g1b53")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_jqj1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lg7xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jqj1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a50sp")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xk2wo"]
+radius = 57.0088
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fp5t"]
+radius = 17.0294
+
+[node name="Holly" instance=ExtResource("1_xk2wo")]
+script = ExtResource("2_4qkdo")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_sml3n")
+
+[node name="CollisionShape2D" parent="talk-area" index="0"]
+shape = SubResource("CircleShape2D_xk2wo")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_5fp5t")

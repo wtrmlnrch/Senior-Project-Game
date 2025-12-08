@@ -4,7 +4,7 @@ var player_in_range = false
 @export var dialogic_timeline: String = "doctalk"
 
 func _ready():
-	npc_name = "Dr.Land"
+	npc_name = "Brother Land"
 	#$Area2D.area_entered.connect(_on_area_entered)
 	#$Area2D.area_exited.connect(_on_area_exited)
 	
