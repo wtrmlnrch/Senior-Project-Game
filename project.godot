@@ -31,6 +31,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",
 "butchertalk": "res://Assets/NPCS/Villagers/leader/butchertalk.dtl",
+"deertalk": "res://Dialogue stuff/deertalk.dtl",
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "leadertalk": "res://Dialogue stuff/leadertalk.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
