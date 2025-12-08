@@ -1004,6 +1004,7 @@ position = Vector2(229, 163)
 
 [node name="Bed" parent="." instance=ExtResource("7_pdftk")]
 position = Vector2(159, 118)
+metadata/_edit_lock_ = true
 
 [node name="CollisionAreas" type="Node" parent="."]
 
@@ -1050,5 +1051,6 @@ z_index = -2
 position = Vector2(139.5, 39.4704)
 scale = Vector2(1.1395, 1.05926)
 texture = ExtResource("10_ds78w")
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

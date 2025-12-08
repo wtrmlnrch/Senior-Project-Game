@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://bj5kb4jl0jijv"]
+[gd_scene load_steps=18 format=3 uid="uid://bj5kb4jl0jijv"]
 
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_gcbbe"]
 [ext_resource type="Texture2D" uid="uid://c0y4hb1kkb00y" path="res://Assets/NPCS/Villagers/sibling/sibling-back-stand.PNG" id="2_odjco"]
+[ext_resource type="Script" uid="uid://h2x87845wylo" path="res://game_scenes/characters/sibling.gd" id="2_xelgk"]
 [ext_resource type="Texture2D" uid="uid://pva1rxq1x1or" path="res://Assets/NPCS/Villagers/sibling/sibling-back-walk-left.PNG" id="3_xelgk"]
 [ext_resource type="Texture2D" uid="uid://dui5l5ugy18p5" path="res://Assets/NPCS/Villagers/sibling/sibling-back-walk-right.PNG" id="4_0a3gj"]
 [ext_resource type="Texture2D" uid="uid://bjan702540uu2" path="res://Assets/NPCS/Villagers/sibling/sibling-forward-stand.PNG" id="5_2urj1"]
@@ -87,12 +88,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gcbbe"]
-radius = 44.0454
+radius = 52.0096
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_odjco"]
 radius = 16.4924
 
 [node name="Sibling" instance=ExtResource("1_gcbbe")]
+script = ExtResource("2_xelgk")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_vrout")

@@ -94,7 +94,7 @@ animations = [{
 
 [node name="MainCharacter" type="CharacterBody2D"]
 z_index = 1
-collision_mask = 63
+collision_mask = 127
 script = ExtResource("1_kmal1")
 max_speed = null
 

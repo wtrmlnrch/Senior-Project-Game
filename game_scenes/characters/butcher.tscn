@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=3 uid="uid://4ade78jk7tsx"]
+
+[ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_di6aj"]
+[ext_resource type="Texture2D" uid="uid://c7iid2o48mayg" path="res://Assets/NPCS/Villagers/butcher/butcher-back-stand.PNG" id="2_6k8da"]
+[ext_resource type="Script" uid="uid://bhr0fqtwfhg75" path="res://game_scenes/characters/butcher.gd" id="2_acyvx"]
+[ext_resource type="Texture2D" uid="uid://c1lv5iggb6583" path="res://Assets/NPCS/Villagers/butcher/butcher-back-walk2.PNG" id="3_acyvx"]
+[ext_resource type="Texture2D" uid="uid://bxv1csiqc1m5e" path="res://Assets/NPCS/Villagers/butcher/butcher-back-walk-1.PNG" id="4_jcjqm"]
+[ext_resource type="Texture2D" uid="uid://5ocdd6jh5er" path="res://Assets/NPCS/Villagers/butcher/butcher-forward-stand.PNG" id="5_1ddr2"]
+[ext_resource type="Texture2D" uid="uid://bkey5iv4ys5v8" path="res://Assets/NPCS/Villagers/butcher/butcher-forward-walk-1.PNG" id="6_v3pwq"]
+[ext_resource type="Texture2D" uid="uid://msn3apaac2iy" path="res://Assets/NPCS/Villagers/butcher/butcher-forward-walk-2.PNG" id="7_oww3p"]
+[ext_resource type="Texture2D" uid="uid://djxguyvdwn5h1" path="res://Assets/NPCS/Villagers/butcher/butcher-left-stand.PNG" id="8_oqw3x"]
+[ext_resource type="Texture2D" uid="uid://1isjjbe658kb" path="res://Assets/NPCS/Villagers/butcher/butcher-left-walk-1.PNG" id="9_5epx1"]
+[ext_resource type="Texture2D" uid="uid://b0kixwdrfbns4" path="res://Assets/NPCS/Villagers/butcher/butcher-left-walk-2.PNG" id="10_attbf"]
+[ext_resource type="Texture2D" uid="uid://bu8ookd0ucb8c" path="res://Assets/NPCS/Villagers/butcher/butcher-right-stand.PNG" id="11_7sxy3"]
+[ext_resource type="Texture2D" uid="uid://vmks7p4j6gqk" path="res://Assets/NPCS/Villagers/butcher/butcher-right-walk-1.PNG" id="12_xprb2"]
+[ext_resource type="Texture2D" uid="uid://ts5hkqrpx5hl" path="res://Assets/NPCS/Villagers/butcher/butcher-right-walk-2.PNG" id="13_u30ll"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4uakr"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6k8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_acyvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6k8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jcjqm")
+}],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1ddr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v3pwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1ddr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oww3p")
+}],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_oqw3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5epx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_oqw3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_attbf")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7sxy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xprb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7sxy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u30ll")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_di6aj"]
+radius = 56.1427
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6k8da"]
+radius = 17.0
+
+[node name="Butcher" instance=ExtResource("1_di6aj")]
+script = ExtResource("2_acyvx")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_4uakr")
+
+[node name="CollisionShape2D" parent="talk-area" index="0"]
+shape = SubResource("CircleShape2D_di6aj")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_6k8da")

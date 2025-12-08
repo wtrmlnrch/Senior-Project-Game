@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://84g1haa68ac1"]
+[gd_scene load_steps=18 format=3 uid="uid://84g1haa68ac1"]
 
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_dlvix"]
 [ext_resource type="Texture2D" uid="uid://dwx6jh3p6st5h" path="res://Assets/NPCS/Villagers/leader/leader-back-stand.PNG" id="2_cekfj"]
+[ext_resource type="Script" uid="uid://bula001i02oia" path="res://game_scenes/characters/leader.gd" id="2_g7i41"]
 [ext_resource type="Texture2D" uid="uid://dipoc1y3n4c8f" path="res://Assets/NPCS/Villagers/leader/leader-back-walk-left.PNG" id="3_g7i41"]
 [ext_resource type="Texture2D" uid="uid://emrgd70pnjwq" path="res://Assets/NPCS/Villagers/leader/leader-back-walk-right.PNG" id="4_redym"]
 [ext_resource type="Texture2D" uid="uid://d0qomakmx6ml4" path="res://Assets/NPCS/Villagers/leader/leader-forward-stand.PNG" id="5_pwktk"]
@@ -93,6 +94,7 @@ radius = 51.4781
 radius = 16.0
 
 [node name="leader" instance=ExtResource("1_dlvix")]
+script = ExtResource("2_g7i41")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_pchj1")
