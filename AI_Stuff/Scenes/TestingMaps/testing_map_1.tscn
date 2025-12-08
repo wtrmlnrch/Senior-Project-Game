@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://cgdaabrg2obj4"]
+[gd_scene load_steps=7 format=4 uid="uid://cgdaabrg2obj4"]
 
 [ext_resource type="TileSet" uid="uid://cisthpvkuboug" path="res://AI_Stuff/Assets/Environment/basicEnv.tres" id="1_lnrpn"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="3_mdhsb"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b1eudu7py5fmo" path="res://AI_Stuff/Scenes/EnvironmentThings/bush.tscn" id="4_mdhsb"]
 [ext_resource type="PackedScene" uid="uid://4qsysr8g31q6" path="res://AI_Stuff/Scenes/Enemies/squirrel_ai.tscn" id="5_0n41p"]
 [ext_resource type="PackedScene" uid="uid://cgsxyiv6bo4yh" path="res://AI_Stuff/Scenes/Enemies/evil_squirrel_ai.tscn" id="6_db0f7"]
-[ext_resource type="PackedScene" uid="uid://c5ni42t63o4ji" path="res://AI_Stuff/Scenes/Enemies/evil_wolf.tscn" id="7_yh4fr"]
 
 [node name="TestingMap1" type="Node2D"]
 
@@ -23,7 +22,7 @@ scale = Vector2(1.5, 1.5)
 is_tutorial = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_mdhsb")]
-position = Vector2(146, 75)
+position = Vector2(17, 61)
 max_speed = 125
 
 [node name="wolf_ai" parent="." instance=ExtResource("3_sowny")]
@@ -31,12 +30,16 @@ position = Vector2(137, 0)
 scale = Vector2(1, 1.01205)
 left_x = -600
 right_x = 600
+metadata/_edit_lock_ = true
 
 [node name="SquirrelAi" parent="." instance=ExtResource("5_0n41p")]
-position = Vector2(50, 94)
+position = Vector2(164, 85)
+
+[node name="SquirrelAi2" parent="." instance=ExtResource("5_0n41p")]
+position = Vector2(-84, 110)
+
+[node name="SquirrelAi3" parent="." instance=ExtResource("5_0n41p")]
+position = Vector2(-155, 74)
 
 [node name="EvilSquirrelAi" parent="." instance=ExtResource("6_db0f7")]
-position = Vector2(-8, 175)
-
-[node name="Evil Wolf" parent="." instance=ExtResource("7_yh4fr")]
-position = Vector2(-15, 103)
+position = Vector2(266, 59)

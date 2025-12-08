@@ -22,6 +22,10 @@ Globals="*res://globals.gd"
 
 project/assembly_name="SeniorGameProject"
 
+[global_group]
+
+Enemies=""
+
 [input]
 
 up={

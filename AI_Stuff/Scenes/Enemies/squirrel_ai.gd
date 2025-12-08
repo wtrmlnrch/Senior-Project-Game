@@ -1,5 +1,7 @@
 extends Node2D
 
+signal sound_emitted(sound_position: Vector2)
+
 @export var horizontal_speed = 200
 @export var vertical_speed = 25
 
@@ -22,7 +24,10 @@ func _physics_process(delta):
 		
 		var hori_multi = 1
 		
-		# make the squirrel make a noise then wait and disappear 		
+		# make the squirrel make a noise then wait and disappear 
+		$AudioStreamPlayer2D.play()
+		emit_sound()
+		
 		if $Squirrel/ShapeCast2D.get_collider(0).global_position.x < $Squirrel.global_position.x:
 			$Squirrel/AnimationPlayer.play("Running Right")
 		else:
@@ -37,3 +42,6 @@ func _physics_process(delta):
 		queue_free()
 		
 	$Squirrel.move_and_slide()
+	
+func emit_sound():
+	sound_emitted.emit(global_position)
