@@ -35,3 +35,5 @@ Daniel (happy): Alright so as you might imagine, the plane crashed for some reas
 			[background arg="res://Assets/NPCS/Villagers/daniel/daniel-smile-dialogue.PNG" fade="0.0"]
 			Daniel (smile): YOU WILL NEVER LEAVE
 	- ...I understand
+		Daniel (smile): Thats perfect, now go on with your day!
+		Main_Char: (that was....weird...)

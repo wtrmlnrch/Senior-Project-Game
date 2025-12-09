@@ -7,6 +7,7 @@ Main_Char: (he turns to walk away)
 Main_Char: Huh?
 - Let him go...
 	Main_Char: (He's just...leaving??)
+	Main_Char: (that was weird...)
 - Call out after him...
 	Main_Char: Hey! Wait up!
 	Main_Char: (I still have some questions)

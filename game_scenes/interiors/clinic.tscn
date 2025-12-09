@@ -996,11 +996,11 @@ format = 2
 layer_0/tile_data = PackedInt32Array(786435, 393217, 0, 786438, 196609, 0, 786437, 458753, 0, 786444, 393217, 1, 786443, 458753, 1, 327700, 327681, 2, 786446, 262145, 2, 786445, 196609, 2, 851971, 327681, 3, 917508, 196609, 6)
 
 [node name="MainCharacter" parent="." instance=ExtResource("6_6m1p4")]
-position = Vector2(160, 119)
+position = Vector2(161, 119)
 
 [node name="Doctor" parent="." instance=ExtResource("9_xb3uh")]
 z_index = 1
-position = Vector2(229, 163)
+position = Vector2(157, 256)
 
 [node name="Bed" parent="." instance=ExtResource("7_pdftk")]
 position = Vector2(159, 118)

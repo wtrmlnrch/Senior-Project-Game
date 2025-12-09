@@ -1,12 +1,33 @@
 Main_Char (Regular): um...Hello?
-Doctor: Look whos awake! You had quite the accident!
+Doctor (shocked): Look whos awake! You had quite the accident!
 Main_Char (Regular): Accident....? What happened...
-Doctor: You were involved in a plane crash, we found you and helped you and your sibling stabaliz-
+Doctor (erm): You were involved in a plane crash, we found you and helped you and your sibling stabaliz-
 update Main_Char [animation="Bounce"]
 Main_Char: How do you know I have a sibling? and where am I, who are you?
 Doctor: Now now, all will be revealed...in due time. For now all you need to know is that my name is Dr. Land.
-update Doctor [animation="Shake X"]
-Doctor: As for your sibling, they woke up before you and are out waiting with some of the others.
-Doctor: Though...before you go, take this pill. It will help with the pain.
+Doctor (glasses): As for your sibling, they woke up before you and are out waiting with some of the others.
+Doctor (glasses): Though...before you go, take this pill. It will help with the pain.
 Main_Char: But I'm not in any pain...
-Doctor: Yes, because of the medication, but its going to wear off in about 20 minutes and when it does, it won't feel to nice.
+- Take the Pill...
+	Main_Char: (He is a doctor...he knows best...)
+	Main_Char: Alright, I'll take the pill.
+	Doctor (happy): Perfect, now you should go talk to some of the townsfolk, also let the Mary know you're alright.
+	Main_Char: (Mary? Who is that)
+	Main_Char: Yessir! I will be on my way.
+- Question the Pill...
+	Main_Char: What is this pill?
+	Doctor (glasses): It's a simple painkiller, fresh recipe made by me, I've found it to be quite effective.
+	Main_Char: A homemade painkiller that is effective? Sounds too good to be true...
+	Doctor (erm): Yeah, you're a smart one. It is indeed too good to be true, theres a minor problem.
+	Doctor (thinking): It doesn't last too long, for all its potency, you'd be lucky to get a good 4 or 5 hours before the pain comes back.
+	Main_Char: hmmm...well either way, I don't feel any pain.
+	Doctor (erm): You did just wake up you know...we've had you medicated, but...
+	Doctor (glasses): It will wear off, and quite soon at that. Your body has been through a trauma, so trust me you want this painkiller.
+	Main_Char: (....hm, that sounds reasonable)
+	Main_Char: Alright, I'll take it.
+	Doctor (glasses): That great, here you go.
+	Main_Char: (he places a pill in my hands)
+	Doctor (thinking): Now, go on out and explore the village and talk to people, also talk to Mary, she wants to see you.
+	Main_Char: (....Mary? Who is that? Ok then)
+	Main_Char: Alright then, I'll be on my way. Thanks for everything Doc!
+	Main_Char: (The doctor waves me off and turns back to whatever he was working on)
