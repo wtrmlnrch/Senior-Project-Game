@@ -4,7 +4,8 @@ extends Node2D
 @onready var player = $MainCharacter
 
 var area
-var scenes
+var scenes 
+var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
 
 func _ready():
 	var used_rect = tilemap.get_used_rect()
@@ -85,3 +86,8 @@ func _on_butcherentrance_body_entered(body: Node2D) -> void:
 func _on_butcherentrance_body_exited(body: Node2D) -> void:
 	if body == player:
 		area[5] = false
+
+
+func _on_path_body_entered(body: Node2D) -> void:
+	if body == player:
+		get_tree().change_scene_to_packed(scene)

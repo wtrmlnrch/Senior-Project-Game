@@ -5895,6 +5895,8 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
 
+[connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
+[connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]
 [connection signal="body_exited" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_exited"]
 [connection signal="body_entered" from="house-entrances/robert-entrance" to="." method="_on_robertentrance_body_entered"]

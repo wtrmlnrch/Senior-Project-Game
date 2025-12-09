@@ -38,6 +38,7 @@ directories/dtl_directory={
 "deertalk": "res://Dialogue stuff/deertalk.dtl",
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "leadertalk": "res://Dialogue stuff/leadertalk.dtl",
+"miniforest": "res://Dialogue stuff/miniforest.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
 "talkbutcher": "res://Dialogue stuff/talkbutcher.dtl",
 "waking": "res://Dialogue stuff/waking.dtl"
