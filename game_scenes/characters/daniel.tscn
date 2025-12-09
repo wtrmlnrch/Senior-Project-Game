@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_58vpm"]
 [ext_resource type="Texture2D" uid="uid://dm0v8pc8ipejo" path="res://Assets/NPCS/Villagers/daniel/daniel-forward-stand.PNG" id="2_d3t7v"]
 [ext_resource type="Texture2D" uid="uid://b2mgv6spptn37" path="res://Assets/NPCS/Villagers/daniel/daniel-back-stand.PNG" id="2_j8ba4"]
+[ext_resource type="Script" uid="uid://mww68iubdo3p" path="res://game_scenes/characters/daniel.gd" id="2_pvmod"]
 [ext_resource type="Texture2D" uid="uid://b7bvph2enso7c" path="res://Assets/NPCS/Villagers/daniel/daniel-back-walk-left.PNG" id="3_pvmod"]
 [ext_resource type="Texture2D" uid="uid://cwfhehefygt8s" path="res://Assets/NPCS/Villagers/daniel/daniel-forward-walk-left.PNG" id="3_vf7cw"]
 [ext_resource type="Texture2D" uid="uid://47fmm7r467e7" path="res://Assets/NPCS/Villagers/daniel/daniel-back-walk-righ.PNG" id="4_a0v73"]
@@ -92,7 +93,8 @@ radius = 66.0303
 [sub_resource type="CircleShape2D" id="CircleShape2D_pvmod"]
 radius = 16.0
 
-[node name="Daniel" instance=ExtResource("1_58vpm")]
+[node name="Robert" instance=ExtResource("1_58vpm")]
+script = ExtResource("2_pvmod")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_ij06q")

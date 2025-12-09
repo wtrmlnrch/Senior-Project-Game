@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvy81dcu6lbjv"]
+
+[ext_resource type="PackedScene" uid="uid://d17cwawl2p7l" path="res://game_scenes/interiors/house_interior.tscn" id="1_shu4i"]
+
+[node name="leader-house" instance=ExtResource("1_shu4i")]

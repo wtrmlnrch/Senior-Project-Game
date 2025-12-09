@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxjmtyqoxtepi"]
+
+[ext_resource type="Texture2D" uid="uid://bil15tkgquppt" path="res://Assets/othr/village-house.PNG" id="1_pmakb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmakb"]
+size = Vector2(63, 72)
+
+[node name="House" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_pmakb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -15)
+shape = SubResource("RectangleShape2D_pmakb")

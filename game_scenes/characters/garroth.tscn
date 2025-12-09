@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=3 uid="uid://b2am22nx0lga2"]
+
+[ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_73wba"]
+[ext_resource type="Texture2D" uid="uid://bqd0dv7xai5b2" path="res://Assets/NPCS/Villagers/jonah/jonah-backwards-stand.PNG" id="2_i04jk"]
+[ext_resource type="Script" uid="uid://ctyaxd12rmvf8" path="res://game_scenes/characters/garroth.gd" id="2_ifcun"]
+[ext_resource type="Texture2D" uid="uid://cxkib3hdqkmwc" path="res://Assets/NPCS/Villagers/jonah/jonah-backwards-walk-left.PNG" id="3_ifcun"]
+[ext_resource type="Texture2D" uid="uid://b2p2qpw03qudr" path="res://Assets/NPCS/Villagers/jonah/jonah-backwards-walk-right.PNG" id="4_q1qqg"]
+[ext_resource type="Texture2D" uid="uid://b4wwqi5s7dpup" path="res://Assets/NPCS/Villagers/jonah/jonah-forward-stand.PNG" id="5_7uetu"]
+[ext_resource type="Texture2D" uid="uid://b0gi0bs3u5snd" path="res://Assets/NPCS/Villagers/jonah/jonah-forward-walk-left.PNG" id="6_m5e5j"]
+[ext_resource type="Texture2D" uid="uid://b33led7xsrx88" path="res://Assets/NPCS/Villagers/jonah/jonah-forward-walk-right.PNG" id="7_1fdqi"]
+[ext_resource type="Texture2D" uid="uid://badyww6i2o2jj" path="res://Assets/NPCS/Villagers/jonah/jonah-left-stand.PNG" id="8_5q2it"]
+[ext_resource type="Texture2D" uid="uid://15qrev1u3v3w" path="res://Assets/NPCS/Villagers/jonah/jonah-left-walk-2.PNG" id="9_st7g5"]
+[ext_resource type="Texture2D" uid="uid://cepvi3b7p7qdy" path="res://Assets/NPCS/Villagers/jonah/jonah -left-walk-1.PNG" id="10_aawfg"]
+[ext_resource type="Texture2D" uid="uid://dm6tkidnj2wlh" path="res://Assets/NPCS/Villagers/jonah/jonah-right-stand.PNG" id="11_3ktu0"]
+[ext_resource type="Texture2D" uid="uid://c1i5fmyq3es6x" path="res://Assets/NPCS/Villagers/jonah/jonah-right-walk-1.PNG" id="12_rjgwt"]
+[ext_resource type="Texture2D" uid="uid://5tmodgv3u7ub" path="res://Assets/NPCS/Villagers/jonah/jonah-right-walk-2.PNG" id="13_g0s44"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dihcf"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i04jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ifcun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i04jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q1qqg")
+}],
+"loop": true,
+"name": &"walking-backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7uetu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_m5e5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7uetu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1fdqi")
+}],
+"loop": true,
+"name": &"walking-forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5q2it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_st7g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5q2it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aawfg")
+}],
+"loop": true,
+"name": &"walking-left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_3ktu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rjgwt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ktu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_g0s44")
+}],
+"loop": true,
+"name": &"walking-right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i04jk"]
+radius = 59.6825
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_73wba"]
+radius = 16.0312
+
+[node name="Garroth" instance=ExtResource("1_73wba")]
+script = ExtResource("2_ifcun")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_dihcf")
+
+[node name="CollisionShape2D" parent="talk-area" index="0"]
+shape = SubResource("CircleShape2D_i04jk")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_73wba")
