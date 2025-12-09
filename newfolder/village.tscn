@@ -5883,7 +5883,7 @@ dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
 z_index = 1
 position = Vector2(678, 272)
 scale = Vector2(0.5, 0.5)
-dialogic_timeline = "res://Dialogue stuff/butchertalk.dtl"
+dialogic_timeline = "res://Assets/NPCS/Villagers/leader/butchertalk.dtl"
 
 [node name="Sibling" parent="." instance=ExtResource("12_7q3ar")]
 z_index = 1
