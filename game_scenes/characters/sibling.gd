@@ -16,6 +16,8 @@ func _on_area_entered(body):
 	if body.name == "MainCharacter":
 		player_in_range = true
 
+func _physics_process(delta):
+	velocity = Vector2.ZERO
 func _on_area_exited(body):
 	if body.name == "MainCharacter":
 		player_in_range = false

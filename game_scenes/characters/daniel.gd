@@ -9,6 +9,9 @@ func _ready():
 	$"talk-area".body_entered.connect(_on_area_entered)
 	$"talk-area".body_exited.connect(_on_area_exited)
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _physics_process(delta):
+	velocity = Vector2.ZERO
 	
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("Interact") and not dialogue_active:

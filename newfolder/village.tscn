@@ -5714,14 +5714,14 @@ z_index = 1
 texture_filter = 1
 position = Vector2(553, 279)
 scale = Vector2(0.5, 0.5)
-collision_layer = 65535
-collision_mask = 65535
+collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/bakertalk.dtl"
 
 [node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
 z_index = 1
 position = Vector2(99, 301)
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
 
 [node name="Viewpoints" type="Node" parent="."]
@@ -5772,6 +5772,7 @@ shape = SubResource("RectangleShape2D_28mq4")
 [node name="MainCharacter" parent="." instance=ExtResource("5_fpftl")]
 position = Vector2(622, 129)
 scale = Vector2(0.5, 0.5)
+collision_mask = 2
 
 [node name="RiverCollisions" type="StaticBody2D" parent="."]
 collision_layer = 32
@@ -5877,18 +5878,21 @@ shape = SubResource("RectangleShape2D_4yj3c")
 z_index = 1
 position = Vector2(324, 305)
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
 
 [node name="Robert" parent="." instance=ExtResource("11_pqbve")]
 z_index = 1
 position = Vector2(678, 272)
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 dialogic_timeline = "res://Assets/NPCS/Villagers/leader/butchertalk.dtl"
 
 [node name="Sibling" parent="." instance=ExtResource("12_7q3ar")]
 z_index = 1
 position = Vector2(510, 349)
 scale = Vector2(0.5, 0.5)
+collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
 
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]
