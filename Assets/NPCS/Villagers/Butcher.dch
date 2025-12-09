@@ -7,46 +7,46 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "PremadeStyle",
+"style": "",
 "suffix": ""
 },
 &"default_portrait": "Idle",
 &"description": "",
-&"display_name": "Dr. Land",
+&"display_name": "Cylus",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/butcher/butcher-angry.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/butcher/butcher-happy.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Idle": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-idle.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/butcher/butcher-idle.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"erm": {
+"Sad": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-erm.PNG\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"glasses": {
-"export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-glasses.PNG\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"happy": {
-"export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-happy.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/butcher/butcher-sad.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -55,16 +55,16 @@
 },
 "shocked": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-shocked.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/butcher/butcher-shocked.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"thinking": {
+"smile": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-thinking.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/butcher/butcher-smile.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

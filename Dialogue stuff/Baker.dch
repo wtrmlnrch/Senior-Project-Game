@@ -7,37 +7,19 @@
 "prefix": "",
 "sound_mood_default": "",
 "sound_moods": {},
-"style": "PremadeStyle",
+"style": "",
 "suffix": ""
 },
 &"default_portrait": "Idle",
 &"description": "",
-&"display_name": "Dr. Land",
+&"display_name": "Betsy",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
 "Idle": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-idle.PNG\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"erm": {
-"export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-erm.PNG\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"glasses": {
-"export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-glasses.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/isabelle/baker-idle.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -46,7 +28,16 @@
 },
 "happy": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-happy.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/isabelle/baker-happy.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"sad": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/isabelle/baker-sad.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -55,7 +46,16 @@
 },
 "shocked": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-shocked.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/isabelle/baker-shocked.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"smile": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/isabelle/baker-smile.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -64,7 +64,7 @@
 },
 "thinking": {
 "export_overrides": {
-"image": "\"res://Assets/NPCS/Villagers/doctor/doctor-thinking.PNG\""
+"image": "\"res://Assets/NPCS/Villagers/isabelle/baker-thinking.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

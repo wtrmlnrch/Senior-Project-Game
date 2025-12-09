@@ -22,6 +22,8 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Baker": "res://Dialogue stuff/Baker.dch",
+"Butcher": "res://Assets/NPCS/Villagers/Butcher.dch",
 "Daniel": "res://Dialogue stuff/Daniel.dch",
 "Doctor": "res://Dialogue stuff/Doctor.dch",
 "Main_Char": "res://Dialogue stuff/Main_Char.dch",
@@ -29,12 +31,15 @@ directories/dch_directory={
 "sibling": "res://Dialogue stuff/sibling.dch"
 }
 directories/dtl_directory={
+"Dialogue stuff/butchertalk": "res://Dialogue stuff/butchertalk.dtl",
 "ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",
+"bakertalk": "res://Dialogue stuff/bakertalk.dtl",
 "butchertalk": "res://Assets/NPCS/Villagers/leader/butchertalk.dtl",
 "deertalk": "res://Dialogue stuff/deertalk.dtl",
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "leadertalk": "res://Dialogue stuff/leadertalk.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
+"talkbutcher": "res://Dialogue stuff/talkbutcher.dtl",
 "waking": "res://Dialogue stuff/waking.dtl"
 }
 layout/style_directory={

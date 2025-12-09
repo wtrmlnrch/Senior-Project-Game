@@ -1,0 +1,33 @@
+Main_Char: (theres a man in an apron standing there, I should speak to him)
+Main_Char: Um...Hello sir.
+Butcher (Idle): Can I help you?
+Main_Char: Yeah, I'm trying to introduce myself to the people around town.
+Butcher (Idle): I see...I'm the butcher.
+Main_Char: (he turns to walk away)
+Main_Char: Huh?
+- Let him go...
+	Main_Char: (He's just...leaving??)
+- Call out after him...
+	Main_Char: Hey! Wait up!
+	Main_Char: (I still have some questions)
+	Butcher (shocked): Can I help you?
+	Main_Char: Yeah, I'd like to know your name and talk with you for a bit!
+	Butcher (Idle): ...Why?
+	Main_Char: (whats up with this guy)
+	Main_Char: I want to get to know the people that saved my life!
+	Butcher (Idle): alright fine, my name is Cylus, I don't really know what else you want from me.
+	Butcher (Idle): I cut things up. Thats my job.
+	Main_Char: Ok...
+	- Question the aggression..
+		Main_Char: Hey dude, are you alright? You seem kind of agitated.
+		Butcher (Idle): What do you mean?
+		Butcher (Idle): I'm perfectly normal right now.
+		Main_Char: alright...if you say so.
+		Butcher (Idle): Well, if you have nothing else, I'll be on my way.
+		Main_Char: Alright, talk to you later then.
+		Main_Char: (he says nothing and leaves)
+	- Leave it alone...
+		Main_Char: (Yeah somethings up with this guy)
+		Butcher (Idle): Well, if thats all, I'll be on my way.
+		Main_Char: Uh...Yeah, thats it.
+		Main_Char: (he says nothing more and leaves)
