@@ -1,5 +1,4 @@
 extends Node2D
-
 @onready var camera = $MainCharacter/PlayerCamera
 @onready var tilemap = $tilesets/ground
 @onready var player = $MainCharacter
@@ -22,7 +21,7 @@ func _ready():
 	
 	for i in range(area.size()):
 		area[i] = false
-
+	
 	camera.limit_left = used_rect.position.x * cell_size.x
 	camera.limit_top = used_rect.position.y * cell_size.y
 	camera.limit_right = (used_rect.position.x + used_rect.size.x) * cell_size.x
@@ -32,56 +31,57 @@ func _ready():
 	player.speed = player.max_speed
 	camera.zoom = Vector2(2.50, 2.50)
 
-func _process(float)->void:
-	
-	for i in range(area.size()):
-		if area[i] == true && Input.is_action_just_pressed("Interact"):
-			get_tree().change_scene_to_packed(scenes[i])
-
+func _process(float) -> void:
+	if Input.is_action_just_pressed("Interact"):
+		for i in range(area.size()):
+			if area[i] == true:
+				get_tree().change_scene_to_packed(scenes[i])
+				return
 
 func _on_clinicentrance_body_entered(body: Node2D) -> void:
-	area[0] = true
-
+	if body == player:
+		area[0] = true
 
 func _on_clinicentrance_body_exited(body: Node2D) -> void:
-	area[0] = false
-
+	if body == player:
+		area[0] = false
 
 func _on_robertentrance_body_entered(body: Node2D) -> void:
-	area[1] = true
-
+	if body == player:
+		area[1] = true
 
 func _on_robertentrance_body_exited(body: Node2D) -> void:
-	area[1] = false
-
+	if body == player:
+		area[1] = false
 
 func _on_bakerentrance_body_entered(body: Node2D) -> void:
-	area[2] = true
-
+	if body == player:
+		area[2] = true
 
 func _on_bakerentrance_body_exited(body: Node2D) -> void:
-	area[2] = false
-
+	if body == player:
+		area[2] = false
 
 func _on_garrothentrance_body_entered(body: Node2D) -> void:
-	area[3] = true
-
+	if body == player:
+		area[3] = true
 
 func _on_garrothentrance_body_exited(body: Node2D) -> void:
-	area[3] = false
-
+	if body == player:
+		area[3] = false
 
 func _on_leaderentrance_body_entered(body: Node2D) -> void:
-	area[4] = true
-
+	if body == player:
+		area[4] = true
 
 func _on_leaderentrance_body_exited(body: Node2D) -> void:
-	area[4] = false
-
+	if body == player:
+		area[4] = false
 
 func _on_butcherentrance_body_entered(body: Node2D) -> void:
-	area[5] = true
-
+	if body == player:
+		area[5] = true
 
 func _on_butcherentrance_body_exited(body: Node2D) -> void:
-	area[5] = false
+	if body == player:
+		area[5] = false

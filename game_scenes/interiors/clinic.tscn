@@ -997,7 +997,6 @@ layer_0/tile_data = PackedInt32Array(786435, 393217, 0, 786438, 196609, 0, 78643
 
 [node name="MainCharacter" parent="." instance=ExtResource("6_6m1p4")]
 position = Vector2(160, 119)
-max_speed = 100
 
 [node name="Doctor" parent="." instance=ExtResource("9_xb3uh")]
 z_index = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://b1nmxvt8pghu0"]
+[gd_scene load_steps=37 format=4 uid="uid://b1nmxvt8pghu0"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://chkqj235w1b1a" path="res://Assets/Texture/TX Props.png" id="4_xygwp"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
+[ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
+[ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
+[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
+[ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
 texture = ExtResource("1_o7pqe")
@@ -5707,9 +5711,18 @@ tile_set = SubResource("TileSet_gvfp2")
 light_mask = 1023
 visibility_layer = 1023
 z_index = 1
-position = Vector2(94, 305)
-collision_layer = 7
-collision_mask = 7
+texture_filter = 1
+position = Vector2(553, 279)
+scale = Vector2(0.5, 0.5)
+collision_layer = 65535
+collision_mask = 65535
+dialogic_timeline = "res://Dialogue stuff/bakertalk.dtl"
+
+[node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
+z_index = 1
+position = Vector2(99, 301)
+scale = Vector2(0.5, 0.5)
+dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
 
 [node name="Viewpoints" type="Node" parent="."]
 
@@ -5757,9 +5770,8 @@ position = Vector2(1043, 348)
 shape = SubResource("RectangleShape2D_28mq4")
 
 [node name="MainCharacter" parent="." instance=ExtResource("5_fpftl")]
-position = Vector2(660, 312)
+position = Vector2(622, 129)
 scale = Vector2(0.5, 0.5)
-max_speed = 100
 
 [node name="RiverCollisions" type="StaticBody2D" parent="."]
 collision_layer = 32
@@ -5818,6 +5830,7 @@ collision_mask = 7
 [node name="house-entrances" type="Node" parent="."]
 
 [node name="clinic-entrance" type="Area2D" parent="house-entrances"]
+position = Vector2(0, -1)
 collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="house-entrances/clinic-entrance"]
@@ -5859,6 +5872,24 @@ collision_layer = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="house-entrances/butcher-entrance"]
 position = Vector2(191, 285)
 shape = SubResource("RectangleShape2D_4yj3c")
+
+[node name="leader" parent="." instance=ExtResource("10_vcg3l")]
+z_index = 1
+position = Vector2(324, 305)
+scale = Vector2(0.5, 0.5)
+dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
+
+[node name="Robert" parent="." instance=ExtResource("11_pqbve")]
+z_index = 1
+position = Vector2(678, 272)
+scale = Vector2(0.5, 0.5)
+dialogic_timeline = "res://Dialogue stuff/butchertalk.dtl"
+
+[node name="Sibling" parent="." instance=ExtResource("12_7q3ar")]
+z_index = 1
+position = Vector2(510, 349)
+scale = Vector2(0.5, 0.5)
+dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
 
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]
 [connection signal="body_exited" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_exited"]
