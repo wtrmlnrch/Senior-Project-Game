@@ -2,6 +2,7 @@ extends Node2D
 @onready var camera = $MainCharacter/PlayerCamera
 @onready var tilemap = $tilesets/ground
 @onready var player = $MainCharacter
+@onready var ui = $UI
 
 var area
 var scenes
@@ -39,49 +40,60 @@ func _process(float) -> void:
 				return
 
 func _on_clinicentrance_body_entered(body: Node2D) -> void:
-	if body == player:
-		area[0] = true
+	area[0] = true
+	$UI/corner/to_enter.visible = true
+
 
 func _on_clinicentrance_body_exited(body: Node2D) -> void:
-	if body == player:
-		area[0] = false
+	area[0] = false
+	$UI/corner/to_enter.visible = false
+
 
 func _on_robertentrance_body_entered(body: Node2D) -> void:
-	if body == player:
-		area[1] = true
+	area[1] = true
+	$UI/corner/to_enter.visible = true
+
 
 func _on_robertentrance_body_exited(body: Node2D) -> void:
-	if body == player:
-		area[1] = false
+	area[1] = false
+	$UI/corner/to_enter.visible = false
+
 
 func _on_bakerentrance_body_entered(body: Node2D) -> void:
-	if body == player:
-		area[2] = true
+	area[2] = true
+	$UI/corner/to_enter.visible = true
+
 
 func _on_bakerentrance_body_exited(body: Node2D) -> void:
-	if body == player:
-		area[2] = false
+	area[2] = false
+	$UI/corner/to_enter.visible = false
+
 
 func _on_garrothentrance_body_entered(body: Node2D) -> void:
-	if body == player:
-		area[3] = true
+	area[3] = true
+	$UI/corner/to_enter.visible = true
+
 
 func _on_garrothentrance_body_exited(body: Node2D) -> void:
-	if body == player:
-		area[3] = false
+	area[3] = false
+	$UI/corner/to_enter.visible = false
+
 
 func _on_leaderentrance_body_entered(body: Node2D) -> void:
-	if body == player:
-		area[4] = true
+	area[4] = true
+	$UI/corner/to_enter.visible = true
+
 
 func _on_leaderentrance_body_exited(body: Node2D) -> void:
-	if body == player:
-		area[4] = false
+	area[4] = false
+	$UI/corner/to_enter.visible = false
+
 
 func _on_butcherentrance_body_entered(body: Node2D) -> void:
-	if body == player:
-		area[5] = true
+	area[5] = true
+	$UI/corner/to_enter.visible = true
+
 
 func _on_butcherentrance_body_exited(body: Node2D) -> void:
-	if body == player:
-		area[5] = false
+	area[5] = false
+	$UI/corner/to_enter.visible = false
