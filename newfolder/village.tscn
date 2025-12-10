@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
-[ext_resource type="PackedScene" path="res://game_scenes/ui.tscn" id="2_gvfp2"]
+[ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="2_gvfp2"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]
 [ext_resource type="Texture2D" uid="uid://chkqj235w1b1a" path="res://Assets/Texture/TX Props.png" id="4_xygwp"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
-[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
+[ext_resource type="PackedScene" uid="uid://dqa2p1ubdx7w5" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
@@ -5752,22 +5752,23 @@ z_index = 1
 position = Vector2(20, 51)
 shape = SubResource("RectangleShape2D_cmj78")
 
-[node name="map-border" type="Area2D" parent="."]
+[node name="map-borders" type="StaticBody2D" parent="."]
 collision_layer = 32
+collision_mask = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map-border"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map-borders"]
 position = Vector2(482.5, 6.5)
 shape = SubResource("RectangleShape2D_vcg3l")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="map-border"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="map-borders"]
 position = Vector2(-63.75, 343.5)
 shape = SubResource("RectangleShape2D_pqbve")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="map-border"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="map-borders"]
 position = Vector2(479.5, 676.75)
 shape = SubResource("RectangleShape2D_7q3ar")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="map-border"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="map-borders"]
 position = Vector2(1043, 348)
 shape = SubResource("RectangleShape2D_28mq4")
 
