@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
-[ext_resource type="PackedScene" path="res://game_scenes/ui.tscn" id="2_gvfp2"]
+[ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="2_gvfp2"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]
 [ext_resource type="Texture2D" uid="uid://chkqj235w1b1a" path="res://Assets/Texture/TX Props.png" id="4_xygwp"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
