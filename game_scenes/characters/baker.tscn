@@ -2,18 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_rnjnp"]
 [ext_resource type="Script" uid="uid://b1rukufd3a8qv" path="res://game_scenes/characters/baker.gd" id="2_r0iea"]
-[ext_resource type="Texture2D" uid="uid://mon8k4wdpyv7" path="res://Assets/NPCS/Villagers/isabelle/isabelle-back-stand.PNG" id="2_v7xcy"]
-[ext_resource type="Texture2D" uid="uid://c11qjbmbn1mdx" path="res://Assets/NPCS/Villagers/isabelle/isabelle-back-walk-2.PNG" id="3_r0iea"]
-[ext_resource type="Texture2D" uid="uid://clhan6gxivvh0" path="res://Assets/NPCS/Villagers/isabelle/isabelle-backwards-walk-1.PNG" id="4_o3ecm"]
-[ext_resource type="Texture2D" uid="uid://yfjaxa200wx0" path="res://Assets/NPCS/Villagers/isabelle/isabelle-forward-stand.PNG" id="5_wvrc2"]
-[ext_resource type="Texture2D" uid="uid://v6icwuxjtry2" path="res://Assets/NPCS/Villagers/isabelle/isabelle-forward-walk-1.PNG" id="6_dptyh"]
-[ext_resource type="Texture2D" uid="uid://dovvtal2qma83" path="res://Assets/NPCS/Villagers/isabelle/isabelle-forward-walk-2.PNG" id="7_l0i8i"]
-[ext_resource type="Texture2D" uid="uid://iwu64v8u6h51" path="res://Assets/NPCS/Villagers/isabelle/isabelle-left-stand.PNG" id="8_pvxcn"]
-[ext_resource type="Texture2D" uid="uid://5w78prmjjeck" path="res://Assets/NPCS/Villagers/isabelle/isabelle-left-walk-1.PNG" id="9_1dr0f"]
-[ext_resource type="Texture2D" uid="uid://cm6gem2dfcikl" path="res://Assets/NPCS/Villagers/isabelle/isabelle-left-walk-2.PNG" id="10_4mxpn"]
-[ext_resource type="Texture2D" uid="uid://crdplfi4xe1bi" path="res://Assets/NPCS/Villagers/isabelle/isabelle-right-stand.PNG" id="11_ldtfg"]
-[ext_resource type="Texture2D" uid="uid://cd0uwpn5unr3i" path="res://Assets/NPCS/Villagers/isabelle/isabelle-right-walk-1.PNG" id="12_kvh77"]
-[ext_resource type="Texture2D" uid="uid://df2gswl2se61x" path="res://Assets/NPCS/Villagers/isabelle/isabelle-right-walk-2.PNG" id="13_svy0j"]
+[ext_resource type="Texture2D" uid="uid://debh45swwobcm" path="res://Assets/NPCS/Villagers/isabelle/isabelle-back-stand.PNG" id="2_v7xcy"]
+[ext_resource type="Texture2D" uid="uid://cgpx7bmtxspok" path="res://Assets/NPCS/Villagers/isabelle/isabelle-back-walk-2.PNG" id="3_r0iea"]
+[ext_resource type="Texture2D" uid="uid://dyvccpybb1uhq" path="res://Assets/NPCS/Villagers/isabelle/isabelle-backwards-walk-1.PNG" id="4_o3ecm"]
+[ext_resource type="Texture2D" uid="uid://hq5cwf365dei" path="res://Assets/NPCS/Villagers/isabelle/isabelle-forward-stand.PNG" id="5_wvrc2"]
+[ext_resource type="Texture2D" uid="uid://dy8uuw2rrw1nd" path="res://Assets/NPCS/Villagers/isabelle/isabelle-forward-walk-1.PNG" id="6_dptyh"]
+[ext_resource type="Texture2D" uid="uid://qpm2lgxxmdhm" path="res://Assets/NPCS/Villagers/isabelle/isabelle-forward-walk-2.PNG" id="7_l0i8i"]
+[ext_resource type="Texture2D" uid="uid://dccf0qx80s145" path="res://Assets/NPCS/Villagers/isabelle/isabelle-left-stand.PNG" id="8_pvxcn"]
+[ext_resource type="Texture2D" uid="uid://cmgc8x4x2xyud" path="res://Assets/NPCS/Villagers/isabelle/isabelle-left-walk-1.PNG" id="9_1dr0f"]
+[ext_resource type="Texture2D" uid="uid://js02813r33vr" path="res://Assets/NPCS/Villagers/isabelle/isabelle-left-walk-2.PNG" id="10_4mxpn"]
+[ext_resource type="Texture2D" uid="uid://bn3n6ixovjlu" path="res://Assets/NPCS/Villagers/isabelle/isabelle-right-stand.PNG" id="11_ldtfg"]
+[ext_resource type="Texture2D" uid="uid://dokl6ehfhpcg2" path="res://Assets/NPCS/Villagers/isabelle/isabelle-right-walk-1.PNG" id="12_kvh77"]
+[ext_resource type="Texture2D" uid="uid://bri72q83x6ryg" path="res://Assets/NPCS/Villagers/isabelle/isabelle-right-walk-2.PNG" id="13_svy0j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yjoqj"]
 resource_local_to_scene = true
@@ -95,6 +95,7 @@ radius = 17.1172
 
 [node name="baker" instance=ExtResource("1_rnjnp")]
 script = ExtResource("2_r0iea")
+dialogic_timeline = "res://Dialogue stuff/bakertalk.dtl"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_yjoqj")
