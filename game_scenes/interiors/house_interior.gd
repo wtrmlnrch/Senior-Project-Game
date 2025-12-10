@@ -12,10 +12,17 @@ func _ready():
 	camera.limit_top = -45
 	camera.limit_bottom = -15
 	camera.zoom = Vector2(1.55, 1.55)
+	
+
 
 func _process(delta: float) -> void:
+	if Globals.is_night == true:
+		scene = load("res://newfolder/villageNight.tscn")
+	else:
+		scene = load("res://newfolder/village.tscn")
 	if exit_area == true and Input.is_action_just_pressed("Interact"):
 		get_tree().change_scene_to_packed(scene)
+	
 
 
 func _on_exit_body_entered(body: Node2D) -> void:

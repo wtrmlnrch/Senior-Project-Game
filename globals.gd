@@ -29,10 +29,13 @@ var npc_interacting_with = ""
 # ui stuff for tasks
 var day = 1
 var night = 0
+var is_night = false
 # doctor, robert, baker, garroth, sibling, holly, leader, butcher
 var npcs_talked_to_today = [false, false, false, false, false, false, false, false]
 var holly_is_dead = false
 
 
 var day_task_complete = [false, false, false]
+var all_tasks_day = false
+var all_tasks_night = false
 var night_task_complete = [false, false, false]
