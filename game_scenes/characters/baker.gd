@@ -28,15 +28,11 @@ func interact():
 		var current_scene = get_tree().current_scene.name
 		print("Current scene name: ", current_scene)
 		print("Speak variable: ", speak)
-		
 		if current_scene == "Village":
-			print("Starting bakertalk dialogue")
 			Dialogic.start("res://Dialogue stuff/bakertalk.dtl")
 		elif current_scene == "NightVillage":
-			print("Starting siblingtalk dialogue")
 			Dialogic.start(speak)
 		else:
-			print("Starting default dialogue")
 			Dialogic.start(dialogic_timeline)  
 			
 		special_talk_function()

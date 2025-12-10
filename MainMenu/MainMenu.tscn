@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://de0ik1lx1mq3r"]
+[gd_scene load_steps=17 format=3 uid="uid://de0ik1lx1mq3r"]
 
 [ext_resource type="Script" uid="uid://bp8cekkgv8v2h" path="res://MainMenu/main_menu.gd" id="1_7t2hb"]
 [ext_resource type="Texture2D" uid="uid://w78qwxk3a6gj" path="res://MainMenu/Graphics/Group 1 (1).png" id="1_lbqne"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dmaaw7n2y23e0" path="res://MainMenu/Graphics/Group 32.png" id="8_7t2hb"]
 [ext_resource type="Texture2D" uid="uid://mphbcfs3b04m" path="res://MainMenu/Graphics/Group 4.png" id="8_nxm3p"]
 [ext_resource type="Texture2D" uid="uid://bupw2o8045ucx" path="res://MainMenu/Graphics/Group 42.png" id="11_gej64"]
+[ext_resource type="AudioStream" uid="uid://dolulqhc421u4" path="res://Assets/Marko Maksimovic - For Lovers.mp3" id="15_gej64"]
 
 [sub_resource type="Theme" id="Theme_npjie"]
 default_font = ExtResource("1_npjie")
@@ -41,14 +42,17 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 32.77
-offset_top = -70.0
-offset_right = 438.77
-offset_bottom = 71.0
+offset_left = 49.0
+offset_top = -320.0
+offset_right = 455.0
+offset_bottom = 20.0
 grow_vertical = 2
 theme = SubResource("Theme_npjie")
-theme_override_font_sizes/normal_font_size = 60
-text = "Game Title"
+theme_override_colors/default_color = Color(0.588235, 0.4, 0.341176, 1)
+theme_override_colors/font_outline_color = Color(0.880415, 0.212594, 0.781902, 1)
+theme_override_colors/font_shadow_color = Color(0.794121, 0.794121, 0.794121, 1)
+theme_override_font_sizes/normal_font_size = 93
+text = "There is No Deer"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -101,6 +105,10 @@ layout_mode = 2
 texture_normal = ExtResource("4_3clmd")
 texture_pressed = ExtResource("11_gej64")
 texture_hover = ExtResource("8_nxm3p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_gej64")
+autoplay = true
 
 [connection signal="pressed" from="GridContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="GridContainer/Settings" to="." method="_on_settings_pressed"]
