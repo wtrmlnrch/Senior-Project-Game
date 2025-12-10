@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://b1nmxvt8pghu0"]
+[gd_scene load_steps=39 format=4 uid="uid://b1nmxvt8pghu0"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
 [ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
+[ext_resource type="AudioStream" uid="uid://cha6rt6dlmlv" path="res://Assets/game music.wav" id="14_4yj3c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
 texture = ExtResource("1_o7pqe")
@@ -5898,6 +5899,10 @@ position = Vector2(510, 349)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_4yj3c")
+autoplay = true
 
 [connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
 [connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]

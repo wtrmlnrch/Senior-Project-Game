@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dfnyr12jhfo5f"]
+[gd_scene load_steps=36 format=4 uid="uid://dfnyr12jhfo5f"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
+[ext_resource type="AudioStream" uid="uid://y1bp34c01a2p" path="res://Assets/game musicreverse.mp3" id="11_jt6bg"]
 [ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
 [ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="13_oximf"]
 
@@ -5872,6 +5873,10 @@ speak = "res://Dialogue stuff/butchernight1.dtl"
 color = Color(0.334359, 0.270973, 0.479658, 1)
 
 [node name="UI" parent="." instance=ExtResource("13_oximf")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_jt6bg")
+autoplay = true
 
 [connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
 [connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]
