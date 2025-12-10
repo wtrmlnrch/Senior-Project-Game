@@ -88,6 +88,5 @@ func _on_butcherentrance_body_exited(body: Node2D) -> void:
 		area[5] = false
 
 
-func _on_path_body_entered(body: Node2D) -> void:
-	if body == player:
-		get_tree().change_scene_to_packed(scene)
+func _on_path_body_entered(body):
+	pass # Replace with function body.

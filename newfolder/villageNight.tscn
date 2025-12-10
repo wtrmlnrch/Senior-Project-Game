@@ -5675,7 +5675,7 @@ size = Vector2(119, 323)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yj3c"]
 size = Vector2(27, 36)
 
-[node name="Village" type="Node2D"]
+[node name="NightVillage" type="Node2D"]
 script = ExtResource("1_u7pt4")
 
 [node name="tilesets" type="Node" parent="."]
@@ -5716,6 +5716,7 @@ position = Vector2(553, 279)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/bakertalk.dtl"
+speak = "res://Dialogue stuff/siblingtalk.dtl"
 
 [node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
 z_index = 1
@@ -5772,7 +5773,8 @@ shape = SubResource("RectangleShape2D_28mq4")
 [node name="MainCharacter" parent="." instance=ExtResource("5_fpftl")]
 position = Vector2(622, 129)
 scale = Vector2(0.5, 0.5)
-collision_mask = 2
+collision_layer = 15
+collision_mask = 15
 
 [node name="RiverCollisions" type="StaticBody2D" parent="."]
 collision_layer = 32

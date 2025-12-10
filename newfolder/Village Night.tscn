@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://cv8r6f8imq4wc"]
+[gd_scene load_steps=19 format=4 uid="uid://e6vjiladradn"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
