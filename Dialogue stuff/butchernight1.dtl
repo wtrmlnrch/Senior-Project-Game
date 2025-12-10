@@ -1,0 +1,22 @@
+Main_Char: Hey there Cylus, can't sleep either?
+Butcher (Idle): (the man turns to look at me, looking unintersted)
+Butcher (Idle): I'm working.
+Main_Char: Oh? Is that what that bag is for?
+Butcher (Idle): Yes. Now is that all? I have things to do.
+(do I want to speak to him more?)
+- keep talking...
+	Main_Char: Actually, I wanted to get to know you better.
+	Butcher (Idle): ...Why?
+	Main_Char: I'm just curious is all, being a butcher sounds like an interesting job.
+	Butcher (Idle): Hm..., it really isn't. They bring me meat, I chop the meat and get rid of the scraps.
+	Main_Char: How do you know what to cut?
+	Butcher (Idle): It's simple once you understand what part's you're cutting and the animal.
+	Butcher (Sad): We mostly get wolves and squirrels here, both easy once you understand them.
+	Main_Char: Oh, I see. Are there no other animals, like deer or cows?
+	Butcher (Happy): You're funny, there are no deer here unfortunatly.
+	Main_Char: Oh...Alright, well I'll see you later Cylus.
+	Main_Char: (The Butcher -Cylus- grunts and goes back to whatever it was he was doing.)
+	<Empty Text Event>
+- Let him leave...
+	Main_Char: (huh he's ready to just up and go again, seems he isn't too keen on people.)
+	Main_Char: (The Butcher goes back to what he was working on, and I promptly decide to leave.)

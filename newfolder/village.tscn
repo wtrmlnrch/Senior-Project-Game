@@ -5724,6 +5724,7 @@ position = Vector2(99, 301)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
+speak = "res://Dialogue stuff/butchernight1.dtl"
 
 [node name="Viewpoints" type="Node" parent="."]
 
