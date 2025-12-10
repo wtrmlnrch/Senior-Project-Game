@@ -3,6 +3,7 @@ extends Node2D
 @onready var camera = $MainCharacter/PlayerCamera
 @onready var tilemap = $tilesets/ground
 @onready var player = $MainCharacter
+@onready var ui = $UI
 
 var area
 var scenes
@@ -41,47 +42,59 @@ func _process(float)->void:
 
 func _on_clinicentrance_body_entered(body: Node2D) -> void:
 	area[0] = true
+	$UI/corner/to_enter.visible = true
 
 
 func _on_clinicentrance_body_exited(body: Node2D) -> void:
 	area[0] = false
+	$UI/corner/to_enter.visible = false
 
 
 func _on_robertentrance_body_entered(body: Node2D) -> void:
 	area[1] = true
+	$UI/corner/to_enter.visible = true
 
 
 func _on_robertentrance_body_exited(body: Node2D) -> void:
 	area[1] = false
+	$UI/corner/to_enter.visible = false
 
 
 func _on_bakerentrance_body_entered(body: Node2D) -> void:
 	area[2] = true
+	$UI/corner/to_enter.visible = true
 
 
 func _on_bakerentrance_body_exited(body: Node2D) -> void:
 	area[2] = false
+	$UI/corner/to_enter.visible = false
 
 
 func _on_garrothentrance_body_entered(body: Node2D) -> void:
 	area[3] = true
+	$UI/corner/to_enter.visible = true
 
 
 func _on_garrothentrance_body_exited(body: Node2D) -> void:
 	area[3] = false
+	$UI/corner/to_enter.visible = false
 
 
 func _on_leaderentrance_body_entered(body: Node2D) -> void:
 	area[4] = true
+	$UI/corner/to_enter.visible = true
 
 
 func _on_leaderentrance_body_exited(body: Node2D) -> void:
 	area[4] = false
+	$UI/corner/to_enter.visible = false
 
 
 func _on_butcherentrance_body_entered(body: Node2D) -> void:
 	area[5] = true
+	$UI/corner/to_enter.visible = true
 
 
 func _on_butcherentrance_body_exited(body: Node2D) -> void:
 	area[5] = false
+	$UI/corner/to_enter.visible = false

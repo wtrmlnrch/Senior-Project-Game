@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://6quxro4oxicl"]
+
+[ext_resource type="Texture2D" uid="uid://dl1gnpjl0n4qm" path="res://Assets/ui/checklist.PNG" id="1_3dfd2"]
+[ext_resource type="Script" uid="uid://bfer244u8c0p7" path="res://game_scenes/ui.gd" id="1_rkepv"]
+[ext_resource type="Texture2D" uid="uid://ccft0e84jp54f" path="res://Assets/ui/talk-to-villagers.PNG" id="2_1e0v0"]
+[ext_resource type="Texture2D" uid="uid://bye6mlcf1g8ar" path="res://Assets/ui/talk-to-the-survivors.PNG" id="3_ivf21"]
+[ext_resource type="Texture2D" uid="uid://x0wqd74jom63" path="res://Assets/ui/complete-task.PNG" id="4_1e0v0"]
+[ext_resource type="Texture2D" uid="uid://8ejt2t4f8o68" path="res://Assets/ui/check-on-the-forest.PNG" id="5_hjg6q"]
+[ext_resource type="Texture2D" uid="uid://bd6egijmlq67v" path="res://Assets/ui/check-on-the-river.PNG" id="6_bfejv"]
+[ext_resource type="Texture2D" uid="uid://onf2fxbareq" path="res://Assets/ui/check-on-the-path.PNG" id="7_n5iw8"]
+[ext_resource type="Texture2D" uid="uid://b1q4gb01dhd82" path="res://Assets/ui/you-already-collected-this.PNG" id="8_bfejv"]
+[ext_resource type="Texture2D" uid="uid://7vrm54ji7ivl" path="res://Assets/ui/e-to-enter.PNG" id="9_4tns7"]
+[ext_resource type="Texture2D" uid="uid://btc2c8a7h13f1" path="res://Assets/ui/e-to-talk.PNG" id="10_rkepv"]
+[ext_resource type="Texture2D" uid="uid://c7iri4vyelj3q" path="res://Assets/ui/e-to-grab.PNG" id="11_homwv"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_rkepv")
+
+[node name="Day-Checklist" type="VBoxContainer" parent="."]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -282.0
+offset_bottom = 220.0
+grow_horizontal = 0
+
+[node name="checklist" type="Sprite2D" parent="Day-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture_filter = 1
+texture = ExtResource("1_3dfd2")
+centered = false
+
+[node name="talk-to-villagers" type="Sprite2D" parent="Day-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture_filter = 1
+texture = ExtResource("2_1e0v0")
+centered = false
+
+[node name="talk-to-survivors" type="Sprite2D" parent="Day-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture_filter = 1
+texture = ExtResource("3_ivf21")
+centered = false
+
+[node name="complete" type="Sprite2D" parent="Day-Checklist"]
+visible = false
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture_filter = 1
+texture = ExtResource("4_1e0v0")
+centered = false
+
+[node name="Night-Checklist" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 870.0
+offset_right = 910.0
+offset_bottom = 40.0
+
+[node name="checklist" type="Sprite2D" parent="Night-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture = ExtResource("1_3dfd2")
+centered = false
+
+[node name="check_forest" type="Sprite2D" parent="Night-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture = ExtResource("5_hjg6q")
+centered = false
+
+[node name="check_river" type="Sprite2D" parent="Night-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture = ExtResource("6_bfejv")
+centered = false
+
+[node name="check_path" type="Sprite2D" parent="Night-Checklist"]
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture = ExtResource("7_n5iw8")
+centered = false
+
+[node name="corner" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.22
+anchor_top = 0.65
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="already_collected" type="Sprite2D" parent="corner"]
+visible = false
+modulate = Color(0, 0.12549, 0.0705882, 1)
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("8_bfejv")
+
+[node name="to_enter" type="Sprite2D" parent="corner"]
+visible = false
+modulate = Color(0, 0.12549, 0.0705882, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("9_4tns7")
+
+[node name="to_talk" type="Sprite2D" parent="corner"]
+visible = false
+modulate = Color(0, 0.12549, 0.0705882, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("10_rkepv")
+
+[node name="to_grab" type="Sprite2D" parent="corner"]
+visible = false
+modulate = Color(0, 0.12549, 0.0705882, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("11_homwv")

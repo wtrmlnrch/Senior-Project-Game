@@ -12,6 +12,7 @@ var globals_keys = [
 var is_near: bool = false
 signal isNear
 signal isGone
+var item_collected = false
 
 func _process(_delta):
 		if is_near and Input.is_action_just_pressed("Interact"):
