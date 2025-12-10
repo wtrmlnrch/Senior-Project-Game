@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://coopi0f76jm6t"
+path="res://.godot/imported/Sam Fourie - Epic Disasters - Airplane Turbulence in Thunderstorm Internal Perspective.wav-aad12852c338617910856c36513648c4.sample"
+
+[deps]
+
+source_file="res://Dialogue stuff/Sam Fourie - Epic Disasters - Airplane Turbulence in Thunderstorm Internal Perspective.wav"
+dest_files=["res://.godot/imported/Sam Fourie - Epic Disasters - Airplane Turbulence in Thunderstorm Internal Perspective.wav-aad12852c338617910856c36513648c4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

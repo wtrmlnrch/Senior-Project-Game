@@ -1,0 +1,29 @@
+audio music "res://Dialogue stuff/Benjamin Esterlis - You and I.wav"
+audio "res://Dialogue stuff/static.wav"
+[background arg="res://Assets/cutscenes/intro-1.PNG" fade="0.0" transition="Simple Fade"]
+Main_Char: Hey mom, me and Charlotte are about to board, everything at the airport went well.
+Main_Char: I just wanted to leave you a voice message before we take off to let you know that things are okay.
+[background arg="res://Assets/cutscenes/intro2.PNG" fade="0.0"]
+Main_Char: Thanks for letting me take her with me on my trip. I know she’s gonna love it in Holland, maybe she could even help with my research haha.
+Main_Char: It’s hard watching her grow up, but she’s 13 now, and she’s so excited to go out into the world and meet new people. This will be a great oppertunity for us both!
+Main_Char:  I wanted to apologize for the fight we had right before I left. What happened with dad isn’t your fault, I was just lashing out.
+Main_Char: You did the best you could with Charlotte and I, even if it meant taking me out of school, and  homeschooling me. I understand.
+Main_Char: Looks like we're about to board!
+[background arg="res://Assets/cutscenes/intro-3.PNG" fade="0.0"]
+Main_Char: I know you’re worried that Charlotte being homeschooled for her whole life is going to ruin her critical thinking, but I think this trip will really help her gain more perspective.
+Main_Char: Maybe she’ll even find out what she wants to do with her life.
+audio "res://Dialogue stuff/Sam Fourie - Epic Disasters - Airplane Turbulence in Thunderstorm Internal Perspective.wav"
+[background arg="res://Assets/cutscenes/intro-4.PNG" fade="0.0"]
+Main_Char: We're in our seat now. I'm getting nervous but it's exciting.
+Main_Char: Charlottes been really excited for this you know. It's very nice to see her be excited for something again.
+Main_Char: I think we're going to take off soon!
+[background arg="res://Assets/cutscenes/intro-5.PNG" fade="0.0"]
+Main_Char:  I heard the pilots mention something about a big storm in the usual flight path, so they’re taking a different route than normal.
+Main_Char:  I’ll call you as soon as we land so you know we made it just fine.
+audio "res://Dialogue stuff/Bjorn Lynne - Blasted - Big Explosion with Debris.wav"
+[background arg="res://Assets/cutscenes/intro-6.PNG" fade="0.0"]
+Main_Char: The seatbelt sign is coming on now, I think we’re getting close to takeoff.
+Main_Char: Charlotte fell asleep already, well I’d better put my phone in airplane mode.
+[background arg="res://Assets/cutscenes/intro-7.PNG" fade="0.0"]
+audio "res://Dialogue stuff/Blackguard Sound - Smash Pros - Collapsing Drywall.wav"
+Main_Char: Goodbye mom, I love you.

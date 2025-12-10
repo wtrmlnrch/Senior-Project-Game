@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cc8utfja0chx6"
+path="res://.godot/imported/Bjorn Lynne - Blasted - Big Explosion with Debris.wav-f59f04939e5849bfa35455f7ed961870.sample"
+
+[deps]
+
+source_file="res://Dialogue stuff/Bjorn Lynne - Blasted - Big Explosion with Debris.wav"
+dest_files=["res://.godot/imported/Bjorn Lynne - Blasted - Big Explosion with Debris.wav-f59f04939e5849bfa35455f7ed961870.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

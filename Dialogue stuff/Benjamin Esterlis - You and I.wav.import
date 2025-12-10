@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5qpxegtdh4dn"
+path="res://.godot/imported/Benjamin Esterlis - You and I.wav-19b0594d9bde192215e7ff1a8724dc39.sample"
+
+[deps]
+
+source_file="res://Dialogue stuff/Benjamin Esterlis - You and I.wav"
+dest_files=["res://.godot/imported/Benjamin Esterlis - You and I.wav-19b0594d9bde192215e7ff1a8724dc39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

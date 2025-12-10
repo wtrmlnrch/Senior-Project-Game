@@ -39,6 +39,7 @@ directories/dtl_directory={
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "leadertalk": "res://Dialogue stuff/leadertalk.dtl",
 "miniforest": "res://Dialogue stuff/miniforest.dtl",
+"opening": "res://Dialogue stuff/opening.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
 "talkbutcher": "res://Dialogue stuff/talkbutcher.dtl",
 "waking": "res://Dialogue stuff/waking.dtl"
