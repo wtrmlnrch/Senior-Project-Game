@@ -1,17 +1,13 @@
-[gd_scene load_steps=38 format=4 uid="uid://dfnyr12jhfo5f"]
+[gd_scene load_steps=34 format=4 uid="uid://dfnyr12jhfo5f"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
-[ext_resource type="PackedScene" uid="uid://c0oojjuka8x58" path="res://game_scenes/characters/baker.tscn" id="2_gvfp2"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]
 [ext_resource type="Texture2D" uid="uid://chkqj235w1b1a" path="res://Assets/Texture/TX Props.png" id="4_xygwp"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
-[ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
-[ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
 [ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
-[ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
 [ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="13_oximf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
@@ -5708,22 +5704,6 @@ tile_set = SubResource("TileSet_u7pt4")
 tile_map_data = PackedByteArray("AAAiABkAAAASAA8AAAAiABoAAAASABAAAAAiABsAAAASABEAAAAjABkAAAATAA8AAAAjABoAAAATABAAAAAjABsAAAATABEAAAAoABkAAAASAA8AAAAoABoAAAASABAAAAAoABsAAAASABEAAAApABkAAAATAA8AAAApABoAAAATABAAAAApABsAAAATABEAAAAvABkAAAASAA8AAAAvABoAAAASABAAAAAvABsAAAASABEAAAAwABkAAAATAA8AAAAwABoAAAATABAAAAAwABsAAAATABEAAAA1ABkAAAASAA8AAAA1ABoAAAASABAAAAA1ABsAAAASABEAAAA2ABkAAAATAA8AAAA2ABoAAAATABAAAAA2ABsAAAATABEAAAA7ABkAAAASAA8AAAA7ABoAAAASABAAAAA7ABsAAAASABEAAAA8ABkAAAATAA8AAAA8ABoAAAATABAAAAA8ABsAAAATABEAAABBABkAAAASAA8AAABBABoAAAASABAAAABBABsAAAASABEAAABCABkAAAATAA8AAABCABoAAAATABAAAABCABsAAAATABEAAABGABkAAAASAA8AAABGABoAAAASABAAAABGABsAAAASABEAAABHABkAAAATAA8AAABHABoAAAATABAAAABHABsAAAATABEAAAAiAB8AAAASAA8AAAAiACAAAAASABAAAAAiACEAAAASABEAAAAjAB8AAAATAA8AAAAjACAAAAATABAAAAAjACEAAAATABEAAAAoAB8AAAASAA8AAAAoACAAAAASABAAAAAoACEAAAASABEAAAApAB8AAAATAA8AAAApACAAAAATABAAAAApACEAAAATABEAAAAvAB8AAAASAA8AAAAvACAAAAASABAAAAAvACEAAAASABEAAAAwAB8AAAATAA8AAAAwACAAAAATABAAAAAwACEAAAATABEAAAA1AB8AAAASAA8AAAA1ACAAAAASABAAAAA1ACEAAAASABEAAAA2AB8AAAATAA8AAAA2ACAAAAATABAAAAA2ACEAAAATABEAAAA7AB8AAAASAA8AAAA7ACAAAAASABAAAAA7ACEAAAASABEAAAA8AB8AAAATAA8AAAA8ACAAAAATABAAAAA8ACEAAAATABEAAABBAB8AAAASAA8AAABBACAAAAASABAAAABBACEAAAASABEAAABCAB8AAAATAA8AAABCACAAAAATABAAAABCACEAAAATABEAAABGAB8AAAASAA8AAABGACAAAAASABAAAABGACEAAAASABEAAABHAB8AAAATAA8AAABHACAAAAATABAAAABHACEAAAATABEAAAAiACUAAAAOAA8AAAAiACYAAAAOABAAAAAiACcAAAAOABEAAAAjACUAAAAPAA8AAAAjACYAAAAPABAAAAAjACcAAAAPABEAAAAoACUAAAAOAA8AAAAoACYAAAAOABAAAAAoACcAAAAOABEAAAApACUAAAAPAA8AAAApACYAAAAPABAAAAApACcAAAAPABEAAAAvACUAAAAOAA8AAAAvACYAAAAOABAAAAAvACcAAAAOABEAAAAwACUAAAAPAA8AAAAwACYAAAAPABAAAAAwACcAAAAPABEAAAA1ACUAAAAOAA8AAAA1ACYAAAAOABAAAAA1ACcAAAAOABEAAAA2ACUAAAAPAA8AAAA2ACYAAAAPABAAAAA2ACcAAAAPABEAAAA7ACUAAAAOAA8AAAA7ACYAAAAOABAAAAA7ACcAAAAOABEAAAA8ACUAAAAPAA8AAAA8ACYAAAAPABAAAAA8ACcAAAAPABEAAABBACUAAAAOAA8AAABBACYAAAAOABAAAABBACcAAAAOABEAAABCACUAAAAPAA8AAABCACYAAAAPABAAAABCACcAAAAPABEAAABGACUAAAAOAA8AAABGACYAAAAOABAAAABGACcAAAAOABEAAABHACUAAAAPAA8AAABHACYAAAAPABAAAABHACcAAAAPABEAAAAiACoAAAAOAA8AAAAiACsAAAAOABAAAAAiACwAAAAOABEAAAAjACoAAAAPAA8AAAAjACsAAAAPABAAAAAjACwAAAAPABEAAAAoACoAAAAOAA8AAAAoACsAAAAOABAAAAAoACwAAAAOABEAAAApACoAAAAPAA8AAAApACsAAAAPABAAAAApACwAAAAPABEAAAAvACoAAAAOAA8AAAAvACsAAAAOABAAAAAvACwAAAAOABEAAAAwACoAAAAPAA8AAAAwACsAAAAPABAAAAAwACwAAAAPABEAAAA1ACoAAAAOAA8AAAA1ACsAAAAOABAAAAA1ACwAAAAOABEAAAA2ACoAAAAPAA8AAAA2ACsAAAAPABAAAAA2ACwAAAAPABEAAAA7ACoAAAAOAA8AAAA7ACsAAAAOABAAAAA7ACwAAAAOABEAAAA8ACoAAAAPAA8AAAA8ACsAAAAPABAAAAA8ACwAAAAPABEAAABBACoAAAAOAA8AAABBACsAAAAOABAAAABBACwAAAAOABEAAABCACoAAAAPAA8AAABCACsAAAAPABAAAABCACwAAAAPABEAAABGACoAAAAOAA8AAABGACsAAAAOABAAAABGACwAAAAOABEAAABHACoAAAAPAA8AAABHACsAAAAPABAAAABHACwAAAAPABEAAAA=")
 tile_set = SubResource("TileSet_gvfp2")
 
-[node name="baker" parent="." instance=ExtResource("2_gvfp2")]
-light_mask = 1023
-visibility_layer = 1023
-z_index = 1
-texture_filter = 1
-position = Vector2(553, 279)
-scale = Vector2(0.5, 0.5)
-collision_layer = 2
-
-[node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
-z_index = 1
-position = Vector2(99, 301)
-scale = Vector2(0.5, 0.5)
-collision_layer = 2
-dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
-
 [node name="Viewpoints" type="Node" parent="."]
 
 [node name="Forest" type="Area2D" parent="Viewpoints"]
@@ -5875,26 +5855,12 @@ collision_layer = 32
 position = Vector2(191, 285)
 shape = SubResource("RectangleShape2D_4yj3c")
 
-[node name="leader" parent="." instance=ExtResource("10_vcg3l")]
-z_index = 1
-position = Vector2(324, 305)
-scale = Vector2(0.5, 0.5)
-collision_layer = 2
-dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
-
 [node name="Robert" parent="." instance=ExtResource("11_pqbve")]
 z_index = 1
-position = Vector2(678, 272)
+position = Vector2(323, 248)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Assets/NPCS/Villagers/leader/butchertalk.dtl"
-
-[node name="Sibling" parent="." instance=ExtResource("12_7q3ar")]
-z_index = 1
-position = Vector2(510, 349)
-scale = Vector2(0.5, 0.5)
-collision_layer = 2
-dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.334359, 0.270973, 0.479658, 1)
