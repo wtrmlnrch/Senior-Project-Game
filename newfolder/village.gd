@@ -5,7 +5,8 @@ extends Node2D
 @onready var ui = $UI
 
 var area
-var scenes
+var scenes 
+var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
 
 func _ready():
 	var used_rect = tilemap.get_used_rect()
@@ -97,3 +98,7 @@ func _on_butcherentrance_body_entered(body: Node2D) -> void:
 func _on_butcherentrance_body_exited(body: Node2D) -> void:
 	area[5] = false
 	$UI/corner/to_enter.visible = false
+
+
+func _on_path_body_entered(body):
+	pass # Replace with function body.

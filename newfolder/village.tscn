@@ -5718,6 +5718,7 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 81
 dialogic_timeline = "res://Dialogue stuff/bakertalk.dtl"
+speak = "res://Dialogue stuff/siblingtalk.dtl"
 
 [node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
 z_index = 1
@@ -5733,7 +5734,7 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Viewpoints/Forest"]
 z_index = 1
-position = Vector2(19.5, 55.5)
+position = Vector2(939, 307)
 shape = SubResource("RectangleShape2D_v7po3")
 
 [node name="River" type="Area2D" parent="Viewpoints"]
@@ -5749,7 +5750,7 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Viewpoints/Path"]
 z_index = 1
-position = Vector2(966, 321)
+position = Vector2(20, 51)
 shape = SubResource("RectangleShape2D_cmj78")
 
 [node name="map-border" type="Area2D" parent="."]
@@ -5898,6 +5899,8 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
 
+[connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
+[connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]
 [connection signal="body_exited" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_exited"]
 [connection signal="body_entered" from="house-entrances/robert-entrance" to="." method="_on_robertentrance_body_entered"]
