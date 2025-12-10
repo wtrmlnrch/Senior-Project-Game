@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bx0bpy23f5gek"]
+[gd_scene load_steps=16 format=4 uid="uid://ifxwfd6iox6i"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_fqx2k"]
 [ext_resource type="Script" uid="uid://baf4uv6rrxsmm" path="res://newfolder/forest_night.gd" id="1_ljn3v"]
@@ -5978,7 +5978,7 @@ size = Vector2(89, 643)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i43eh"]
 size = Vector2(1233.5, 114)
 
-[node name="forest" type="Node2D"]
+[node name="forest2" type="Node2D"]
 script = ExtResource("1_ljn3v")
 
 [node name="ground" type="TileMapLayer" parent="."]
@@ -6020,3 +6020,6 @@ shape = SubResource("RectangleShape2D_gp4bw")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="mapborders"]
 position = Vector2(567.25, 729)
 shape = SubResource("RectangleShape2D_i43eh")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.293935, 0.27272, 0.531244, 1)
