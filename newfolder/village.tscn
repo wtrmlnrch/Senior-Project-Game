@@ -5731,7 +5731,7 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Viewpoints/Forest"]
 z_index = 1
-position = Vector2(19.5, 55.5)
+position = Vector2(939, 307)
 shape = SubResource("RectangleShape2D_v7po3")
 
 [node name="River" type="Area2D" parent="Viewpoints"]
@@ -5747,7 +5747,7 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Viewpoints/Path"]
 z_index = 1
-position = Vector2(966, 321)
+position = Vector2(20, 51)
 shape = SubResource("RectangleShape2D_cmj78")
 
 [node name="map-border" type="Area2D" parent="."]
