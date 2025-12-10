@@ -5715,7 +5715,6 @@ texture_filter = 1
 position = Vector2(553, 279)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
-dialogic_timeline = "res://Dialogue stuff/bakertalk.dtl"
 speak = "res://Dialogue stuff/siblingtalk.dtl"
 
 [node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
