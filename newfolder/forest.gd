@@ -4,6 +4,8 @@ extends Node2D
 @onready var player = $MainCharacter
 @onready var camera = $MainCharacter/PlayerCamera
 
+var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
+
 func _ready():
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
@@ -16,3 +18,8 @@ func _ready():
 	player.max_speed = 65
 	player.speed = player.max_speed
 	camera.zoom = Vector2(2.50, 2.50)
+
+
+func _on_level_0_body_entered(body: Node2D) -> void:
+	if body == player:
+		get_tree().change_scene_to_packed(scene)

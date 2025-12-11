@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://l3cja8wa6fl1"]
+[gd_scene load_steps=17 format=4 uid="uid://l3cja8wa6fl1"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_fqx2k"]
 [ext_resource type="Script" uid="uid://clmwl3tdsx6f2" path="res://newfolder/forest.gd" id="1_gnrlw"]
@@ -5978,6 +5978,9 @@ size = Vector2(89, 643)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bofyg"]
 size = Vector2(1233.5, 114)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_541sn"]
+size = Vector2(50, 50)
+
 [node name="forest" type="Node2D"]
 script = ExtResource("1_gnrlw")
 
@@ -6020,3 +6023,11 @@ shape = SubResource("RectangleShape2D_y03gf")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="mapborders"]
 position = Vector2(567.25, 729)
 shape = SubResource("RectangleShape2D_bofyg")
+
+[node name="level0" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level0"]
+position = Vector2(-57, 460)
+shape = SubResource("RectangleShape2D_541sn")
+
+[connection signal="body_entered" from="level0" to="." method="_on_level_0_body_entered"]

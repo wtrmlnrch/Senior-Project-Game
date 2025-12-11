@@ -5647,7 +5647,7 @@ physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_v7po3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7po3"]
-size = Vector2(69, 49)
+size = Vector2(88.5, 70.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gvfp2"]
 size = Vector2(60, 62)
@@ -5731,7 +5731,7 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Viewpoints/Forest"]
 z_index = 1
-position = Vector2(939, 307)
+position = Vector2(948.75, 317.75)
 shape = SubResource("RectangleShape2D_v7po3")
 
 [node name="River" type="Area2D" parent="Viewpoints"]
@@ -5750,8 +5750,9 @@ z_index = 1
 position = Vector2(20, 51)
 shape = SubResource("RectangleShape2D_cmj78")
 
-[node name="map-border" type="Area2D" parent="."]
-collision_layer = 32
+[node name="map-border" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map-border"]
 position = Vector2(482.5, 6.5)
@@ -5772,8 +5773,6 @@ shape = SubResource("RectangleShape2D_28mq4")
 [node name="MainCharacter" parent="." instance=ExtResource("5_fpftl")]
 position = Vector2(622, 129)
 scale = Vector2(0.5, 0.5)
-collision_layer = 15
-collision_mask = 15
 
 [node name="RiverCollisions" type="StaticBody2D" parent="."]
 collision_layer = 32

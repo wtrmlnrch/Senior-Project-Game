@@ -7,6 +7,7 @@ extends Node2D
 var area
 var scenes 
 var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
+var in_forest = false
 
 func _ready():
 	var used_rect = tilemap.get_used_rect()
@@ -39,6 +40,9 @@ func _process(float) -> void:
 			if area[i] == true:
 				get_tree().change_scene_to_packed(scenes[i])
 				return
+	
+	if in_forest == true and Input.is_action_just_pressed("Interact"):
+		get_tree().change_scene_to_packed(scene)
 
 func _on_clinicentrance_body_entered(body: Node2D) -> void:
 	area[0] = true
@@ -102,3 +106,11 @@ func _on_butcherentrance_body_exited(body: Node2D) -> void:
 
 func _on_path_body_entered(body):
 	pass # Replace with function body.
+
+
+func _on_forest_body_entered(body: Node2D) -> void:
+	in_forest = true
+
+
+func _on_forest_body_exited(body: Node2D) -> void:
+	in_forest = false
