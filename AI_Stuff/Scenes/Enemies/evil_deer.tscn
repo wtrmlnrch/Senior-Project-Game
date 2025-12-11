@@ -3,6 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://b1ue1rq4jgj2" path="res://AI_Stuff/Assets/Enemy Sprites/deerSprites.png" id="1_jjqo7"]
 [ext_resource type="Script" uid="uid://cunx6fipd2mls" path="res://AI_Stuff/Scenes/Enemies/evil_deer.gd" id="1_pqx6f"]
 
+[sub_resource type="Animation" id="Animation_pqx6f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_jjqo7"]
 resource_name = "head moving"
 loop_mode = 2
@@ -19,21 +34,6 @@ tracks/0/keys = {
 "values": [0, 1, 3, 4, 2]
 }
 
-[sub_resource type="Animation" id="Animation_pqx6f"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lw4tm"]
 _data = {
 &"RESET": SubResource("Animation_pqx6f"),
@@ -43,7 +43,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_pqx6f"]
 radius = 187.017
 
-[node name="EvilDeer" type="Node2D"]
+[node name="EvilDeer" type="Node2D" groups=["deer"]]
 script = ExtResource("1_pqx6f")
 
 [node name="Body" type="Node2D" parent="."]

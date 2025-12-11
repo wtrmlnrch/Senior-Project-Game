@@ -3,8 +3,8 @@ extends CharacterBody2D
 @export var max_speed: int = 100
 var speed: int
 
-
 @export var hunger_bar: TextureProgressBar
+@export var health_bar: TextureProgressBar
 
 # movement and hiding variables
 var can_move: bool = true
@@ -14,6 +14,9 @@ var is_hidden: bool = false
 func _ready():
 	speed = max_speed
 	Globals.hunger = Globals.max_hunger
+	for deer in get_tree().get_nodes_in_group("deer"):
+		deer.haunting_cry_entry.connect(_on_deer_haunting_cry_entry)
+		deer.haunting_cry_exit.connect(_on_deer_haunting_cry_exit)
 
 func _process(delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -49,6 +52,15 @@ var is_facing_back: bool = false
 var is_facing_right: bool = false
 var is_facing_left: bool = false
 
+# for dialogue I think
+#func _input(event: InputEvent):
+	#if Dialogic.current_timeline != null:
+		#return
+	#if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
+		#Dialogic.start('dialogueA')
+		#get_viewport().set_input_as_handled()
+	#
+		#
 
 
 # Handles player movement, plays the correct animation
@@ -110,3 +122,15 @@ func make_visible():
 	set_collision_mask_value(2, true)
 	$AnimatedSprite2D.visible = true
 	can_move = true
+
+func _on_deer_haunting_cry_entry(player):
+	print("test")
+	if player == self:
+		slow_player()
+
+func _on_deer_haunting_cry_exit(player):
+	if player == self:
+		speed = max_speed
+
+func slow_player():
+	speed = max_speed/2

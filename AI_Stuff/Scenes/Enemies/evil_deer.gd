@@ -7,7 +7,8 @@ var teleportation_time : float = 0.0
 
 var just_tpd : bool = false
 
-signal haunting_cry
+signal haunting_cry_entry(player)
+signal haunting_cry_exit(player)
 
 func _ready():
 	$Body/AnimationPlayer.play("head moving")
@@ -34,4 +35,10 @@ func _process(delta):
 
 
 func _on_area_2d_body_entered(body):
-	emit_signal("haunting_cry")
+	if body.is_in_group("player"):
+		emit_signal("haunting_cry_entry", body)
+
+
+func _on_area_2d_body_exited(body):
+	if body.is_in_group("player"):
+		emit_signal("haunting_cry_exit", body)
