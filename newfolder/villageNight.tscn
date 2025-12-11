@@ -5862,6 +5862,7 @@ scale = Vector2(0.5, 0.5)
 dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
 speak = "res://Dialogue stuff/butchernight1.dtl"
 day2 = "res://Dialogue stuff/Butchertalkday2.dtl"
+finalday = "res://Dialogue stuff/butcherFinalSpeak.dtl"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.334359, 0.270973, 0.479658, 1)

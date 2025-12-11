@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
-[ext_resource type="PackedScene" uid="uid://dqa2p1ubdx7w5" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
+[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
 [ext_resource type="AudioStream" uid="uid://cha6rt6dlmlv" path="res://Assets/game music.wav" id="14_4yj3c"]
 [ext_resource type="PackedScene" uid="uid://cmvqsqbvlv6ub" path="res://newfolder/Scenes/MinimumViableProduct/hotbar.tscn" id="15_5nata"]
@@ -5900,8 +5900,6 @@ z_index = 1
 position = Vector2(510, 349)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
-dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
-speak = "res://Dialogue stuff/siblingtalk2.dtl"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4yj3c")
