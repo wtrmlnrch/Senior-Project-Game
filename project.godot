@@ -36,7 +36,9 @@ directories/dtl_directory={
 "ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",
 "GarrothNight": "res://Dialogue stuff/GarrothNight.dtl",
 "GarrothTalk": "res://Dialogue stuff/GarrothTalk.dtl",
+"Roberttalk2": "res://Dialogue stuff/Roberttalk2.dtl",
 "bakertalk": "res://Dialogue stuff/bakertalk.dtl",
+"bakertalk2": "res://Dialogue stuff/bakertalk2.dtl",
 "butchernight1": "res://Dialogue stuff/butchernight1.dtl",
 "butchertalk": "res://Assets/NPCS/Villagers/leader/butchertalk.dtl",
 "deertalk": "res://Dialogue stuff/deertalk.dtl",
@@ -45,6 +47,7 @@ directories/dtl_directory={
 "miniforest": "res://Dialogue stuff/miniforest.dtl",
 "opening": "res://Dialogue stuff/opening.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
+"siblingtalk2": "res://Dialogue stuff/siblingtalk2.dtl",
 "talkbutcher": "res://Dialogue stuff/talkbutcher.dtl",
 "waking": "res://Dialogue stuff/waking.dtl"
 }

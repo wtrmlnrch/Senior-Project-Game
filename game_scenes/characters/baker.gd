@@ -1,7 +1,7 @@
 extends npc
 var player_in_range = false
 @export var dialogic_timeline: String = "res://Dialogue stuff/bakertalk.dtl"
-@export var speak: String = "res://Dialogue stuff/siblingtalk.dtl"
+@export var speak: String = "res://Dialogue stuff/bakertalk2.dtl"
 
 func _ready():
 	npc_name = "Sister Betsy"
@@ -26,11 +26,9 @@ func _on_area_exited(body):
 func interact():
 	if player_in_range:
 		var current_scene = get_tree().current_scene.name
-		print("Current scene name: ", current_scene)
-		print("Speak variable: ", speak)
 		if current_scene == "Village":
 			Dialogic.start("res://Dialogue stuff/bakertalk.dtl")
-		elif current_scene == "NightVillage":
+		elif current_scene == "Village2":
 			Dialogic.start(speak)
 		else:
 			Dialogic.start(dialogic_timeline)  

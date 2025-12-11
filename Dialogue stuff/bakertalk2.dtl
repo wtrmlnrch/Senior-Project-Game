@@ -1,0 +1,13 @@
+Main_Char: Hi Betsy, Good morning!
+Baker (happy): Oh hey there! How do you do!
+Main_Char: I'm good! How are you!
+Baker (happy): I'm doing well, just collected some seeds from around here.
+Main_Char: Oh thats what you're doing, I was curious what you were doing back here.
+audio "res://Dialogue stuff/static.wav"
+Baker (Idle): Well...curiosity killed the cat.
+Baker (happy): haha anyways, what are you up to!
+Main_Char: (...)
+Main_Char: ...Nothing much! Just walking around saying hi to everyone.
+Baker (happy): Well how sweet of you! Well, run along now, I got to get back to collecting these seeds!
+Main_Char: Oh! Well I'll see you later then.
+Main_Char: (The Baker smiles and waves and goes back to picking seeds)
