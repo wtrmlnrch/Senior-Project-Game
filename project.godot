@@ -32,6 +32,7 @@ directories/dch_directory={
 "sibling": "res://Dialogue stuff/sibling.dch"
 }
 directories/dtl_directory={
+"Butchertalkday2": "res://Dialogue stuff/Butchertalkday2.dtl",
 "Dialogue stuff/butchertalk": "res://Dialogue stuff/butchertalk.dtl",
 "ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",
 "GarrothNight": "res://Dialogue stuff/GarrothNight.dtl",
@@ -44,6 +45,7 @@ directories/dtl_directory={
 "deertalk": "res://Dialogue stuff/deertalk.dtl",
 "doctalk": "res://Dialogue stuff/doctalk.dtl",
 "leadertalk": "res://Dialogue stuff/leadertalk.dtl",
+"leadertalkday2": "res://Dialogue stuff/leadertalkday2.dtl",
 "miniforest": "res://Dialogue stuff/miniforest.dtl",
 "opening": "res://Dialogue stuff/opening.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",

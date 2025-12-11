@@ -1,0 +1,24 @@
+Main_Char: Good morning Mary!
+leader (idle): Hello there! How'd you sleep!
+Main_Char: I slept well! What're you doing?
+leader (idle): Oh I'm just wandering...
+Main_Char: That sounds fun!
+Main_Char: (should I tell her about the deer? It might not be a good idea)
+- the deer...
+	Main_Char: I went out last night...and I saw this weird deer...
+	leader (disgust): why did you do that? Are you trying to leave?
+	Main_Char: No no of course not! I just wanted to take a walk!
+	leader (idle): I see...and a deer you say?
+	Main_Char: Yeah...I felt as if it was looking at me...
+	leader (idle): Maybe it wants to be your friend...
+	leader (thinking): Theres no deer on this island...it must be lonely. You should...
+	[background arg="res://Assets/NPCS/Villagers/leader/leader-smile-dialogue.PNG" fade="1.1" transition="Push Left"]
+	leader (smile): ...go up to it, be its friend. It's the kind thing to do.
+	Main_Char: (she gives me no time to respond, and just leaves....weird)
+- don't say...
+	Main_Char: Well, I'll see you later Mary!
+	leader (thinking): Oh? You don't have anything to tell me?
+	Main_Char: (no way she knows...how would she know)
+	Main_Char: Um...No?
+	leader (thinking): Well...it can't be helped. See you later.
+	Main_Char: (The glint in her eye scared me, but I just walked away.)

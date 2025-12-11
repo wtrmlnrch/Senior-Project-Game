@@ -1,0 +1,26 @@
+Main_Char: Hey good morning Cylus!
+Butcher (Idle): Hello. Did you need something?
+Main_Char: Just saying hi!
+Butcher (Idle): Hi.
+Main_Char: (actually, I should ask him about the deer, he did say there wasn't any deer on the island.)
+- mention the deer...
+	Main_Char: Hey Cylus, I thought you said there's no deer on this island.
+	Butcher (Idle): ...There isnt...
+	Main_Char: I saw one though.
+	Butcher (shocked): No...thats not possible.
+	Butcher (Sad): I-...
+	Butcher (Sad): You saw it...damnit...
+	Main_Char: ( I couldn't hear what he said, it could barely be called something said under his breath)
+	Main_Char: Sorry Cylus, what'd you say? Are you alright?
+	Main_Char: (Cylus composes himself before he looks back down at me.)
+	Butcher (Sad): Sorry, I was trying to say you should...be careful in that forest.
+	Butcher (Sad): Sometimes this places drives you a bit...stir crazy, you might see things that aren't there.
+	Main_Char: Like the deer...?
+	Main_Char: (Cylus pauses for a moment, as if to think)
+	Butcher (Sad): ...Yes exactly that. I wouldn't tell anyone else about that deer, don't want them thinkng you're crazy.
+	Butcher (Sad): Just...be more careful in the future. Maybe that deer you think you saw was a crazed wolf...I'd stay away from that if I was you.
+	Main_Char: Alright Cylus, I understand. Thank you for the warning!
+	Main_Char: (I smile and wave as I walk away but I could tell he was concerned. He wasn't telling me something, I could tell.)
+- don't mention it...
+	Main_Char: Well, have a good day Cylus!
+	Main_Char: (he nods to me as he turns away.)

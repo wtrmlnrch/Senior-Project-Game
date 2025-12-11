@@ -27,7 +27,6 @@ func interact():
 	if player_in_range:
 		var current_scene = get_tree().current_scene.name
 		if current_scene == "Village":
-			print("meow")
 			Dialogic.start(dialogic_timeline)
 		elif current_scene == "Village2":
 			Dialogic.start(speak)
