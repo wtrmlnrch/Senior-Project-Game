@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dc13vnjyh440w"]
+[gd_scene load_steps=4 format=3 uid="uid://dc13vnjyh440w"]
 
 [ext_resource type="PackedScene" uid="uid://bx5lc4py85ape" path="res://AI_Stuff/Scenes/Enemies/evil_wolf_manager.tscn" id="1_rh6oy"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_3yne0"]
+[ext_resource type="PackedScene" uid="uid://dnekeiuqiqtuc" path="res://AI_Stuff/Scenes/Enemies/evil_deer.tscn" id="3_niqg2"]
 
 [node name="CaveScene" type="Node2D"]
 
@@ -9,3 +10,6 @@
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_3yne0")]
 position = Vector2(28, 367)
+
+[node name="EvilDeer" parent="." instance=ExtResource("3_niqg2")]
+position = Vector2(41, 313)

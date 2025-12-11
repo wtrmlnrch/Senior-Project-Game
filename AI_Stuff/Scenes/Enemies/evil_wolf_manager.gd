@@ -10,12 +10,11 @@ var astargrid_roam = AStarGrid2D.new()
 
 var random_point : Vector2
 
-
 func _ready() -> void:
 	wolves = $Wolves.get_children()
-	
 	initialize_roam()
-	
+
+# continuely lets the wolves roam
 func _process(_delta):
 	for wolf in wolves:
 		if !wolf.is_moving_on_path:
@@ -31,6 +30,7 @@ func initialize_roam():
 	astargrid_roam.default_compute_heuristic = AStarGrid2D.HEURISTIC_MANHATTAN
 	astargrid_roam.update()
 	
+	# removes empty spaces from traversal
 	for x in range(used_rect.position.x, used_rect.end.x):
 		for y in range(used_rect.position.y, used_rect.end.y):
 			var cell_coords = Vector2i(x, y)
@@ -41,6 +41,7 @@ func initialize_roam():
 				astargrid_roam.set_point_solid(cell_coords, false)
 
 
+# calculates the roaming path using the built in A* grid
 func recalculate_roam(enemy_initial_pos) -> PackedVector2Array:
 	var path = []
 	var floor_tiles = regular_tilemap_layer.get_used_cells()
@@ -55,7 +56,8 @@ func recalculate_roam(enemy_initial_pos) -> PackedVector2Array:
 		path[i] = path[i]+Vector2(32,32)
 	
 	return path
-		
+
+
 # makes the wolf move using a calculated path
 func wolf_move(wolf):
 	wolf.set_path(recalculate_roam(wolf.global_position))
