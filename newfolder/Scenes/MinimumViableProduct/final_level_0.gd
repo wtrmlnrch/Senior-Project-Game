@@ -7,6 +7,7 @@ extends Node2D
 var scene = load("res://newfolder/village.tscn")
 var forest_scene = load("res://newfolder/forest.tscn")
 var forest_area = false
+var cave = load("res://AI_Stuff/Scenes/Maps/cave_scene.tscn")
 # Comment to let me merge
 
 	
@@ -45,3 +46,8 @@ func _on_forestentrance_body_entered(body: Node2D) -> void:
 
 func _on_forestentrance_body_exited(body: Node2D) -> void:
 	forest_area = false
+
+
+func _on_caveentrance_body_entered(body: Node2D) -> void:
+	if body == player:
+		get_tree().change_scene_to_packed(cave)

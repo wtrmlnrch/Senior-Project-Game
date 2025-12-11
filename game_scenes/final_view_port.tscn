@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://caesv7euiyv05"]
+[gd_scene load_steps=3 format=3 uid="uid://caesv7euiyv05"]
 
 [ext_resource type="Texture2D" uid="uid://6tiyaeo4brhi" path="res://Assets/cutscenes/forest-cg.PNG" id="1_xkrnj"]
+[ext_resource type="Texture2D" uid="uid://b1ue1rq4jgj2" path="res://AI_Stuff/Assets/Enemy Sprites/deerSprites.png" id="2_o0jnm"]
 
 [node name="FinalViewPort" type="Node2D"]
 
@@ -8,3 +9,25 @@
 position = Vector2(583.5, 334.5)
 scale = Vector2(2.04167, 1.7075)
 texture = ExtResource("1_xkrnj")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 26.0
+offset_top = 324.0
+offset_right = 693.0
+offset_bottom = 649.0
+theme_override_font_sizes/font_size = 25
+text = "As I gaze out into the seemingly endless forest, I pray 
+that this is all a dream, and I wake up soon. I'm sorry 
+mom, I'm sorry that I couldn't protect Charlotte. But 
+that's all over now. The beauty of this deer is 
+captivating, and a voice in my head tells me it is only 
+here to keep me safe. I open my arms and embrace 
+the inevitable.
+"
+editable = false
+
+[node name="DeerSprites" type="Sprite2D" parent="."]
+modulate = Color(0.597176, 0.597176, 0.597176, 1)
+position = Vector2(1474.5, 626.5)
+scale = Vector2(7.35938, 8.17969)
+texture = ExtResource("2_o0jnm")

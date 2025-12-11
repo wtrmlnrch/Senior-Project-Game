@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://ngtxgihuwjhd"]
+[gd_scene load_steps=19 format=4 uid="uid://ngtxgihuwjhd"]
 
 [ext_resource type="Script" uid="uid://cblm3j6j4u7hl" path="res://newfolder/Scenes/MinimumViableProduct/final_level_0.gd" id="1_5mpgt"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_sy7jo"]
@@ -4595,6 +4595,9 @@ size = Vector2(600, 91)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vghvt"]
 size = Vector2(497, 92)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lthah"]
+size = Vector2(66, 44)
+
 [node name="Level0Snow" type="Node2D"]
 script = ExtResource("1_5mpgt")
 
@@ -4643,7 +4646,7 @@ collision_layer = 32
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorders/TopBorder"]
-position = Vector2(576, -17)
+position = Vector2(578, -44)
 shape = SubResource("RectangleShape2D_w8pwn")
 
 [node name="RightBorder" type="StaticBody2D" parent="CollisionBorders"]
@@ -4686,4 +4689,11 @@ scale = Vector2(0.6, 0.6)
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.294118, 0.27451, 0.529412, 1)
 
+[node name="Cave-entrance" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cave-entrance"]
+position = Vector2(272, 0)
+shape = SubResource("RectangleShape2D_lthah")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Cave-entrance" to="." method="_on_caveentrance_body_entered"]

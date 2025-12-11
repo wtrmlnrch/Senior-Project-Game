@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="11_bx512"]
 [ext_resource type="AudioStream" uid="uid://y1bp34c01a2p" path="res://Assets/game musicreverse.mp3" id="11_jt6bg"]
 [ext_resource type="PackedScene" uid="uid://c0oojjuka8x58" path="res://game_scenes/characters/baker.tscn" id="12_50ks4"]
-[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="14_uxp81"]
+[ext_resource type="PackedScene" uid="uid://dqa2p1ubdx7w5" path="res://game_scenes/characters/daniel.tscn" id="14_uxp81"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="15_jsed8"]
 [ext_resource type="Texture2D" uid="uid://dwwn6muqtyt04" path="res://ddeer.png" id="16_50ks4"]
 
