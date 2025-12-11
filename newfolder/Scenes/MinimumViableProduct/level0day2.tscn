@@ -4599,7 +4599,7 @@ size = Vector2(497, 92)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sgog"]
 size = Vector2(105, 104)
 
-[node name="Level0Snow" type="Node2D"]
+[node name="Level0Snow2" type="Node2D"]
 script = ExtResource("1_sd5nv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
