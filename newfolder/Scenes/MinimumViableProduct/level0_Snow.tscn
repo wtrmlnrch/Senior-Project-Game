@@ -4668,6 +4668,7 @@ tile_map_data = PackedByteArray("AAAlAAwAAAAnABsAAAAlAA0AAAAnABwAAAAlAA4AAAAnAB0
 tile_set = SubResource("TileSet_5oot1")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(21, 575)
@@ -4727,6 +4728,7 @@ position = Vector2(84, 567)
 scale = Vector2(0.6, 0.6)
 
 [node name="forest-entrance" type="Area2D" parent="."]
+collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="forest-entrance"]
 position = Vector2(738.5, 54)

@@ -41,8 +41,6 @@ func _process(float) -> void:
 				get_tree().change_scene_to_packed(scenes[i])
 				return
 	
-	if in_forest == true and Input.is_action_just_pressed("Interact"):
-		get_tree().change_scene_to_packed(scene)
 
 func _on_clinicentrance_body_entered(body: Node2D) -> void:
 	area[0] = true
@@ -105,11 +103,12 @@ func _on_butcherentrance_body_exited(body: Node2D) -> void:
 
 
 func _on_path_body_entered(body):
-	pass # Replace with function body.
+	if body == player:
+		get_tree().change_scene_to_packed(scene)
 
 
 func _on_forest_body_entered(body: Node2D) -> void:
-	in_forest = true
+	pass
 
 
 func _on_forest_body_exited(body: Node2D) -> void:
