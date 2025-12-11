@@ -2,6 +2,7 @@ extends npc
 var player_in_range = false
 @export var dialogic_timeline: String = "res://Dialogue stuff/leadertalk.dtl"
 @export var day2: String = "res://Dialogue stuff/leadertalkday2.dtl"
+@export var final: String = "res://Dialogue stuff/finalspeak.dtl"
 
 func _ready():
 	npc_name = "Mary"
@@ -31,6 +32,8 @@ func interact():
 			Dialogic.start("res://Dialogue stuff/leadertalk.dtl")
 		elif current_scene == "Village2":
 			Dialogic.start(day2)
+		elif current_scene == "finalnight":
+			Dialogic.start(final)
 		else:
 			Dialogic.start(dialogic_timeline)  
 			

@@ -95,6 +95,8 @@ radius = 16.4924
 
 [node name="Sibling" instance=ExtResource("1_gcbbe")]
 script = ExtResource("2_xelgk")
+dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
+speak = "res://Dialogue stuff/siblingtalk2.dtl"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_vrout")
