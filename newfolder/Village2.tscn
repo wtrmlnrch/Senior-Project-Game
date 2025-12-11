@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://b1nmxvt8pghu0"]
+[gd_scene load_steps=39 format=4 uid="uid://du7kaqt8aqwhp"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
-[ext_resource type="PackedScene" uid="uid://dqa2p1ubdx7w5" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
+[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
 [ext_resource type="AudioStream" uid="uid://cha6rt6dlmlv" path="res://Assets/game music.wav" id="14_4yj3c"]
 
@@ -5677,7 +5677,7 @@ size = Vector2(119, 323)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yj3c"]
 size = Vector2(27, 36)
 
-[node name="Village" type="Node2D"]
+[node name="Village2" type="Node2D"]
 script = ExtResource("1_u7pt4")
 
 [node name="UI" parent="." instance=ExtResource("2_gvfp2")]
@@ -5714,14 +5714,15 @@ tile_set = SubResource("TileSet_gvfp2")
 
 [node name="baker" parent="." instance=ExtResource("7_28mq4")]
 z_index = 2
-position = Vector2(568, 276)
+position = Vector2(115, 130)
 scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 81
+speak = "res://Dialogue stuff/bakertalk2.dtl"
 
 [node name="Butcher" parent="." instance=ExtResource("9_cmj78")]
 z_index = 1
-position = Vector2(99, 301)
+position = Vector2(340, 243)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
@@ -5881,14 +5882,14 @@ shape = SubResource("RectangleShape2D_4yj3c")
 
 [node name="leader" parent="." instance=ExtResource("10_vcg3l")]
 z_index = 1
-position = Vector2(324, 305)
+position = Vector2(277, 571)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
 
 [node name="Robert" parent="." instance=ExtResource("11_pqbve")]
 z_index = 1
-position = Vector2(678, 272)
+position = Vector2(674, 54)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/butchertalk.dtl"
@@ -5896,17 +5897,16 @@ speak = "res://Dialogue stuff/Roberttalk2.dtl"
 
 [node name="Sibling" parent="." instance=ExtResource("12_7q3ar")]
 z_index = 1
-position = Vector2(510, 349)
+position = Vector2(902, 399)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
+speak = "res://Dialogue stuff/siblingtalk2.dtl"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4yj3c")
 autoplay = true
 
-[connection signal="body_entered" from="Viewpoints/Forest" to="." method="_on_forest_body_entered"]
-[connection signal="body_exited" from="Viewpoints/Forest" to="." method="_on_forest_body_exited"]
 [connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
 [connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]

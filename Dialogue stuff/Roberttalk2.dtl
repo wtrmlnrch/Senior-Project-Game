@@ -1,0 +1,23 @@
+Main_Char: Good morning Robert!
+Daniel (happy): Morning kid, how was your first night here?
+Main_Char: Well first night not in a coma you mean haha.
+Daniel (happy): Haha yeah something like that.
+Main_Char: (should I tell him about the forest?)
+- Tell him...
+	Main_Char: Last night...I went out into the forest...
+	Main_Char: (I see him stiffen)
+	Daniel (thinking): I assume that didn't go to well?
+	Main_Char: No...those wolves are crazy.
+	Daniel (shock): Yeah...they get pretty rowdy. See anything else out of the ordinary?
+	Main_Char: I saw...a deer. It was weird.
+	Daniel (angry): There are no deer here.
+	Main_Char: But I saw-
+	Daniel (angry): No. You didn't.
+	Daniel (angry): Don't tell anyone of this.
+	Main_Char: Um...Alright?
+	Main_Char: (I decided to end that conversation right there.)
+- Don't tell him...
+	Main_Char: Haha, I slept pretty good. These beds are surprisngly comfy.
+	Daniel (happy): That good, happy you enjoyed it.
+	Daniel (happy): Alright I have to go, good luck in your day kid.
+	Main_Char: (and with that, he walked away)

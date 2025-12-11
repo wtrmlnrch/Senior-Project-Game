@@ -1,39 +1,39 @@
 extends npc
-
 var player_in_range = false
-var dialogue_active = false
-@export var dialogic_timeline: String = "res://Assets/NPCS/Villagers/leader/butchertalk.dtl"
+@export var dialogic_timeline: String = "res://Dialogue stuff/butchertalk.dtl"
+@export var speak: String = "res://Dialogue stuff/Roberttalk2.dtl"
 
 func _ready():
-	npc_name = "Robert"
+	npc_name = "Sister Robert"
 	$"talk-area".body_entered.connect(_on_area_entered)
 	$"talk-area".body_exited.connect(_on_area_exited)
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-
+	
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	
 func _process(delta):
-	if player_in_range and Input.is_action_just_pressed("Interact") and not dialogue_active:
+	if player_in_range and Input.is_action_just_pressed("Interact"):
 		interact()
-
+		
 func _on_area_entered(body):
-	if body.name == "MainCharacter" and body != self:
+	if body.name == "MainCharacter":
 		player_in_range = true
-
+		
 func _on_area_exited(body):
-	if body.name == "MainCharacter" and body != self:
+	if body.name == "MainCharacter":
 		player_in_range = false
-
+		
 func interact():
-	if player_in_range and not dialogue_active:
-		dialogue_active = true
-		Dialogic.start(dialogic_timeline)
+	if player_in_range:
+		var current_scene = get_tree().current_scene.name
+		if current_scene == "Village":
+			Dialogic.start("res://Dialogue stuff/butchertalk.dtl")
+		elif current_scene == "Village2":
+			Dialogic.start(speak)
+		else:
+			Dialogic.start(dialogic_timeline)  
+			
 		special_talk_function()
-
-func _on_dialogic_signal(argument: String):
-	if argument == "dialogue_end":
-		dialogue_active = false
-
+		
 func special_talk_function():
 	pass
