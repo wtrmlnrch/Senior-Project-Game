@@ -26,6 +26,7 @@ directories/dch_directory={
 "Butcher": "res://Assets/NPCS/Villagers/Butcher.dch",
 "Daniel": "res://Dialogue stuff/Daniel.dch",
 "Doctor": "res://Dialogue stuff/Doctor.dch",
+"Garroth": "res://Dialogue stuff/Garroth.dch",
 "Main_Char": "res://Dialogue stuff/Main_Char.dch",
 "leader": "res://Dialogue stuff/leader.dch",
 "sibling": "res://Dialogue stuff/sibling.dch"
@@ -33,6 +34,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "Dialogue stuff/butchertalk": "res://Dialogue stuff/butchertalk.dtl",
 "ForestDialogue1": "res://Dialogue stuff/ForestDialogue1.dtl",
+"GarrothNight": "res://Dialogue stuff/GarrothNight.dtl",
+"GarrothTalk": "res://Dialogue stuff/GarrothTalk.dtl",
 "bakertalk": "res://Dialogue stuff/bakertalk.dtl",
 "butchernight1": "res://Dialogue stuff/butchernight1.dtl",
 "butchertalk": "res://Assets/NPCS/Villagers/leader/butchertalk.dtl",

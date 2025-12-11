@@ -6,7 +6,7 @@ extends Node2D
 
 var area
 var scenes 
-var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
+var scene = load("res://newfolder/forestNight.tscn")
 
 func _ready():
 	var used_rect = tilemap.get_used_rect()

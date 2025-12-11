@@ -1,0 +1,22 @@
+Main_Char: (Is that...Garroth? What's he doing out this late?)
+- Say hi....
+	Main_Char: Hey Garroth! Whats up!
+	Main_Char: (Garroth turns around, and seeing him outside, he's taller than I thought)
+	Garroth (Shocked): Oh! \:o
+	Garroth (Happy): How do you do lil survivor! \:>
+	Main_Char: (How does he talk like that, its so interesting...)
+	Main_Char: I'm good! I just can't sleep right now.
+	Garroth (Happy): Hahaah I'm the same way dude x3
+	Garroth (Idle): You...heading out to the forest? O-O
+	Main_Char: Not sure yet...should I?
+	Garroth (Idle): The forest gets a bit...quirky at night. Be Careful. o_o
+	Main_Char: (and with that, he walks away.)
+- Question him....
+	Main_Char: Garroth? What are you up to this late?
+	Garroth (Confused): Wouldn't you like to know? >\:(
+	Garroth (Confused): Now what are you doing here out this late? -_-
+	Main_Char: Uh...I just can't sleep.
+	Garroth (Idle): Well, be careful out here....It gets a bit quirky here at night. \:]
+	Main_Char: (he talks in such an interesting way)
+	Main_Char: Alright I understand, thanks for the warning.
+	Main_Char: (he says nothing and turns away)

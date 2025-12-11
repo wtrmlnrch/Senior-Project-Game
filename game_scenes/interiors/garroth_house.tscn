@@ -1,5 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cilic28g8vbvh"]
+[gd_scene load_steps=3 format=3 uid="uid://cilic28g8vbvh"]
 
 [ext_resource type="PackedScene" uid="uid://d17cwawl2p7l" path="res://game_scenes/interiors/house_interior.tscn" id="1_7ulaq"]
+[ext_resource type="PackedScene" uid="uid://b2am22nx0lga2" path="res://game_scenes/characters/garroth.tscn" id="2_jjsuw"]
 
 [node name="garroth-house" instance=ExtResource("1_7ulaq")]
+
+[node name="Garroth" parent="." index="6" instance=ExtResource("2_jjsuw")]
+position = Vector2(634, 114)
+scale = Vector2(0.7, 0.7)
+dialogic_timeline = "res://Dialogue stuff/GarrothTalk.dtl"
+speak = "res://Dialogue stuff/GarrothNight.dtl"

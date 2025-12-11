@@ -1,0 +1,85 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "Angry",
+&"description": "",
+&"display_name": "Garroth",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-angry.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Confused": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-confused.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-happy.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Idle": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-idle.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-sad.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Shocked": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-shocked.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Smile": {
+"export_overrides": {
+"image": "\"res://Assets/NPCS/Villagers/jonah/jonah-smile.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}
