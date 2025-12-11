@@ -1,6 +1,6 @@
 [gd_scene load_steps=40 format=4 uid="uid://c80eiy7wgs35u"]
 
-[ext_resource type="Script" path="res://newfolder/finalnight.gd" id="1_bx512"]
+[ext_resource type="Script" uid="uid://cg804vuo5n08s" path="res://newfolder/finalnight.gd" id="1_bx512"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]
