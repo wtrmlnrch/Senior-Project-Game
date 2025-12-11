@@ -990,6 +990,7 @@ position = Vector2(158, 123)
 z_index = 1
 position = Vector2(157, 256)
 speak = "res://Dialogue stuff/morningrise.dtl"
+night1 = "res://Dialogue stuff/nightdoc.dtl"
 
 [node name="Bed" parent="." instance=ExtResource("7_pdftk")]
 position = Vector2(159, 118)

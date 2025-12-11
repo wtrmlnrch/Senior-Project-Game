@@ -48,6 +48,7 @@ directories/dtl_directory={
 "leadertalkday2": "res://Dialogue stuff/leadertalkday2.dtl",
 "miniforest": "res://Dialogue stuff/miniforest.dtl",
 "morningrise": "res://Dialogue stuff/morningrise.dtl",
+"nightdoc": "res://Dialogue stuff/nightdoc.dtl",
 "opening": "res://Dialogue stuff/opening.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
 "siblingtalk2": "res://Dialogue stuff/siblingtalk2.dtl",
