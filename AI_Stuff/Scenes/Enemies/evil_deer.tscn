@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnekeiuqiqtuc"]
+[gd_scene load_steps=8 format=3 uid="uid://dnekeiuqiqtuc"]
 
 [ext_resource type="Texture2D" uid="uid://b1ue1rq4jgj2" path="res://AI_Stuff/Assets/Enemy Sprites/deerSprites.png" id="1_jjqo7"]
 [ext_resource type="Script" uid="uid://cunx6fipd2mls" path="res://AI_Stuff/Scenes/Enemies/evil_deer.gd" id="1_pqx6f"]
+[ext_resource type="AudioStream" uid="uid://sh4fvifkundp" path="res://AI_Stuff/Assets/Sounds/Dauzkobza - Phobia - Ghostly Eerie Atmosphere .mp3" id="3_lw4tm"]
 
 [sub_resource type="Animation" id="Animation_pqx6f"]
 length = 0.001
@@ -66,6 +67,9 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body/Area2D"]
 shape = SubResource("CircleShape2D_pqx6f")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Body"]
+stream = ExtResource("3_lw4tm")
+
 [node name="Teleportation Points" type="Node2D" parent="."]
 
 [node name="Point0" type="Node2D" parent="Teleportation Points"]
@@ -83,6 +87,12 @@ position = Vector2(-667, -283)
 position = Vector2(356, -233)
 
 [node name="Point5" type="Node2D" parent="Teleportation Points"]
+position = Vector2(-349, 231)
+
+[node name="Point6" type="Node2D" parent="Teleportation Points"]
+position = Vector2(-349, 231)
+
+[node name="Point7" type="Node2D" parent="Teleportation Points"]
 position = Vector2(-349, 231)
 
 [connection signal="body_entered" from="Body/Area2D" to="." method="_on_area_2d_body_entered"]

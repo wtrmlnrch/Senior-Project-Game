@@ -12,6 +12,8 @@ var alert = false
 var alert_timer = 0.0
 var target_position = Vector2.ZERO
 
+var squirrel_body = null
+var growled = false
 
 @onready var lineOfSight = $RayCast2D
 	
@@ -30,9 +32,20 @@ func _physics_process(delta):
 		alert_timer -= delta
 		if alert_timer <= 0:
 			alert = false
+			growled = false
 		
 		var direction = (target_position - global_position).normalized()
 		velocity = direction * normalSpeed * speed_multiplier
+	
+		if !growled:
+			$Growl.play()
+			growled = true
+		if $AudioStreamPlayer2D.playing:
+			$AudioStreamPlayer2D.pitch_scale = 2
+		else:
+			$AudioStreamPlayer2D.play()
+			$AudioStreamPlayer2D.pitch_scale = 2
+		
 		move_and_slide()
 		
 		_play_animation_by_velocity()
@@ -50,6 +63,12 @@ func _physics_process(delta):
 			
 			var direction = (current_target - global_position).normalized()
 			velocity = direction * normalSpeed
+			
+			if $AudioStreamPlayer2D.playing:
+				$AudioStreamPlayer2D.pitch_scale = 1
+			else:
+				$AudioStreamPlayer2D.play()
+			
 		
 			move_and_slide()
 			
@@ -89,3 +108,18 @@ func _play_animation_by_velocity():
 		else:
 			moveUp()
 	
+
+
+func _on_listening_area_area_entered(body):
+	squirrel_body = body.get_parent()
+	squirrel_body.sound_emitted.connect(_on_squirrel_sound)
+	
+func _on_listening_area_area_exited(_body):
+	if squirrel_body != null:
+		squirrel_body.sound_emitted.disconnect(_on_squirrel_sound)
+		squirrel_body = null
+
+func _on_squirrel_sound(sound_position : Vector2):
+	alert = true
+	alert_timer = alertDuration
+	target_position = sound_position

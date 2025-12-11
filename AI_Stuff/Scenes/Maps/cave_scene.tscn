@@ -1,15 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc13vnjyh440w"]
+[gd_scene load_steps=6 format=3 uid="uid://dc13vnjyh440w"]
 
 [ext_resource type="PackedScene" uid="uid://bx5lc4py85ape" path="res://AI_Stuff/Scenes/Enemies/evil_wolf_manager.tscn" id="1_rh6oy"]
+[ext_resource type="Script" uid="uid://cvxn1t6aj1coi" path="res://AI_Stuff/Scenes/Maps/cave_scene.gd" id="1_vwfq1"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_3yne0"]
 [ext_resource type="PackedScene" uid="uid://dnekeiuqiqtuc" path="res://AI_Stuff/Scenes/Enemies/evil_deer.tscn" id="3_niqg2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_niqg2"]
+size = Vector2(175.75, 89.5)
+
 [node name="CaveScene" type="Node2D"]
+script = ExtResource("1_vwfq1")
 
 [node name="Evil Wolf AI" parent="." instance=ExtResource("1_rh6oy")]
 
-[node name="MainCharacter" parent="." instance=ExtResource("2_3yne0")]
-position = Vector2(28, 367)
-
 [node name="EvilDeer" parent="." instance=ExtResource("3_niqg2")]
-position = Vector2(41, 313)
+position = Vector2(779, -757)
+
+[node name="Point1" parent="EvilDeer/Teleportation Points" index="1"]
+position = Vector2(-455, 535)
+
+[node name="Point2" parent="EvilDeer/Teleportation Points" index="2"]
+position = Vector2(-916, -566)
+
+[node name="Point3" parent="EvilDeer/Teleportation Points" index="3"]
+position = Vector2(-1120, -13)
+
+[node name="Point4" parent="EvilDeer/Teleportation Points" index="4"]
+position = Vector2(425, -444)
+
+[node name="Point5" parent="EvilDeer/Teleportation Points" index="5"]
+position = Vector2(781, 686)
+
+[node name="Point6" parent="EvilDeer/Teleportation Points" index="6"]
+position = Vector2(-1234, 668)
+
+[node name="Point7" parent="EvilDeer/Teleportation Points" index="7"]
+position = Vector2(-319, -1195)
+
+[node name="MainCharacter" parent="." instance=ExtResource("2_3yne0")]
+position = Vector2(32, 373)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(419, -2007)
+shape = SubResource("RectangleShape2D_niqg2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+
+[editable path="EvilDeer"]

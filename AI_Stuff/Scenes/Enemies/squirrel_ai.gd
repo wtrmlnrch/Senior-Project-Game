@@ -17,8 +17,7 @@ func _ready():
 	$Squirrel/AnimationPlayer.play("Scanning")
 
 func _physics_process(delta):
-	if $Squirrel/ShapeCast2D.is_colliding() and $Squirrel/ShapeCast2D.get_collider(0).get_name() == "CharacterBody2D" and !running:
-		
+	if $Squirrel/ShapeCast2D.is_colliding() and ($Squirrel/ShapeCast2D.get_collider(0).get_name() == "CharacterBody2D" or $Squirrel/ShapeCast2D.get_collider(0).get_name() == "MainCharacter") and !running:
 		running_time = running_duration
 		running = true
 		

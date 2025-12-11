@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://cisthpvkuboug" path="res://AI_Stuff/Assets/Environment/basicEnv.tres" id="1_lnrpn"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="3_mdhsb"]
-[ext_resource type="PackedScene" uid="uid://dnekeiuqiqtuc" path="res://AI_Stuff/Scenes/Enemies/evil_deer.tscn" id="3_sowny"]
+[ext_resource type="PackedScene" uid="uid://dd5colxo1ug6b" path="res://AI_Stuff/Scenes/Enemies/wolf_ai.tscn" id="3_sowny"]
 
 [node name="TestingMap1" type="Node2D"]
 
@@ -17,5 +17,4 @@ rendering_quadrant_size = 32
 position = Vector2(17, 61)
 max_speed = 125
 
-[node name="EvilDeer" parent="." instance=ExtResource("3_sowny")]
-position = Vector2(-232, -10)
+[node name="wolf_ai" parent="." instance=ExtResource("3_sowny")]

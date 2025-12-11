@@ -2,7 +2,7 @@ extends Node2D
 
 var teleportation_points : Array
 
-var teleportation_cooldown : float = 2.0
+var teleportation_cooldown : float = 5.0
 var teleportation_time : float = 0.0
 
 var just_tpd : bool = false
@@ -37,8 +37,10 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
 		emit_signal("haunting_cry_entry", body)
+		$Body/AudioStreamPlayer2D.play(0.0)
 
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("player"):
 		emit_signal("haunting_cry_exit", body)
+		$Body/AudioStreamPlayer2D.stop()

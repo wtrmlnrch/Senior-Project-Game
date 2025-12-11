@@ -13,6 +13,7 @@ var alert_duration = 2.0
 
 var target_position = Vector2.ZERO
 var squirrel_body = null
+var growled = false
 
 func _ready():
 	$Wolf.global_position.y = y_value
@@ -30,11 +31,17 @@ func _physics_process(delta):
 		$Wolf.velocity.x = direction * (normal_speed*2)
 		$Wolf.velocity.y = 0
 		$Wolf.global_position.y = y_value
+		
+		# code doesn't work. try to fix in morning
+		if !growled:
+			$Growl.play()
+			growled = true
 
 		$Wolf.move_and_slide()
 		
 		if alert_timer <= 0:
 			alert = false
+			growled = false
 		return
 	
 	var speed = normal_speed
