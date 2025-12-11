@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=4 uid="uid://ngtxgihuwjhd"]
+[gd_scene load_steps=18 format=4 uid="uid://ngtxgihuwjhd"]
 
 [ext_resource type="Script" uid="uid://cblm3j6j4u7hl" path="res://newfolder/Scenes/MinimumViableProduct/final_level_0.gd" id="1_5mpgt"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_sy7jo"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_t2y2r"]
-[ext_resource type="PackedScene" uid="uid://gpu24fuiaevo" path="res://newfolder/Scenes/MinimumViableProduct/blueberry_bush.tscn" id="8_3sgog"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmxhs"]
 texture = ExtResource("1_sy7jo")
@@ -4678,9 +4677,6 @@ shape = SubResource("RectangleShape2D_hpa2n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBorders/RiverCollisionRight"]
 position = Vector2(903.5, 238)
 shape = SubResource("RectangleShape2D_vghvt")
-
-[node name="BlueberryBush" parent="." instance=ExtResource("8_3sgog")]
-position = Vector2(505, 409)
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_t2y2r")]
 position = Vector2(84, 567)
