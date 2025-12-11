@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=4 uid="uid://bx0bpy23f5gek"]
+[gd_scene load_steps=20 format=4 uid="uid://bx0bpy23f5gek"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_fqx2k"]
 [ext_resource type="Script" uid="uid://baf4uv6rrxsmm" path="res://newfolder/forest_night.gd" id="1_ljn3v"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_gwa2y"]
 [ext_resource type="Texture2D" uid="uid://dwwn6muqtyt04" path="res://ddeer.png" id="4_fuwrr"]
+[ext_resource type="PackedScene" uid="uid://4qsysr8g31q6" path="res://AI_Stuff/Scenes/Enemies/squirrel_ai.tscn" id="5_gp4bw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w6b2n"]
 texture = ExtResource("1_fqx2k")
@@ -3366,7 +3367,9 @@ texture = ExtResource("1_fqx2k")
 16:8/0 = 0
 17:8/0 = 0
 18:8/0 = 0
+18:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -3.41732, -3.41732, -8, 8, 8, 8)
 19:8/0 = 0
+19:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.97845, -3.95689, 8, 8, -8, 8)
 20:8/0 = 0
 21:8/0 = 0
 22:8/0 = 0
@@ -3376,7 +3379,9 @@ texture = ExtResource("1_fqx2k")
 26:8/0 = 0
 27:8/0 = 0
 28:8/0 = 0
+28:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -3.59717, -5.2159, -8, 8, 8, 8)
 29:8/0 = 0
+29:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.49647, -5.03604, 8, 8, -8, 8)
 30:8/0 = 0
 31:8/0 = 0
 32:8/0 = 0
@@ -3410,7 +3415,9 @@ texture = ExtResource("1_fqx2k")
 16:9/0 = 0
 17:9/0 = 0
 18:9/0 = 0
+18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.2159, 2.15831, 8, 8, 8, -8)
 19:9/0 = 0
+19:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 4.67633, 4.31661, 8, -8, -8, -8)
 20:9/0 = 0
 21:9/0 = 0
 22:9/0 = 0
@@ -3420,7 +3427,9 @@ texture = ExtResource("1_fqx2k")
 26:9/0 = 0
 27:9/0 = 0
 28:9/0 = 0
+28:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.2159, 4.13675, 8, 8, 8, -8, -8, -8)
 29:9/0 = 0
+29:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 5.93534, 5.57562, 8, -8, -8, -8)
 30:9/0 = 0
 31:9/0 = 0
 32:9/0 = 0
@@ -4047,9 +4056,13 @@ texture = ExtResource("1_fqx2k")
 24:24/0 = 0
 25:24/0 = 0
 26:24/0 = 0
+26:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -2.69788, 8, 8, -4.49647, 8)
 27:24/0 = 0
+27:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, 8, -8, 8, 8, -8, 8)
 28:24/0 = 0
+28:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -2.33816, 8, 8, -8, 8)
 29:24/0 = 0
+29:24/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.1583, 8, 3.95689, 8, 8, -8, 8)
 30:24/0 = 0
 31:24/0 = 0
 32:24/0 = 0
@@ -4091,9 +4104,13 @@ texture = ExtResource("1_fqx2k")
 24:25/0 = 0
 25:25/0 = 0
 26:25/0 = 0
+26:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 5.39576, -5.93534, 3.59718)
 27:25/0 = 0
+27:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 28:25/0 = 0
+28:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 29:25/0 = 0
+29:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 4.67633, 4.49647, -8, 8)
 30:25/0 = 0
 31:25/0 = 0
 32:25/0 = 0
@@ -4386,7 +4403,9 @@ texture = ExtResource("1_fqx2k")
 13:33/0 = 0
 14:33/0 = 0
 15:33/0 = 0
+15:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:33/0 = 0
+16:33/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:33/0 = 0
 18:33/0 = 0
 19:33/0 = 0
@@ -4416,7 +4435,9 @@ texture = ExtResource("1_fqx2k")
 13:34/0 = 0
 14:34/0 = 0
 15:34/0 = 0
+15:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:34/0 = 0
+16:34/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:34/0 = 0
 18:34/0 = 0
 19:34/0 = 0
@@ -4446,7 +4467,9 @@ texture = ExtResource("1_fqx2k")
 13:35/0 = 0
 14:35/0 = 0
 15:35/0 = 0
+15:35/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.59717, -3.95689, 0, -1.07915, -2.33816, 2.1583, -1.25901, -1.25901, 1.79859, 8, 8, 8, -8, -8, -8)
 16:35/0 = 0
+16:35/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 0.899294, 2.69788, -1.25901, 0.179859, 0.719435, -1.07915, 0.539576, -3.95689, 5.39576, -2.87774, 8, -8, -8, -8)
 17:35/0 = 0
 18:35/0 = 0
 19:35/0 = 0
@@ -4478,6 +4501,8 @@ texture = ExtResource("1_fqx2k")
 7:37/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wsawx"]
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_gnrlw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y03gf"]
@@ -5982,6 +6007,9 @@ size = Vector2(1233.5, 114)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eag74"]
 size = Vector2(51, 72)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56u30"]
+size = Vector2(30, 25)
+
 [node name="forest2" type="Node2D"]
 script = ExtResource("1_ljn3v")
 
@@ -6028,16 +6056,44 @@ shape = SubResource("RectangleShape2D_i43eh")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.293935, 0.27272, 0.531244, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(502, 432)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("4_fuwrr")
-
 [node name="path" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="path"]
 position = Vector2(-55, 457)
 shape = SubResource("RectangleShape2D_eag74")
+
+[node name="Deer" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="Deer"]
+z_index = 1
+position = Vector2(502, 432)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_fuwrr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deer"]
+position = Vector2(503, 436.5)
+shape = SubResource("RectangleShape2D_56u30")
+
+[node name="SquirrelAi" parent="." instance=ExtResource("5_gp4bw")]
+position = Vector2(93, 511)
+scale = Vector2(0.5, 0.5)
+
+[node name="SquirrelAi2" parent="." instance=ExtResource("5_gp4bw")]
+position = Vector2(286, 542)
+scale = Vector2(0.5, 0.5)
+
+[node name="SquirrelAi3" parent="." instance=ExtResource("5_gp4bw")]
+position = Vector2(259, 401)
+scale = Vector2(0.5, 0.5)
+
+[node name="SquirrelAi4" parent="." instance=ExtResource("5_gp4bw")]
+position = Vector2(426, 487)
+scale = Vector2(0.5, 0.5)
+
+[node name="SquirrelAi5" parent="." instance=ExtResource("5_gp4bw")]
+position = Vector2(577, 563)
+scale = Vector2(0.5, 0.5)
 
 [connection signal="body_entered" from="path" to="." method="_on_path_body_entered"]

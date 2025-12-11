@@ -1,12 +1,10 @@
-[gd_scene load_steps=23 format=4 uid="uid://bysud6q214o4e"]
+[gd_scene load_steps=21 format=4 uid="uid://bysud6q214o4e"]
 
 [ext_resource type="Script" uid="uid://boeumfvudus6m" path="res://newfolder/Scenes/MinimumViableProduct/level_0_night.gd" id="1_qgqn4"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_sy7jo"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_t2y2r"]
-[ext_resource type="Texture2D" uid="uid://0dft7bs21alh" path="res://newfolder/Graphics/UI/healthbarUnder.png" id="4_lcryt"]
-[ext_resource type="Texture2D" uid="uid://dpxsnwlbjfkce" path="res://newfolder/Graphics/UI/healthbarProgress.png" id="5_21ef1"]
-[ext_resource type="Script" uid="uid://bplef70jujh6m" path="res://newfolder/Scenes/MinimumViableProduct/hunger_bar.gd" id="6_21ef1"]
-[ext_resource type="PackedScene" uid="uid://cmvqsqbvlv6ub" path="res://newfolder/Scenes/MinimumViableProduct/hotbar.tscn" id="7_6llk3"]
+[ext_resource type="PackedScene" uid="uid://dd5colxo1ug6b" path="res://AI_Stuff/Scenes/Enemies/wolf_ai.tscn" id="5_toms7"]
+[ext_resource type="PackedScene" uid="uid://b1eudu7py5fmo" path="res://AI_Stuff/Scenes/EnvironmentThings/bush.tscn" id="6_l0d3x"]
 [ext_resource type="PackedScene" uid="uid://gpu24fuiaevo" path="res://newfolder/Scenes/MinimumViableProduct/blueberry_bush.tscn" id="8_3sgog"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmxhs"]
@@ -4692,42 +4690,6 @@ shape = SubResource("RectangleShape2D_vghvt")
 [node name="BlueberryBush" parent="." instance=ExtResource("8_3sgog")]
 position = Vector2(505, 409)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HungerBar" type="TextureProgressBar" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 65.0
-offset_bottom = 65.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(3, 3)
-step = 0.0
-value = 100.0
-texture_under = ExtResource("4_lcryt")
-texture_progress = ExtResource("5_21ef1")
-tint_under = Color(0, 1, 1, 1)
-tint_progress = Color(0.528344, 0.246167, 0.0979219, 1)
-script = ExtResource("6_21ef1")
-
-[node name="Hotbar" parent="CanvasLayer" instance=ExtResource("7_6llk3")]
-
-[node name="HealthBar" type="TextureProgressBar" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_right = 0.185
-anchor_bottom = 0.205
-offset_left = -2.0
-offset_top = 39.0
-offset_right = -2.12
-offset_bottom = 39.16
-scale = Vector2(3, 3)
-value = 100.0
-texture_under = ExtResource("4_lcryt")
-texture_progress = ExtResource("5_21ef1")
-tint_under = Color(0.164706, 1, 1, 1)
-tint_progress = Color(1, 0, 1, 1)
-
 [node name="MainCharacter" parent="." instance=ExtResource("2_t2y2r")]
 position = Vector2(84, 567)
 scale = Vector2(0.6, 0.6)
@@ -4735,5 +4697,38 @@ scale = Vector2(0.6, 0.6)
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.294118, 0.27451, 0.529412, 1)
 
+[node name="EnemyStuff" type="Node2D" parent="."]
+
+[node name="wolf_ai" parent="EnemyStuff" instance=ExtResource("5_toms7")]
+position = Vector2(525, 485)
+
+[node name="LW_Collision" parent="EnemyStuff/wolf_ai/Walls/LeftWall" index="0"]
+position = Vector2(-360, 4)
+
+[node name="RW_Collision" parent="EnemyStuff/wolf_ai/Walls/RightWall" index="0"]
+position = Vector2(237, 4)
+
+[node name="wolf_ai2" parent="EnemyStuff" instance=ExtResource("5_toms7")]
+position = Vector2(675, 353)
+
+[node name="LW_Collision" parent="EnemyStuff/wolf_ai2/Walls/LeftWall" index="0"]
+position = Vector2(-400, 4)
+
+[node name="RW_Collision" parent="EnemyStuff/wolf_ai2/Walls/RightWall" index="0"]
+position = Vector2(113, 4)
+
+[node name="Bush" parent="EnemyStuff" instance=ExtResource("6_l0d3x")]
+position = Vector2(263, 564)
+is_tutorial = true
+
+[node name="Bush2" parent="EnemyStuff" instance=ExtResource("6_l0d3x")]
+position = Vector2(564, 410)
+
+[node name="Bush3" parent="EnemyStuff" instance=ExtResource("6_l0d3x")]
+position = Vector2(731, 321)
+
 [connection signal="body_entered" from="forest-entrance" to="." method="_on_forestentrance_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+
+[editable path="EnemyStuff/wolf_ai"]
+[editable path="EnemyStuff/wolf_ai2"]
