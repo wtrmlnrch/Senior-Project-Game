@@ -8,9 +8,7 @@ extends TextureButton
 var globals_keys = [
 	"inventory1item",
 	"inventory2item",
-	"inventory3item",
-	"inventory4item",
-	"inventory5item"
+	"inventory3item"
 ]
 
 var items_that_exist = [

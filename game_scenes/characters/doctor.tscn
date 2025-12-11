@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://sfabo2bukdli"]
+[gd_scene load_steps=18 format=3 uid="uid://ctuohewi60foc"]
 
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_25gq6"]
 [ext_resource type="Script" uid="uid://byskd8fhmdcrg" path="res://game_scenes/characters/doctor.gd" id="2_07uux"]

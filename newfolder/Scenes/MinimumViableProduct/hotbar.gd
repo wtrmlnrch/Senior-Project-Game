@@ -6,18 +6,14 @@ var items = []
 var globals_keys = [
 	"inventory1active",
 	"inventory2active",
-	"inventory3active",
-	"inventory4active",
-	"inventory5active"
+	"inventory3active"
 ]
 
 func _ready():
 	slots = [
 		$HBoxContainer/InventorySlot,
 		$HBoxContainer/InventorySlot2,
-		$HBoxContainer/InventorySlot3,
-		$HBoxContainer/InventorySlot4,
-		$HBoxContainer/InventorySlot5
+		$HBoxContainer/InventorySlot3
 	]
 	
 	for i in range(slots.size()):

@@ -22,7 +22,3 @@ func _on_area_exited(area):
 func interact():
 	if player_in_range:
 		Dialogic.start(dialogic_timeline)
-		special_talk_function()
-
-func special_talk_function():
-	pick_inventory_slot('pill')
