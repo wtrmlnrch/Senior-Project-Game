@@ -5,6 +5,8 @@ extends Node2D
 @onready var player = $MainCharacter
 @onready var camera = $MainCharacter/PlayerCamera
 
+var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Night.tscn")
+
 func _ready():
 	Dialogic.start("res://Dialogue stuff/moredeer.dtl")
 	var used_rect = tilemap.get_used_rect()
@@ -18,3 +20,8 @@ func _ready():
 	player.max_speed = 65
 	player.speed = player.max_speed
 	camera.zoom = Vector2(2.50, 2.50)
+
+
+func _on_path_body_entered(body):
+	if body == player:
+		get_tree().change_scene_to_packed(scene)

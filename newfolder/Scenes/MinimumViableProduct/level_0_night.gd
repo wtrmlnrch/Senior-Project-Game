@@ -14,7 +14,6 @@ func _input(event: InputEvent):
 	if Dialogic.current_timeline != null:
 		return
 	if event is InputEventKey and event.keycode == KEY_ENTER and event.pressed:
-		Dialogic.start('res://Dialogue stuff/miniforest.dtl')
 		get_viewport().set_input_as_handled()
 	
 		
@@ -25,7 +24,6 @@ func _ready():
 		scene = load("res://newfolder/villageNight2.tscn")
 	else:
 		scene = load("res://newfolder/finalnight.tscn")
-	Dialogic.start("res://Dialogue stuff/miniforest.dtl")
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
 	camera.limit_left = used_rect.position.x * cell_size.x

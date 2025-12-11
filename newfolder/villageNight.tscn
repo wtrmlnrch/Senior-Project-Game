@@ -1,6 +1,6 @@
 [gd_scene load_steps=35 format=4 uid="uid://l2pwysbep7hv"]
 
-[ext_resource type="Script" uid="uid://c5d14wtm7s8v0" path="res://newfolder/village_night.gd" id="1_af7ng"]
+[ext_resource type="Script" path="res://newfolder/village_night.gd" id="1_af7ng"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]

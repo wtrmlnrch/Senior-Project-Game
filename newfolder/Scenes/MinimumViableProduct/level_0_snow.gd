@@ -5,7 +5,7 @@ extends Node2D
 @onready var camera = $MainCharacter/PlayerCamera
 @onready var player = $MainCharacter
 var scene = load("res://newfolder/villageNight.tscn")
-var forest_scene = load("res://newfolder/forestNight.tscn")
+var forest_scene = load("res://newfolder/forest.tscn")
 var forest_area = false
 # Comment to let me merge
 

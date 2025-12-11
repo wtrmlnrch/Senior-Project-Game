@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bx0bpy23f5gek"]
+[gd_scene load_steps=18 format=4 uid="uid://bx0bpy23f5gek"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_fqx2k"]
 [ext_resource type="Script" uid="uid://baf4uv6rrxsmm" path="res://newfolder/forest_night.gd" id="1_ljn3v"]
@@ -5979,6 +5979,9 @@ size = Vector2(89, 643)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i43eh"]
 size = Vector2(1233.5, 114)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eag74"]
+size = Vector2(51, 72)
+
 [node name="forest2" type="Node2D"]
 script = ExtResource("1_ljn3v")
 
@@ -5999,7 +6002,7 @@ tile_map_data = PackedByteArray("AAADABgAAAAMABQAAAADABkAAAAMABUAAAAEABgAAAANABQ
 tile_set = SubResource("TileSet_bofyg")
 
 [node name="MainCharacter" parent="." instance=ExtResource("2_gwa2y")]
-position = Vector2(-20, 460)
+position = Vector2(-14, 460)
 scale = Vector2(0.5, 0.5)
 
 [node name="mapborders" type="StaticBody2D" parent="."]
@@ -6030,3 +6033,11 @@ z_index = 1
 position = Vector2(502, 432)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_fuwrr")
+
+[node name="path" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="path"]
+position = Vector2(-55, 457)
+shape = SubResource("RectangleShape2D_eag74")
+
+[connection signal="body_entered" from="path" to="." method="_on_path_body_entered"]
