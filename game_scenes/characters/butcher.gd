@@ -3,6 +3,7 @@ var player_in_range = false
 @export var dialogic_timeline: String = "res://Dialogue stuff/talkbutcher.dtl"
 @export var speak: String = "res://Dialogue stuff/butchernight1.dtl"
 @export var day2: String = "res://Dialogue stuff/Butchertalkday2.dtl"
+@export var finalday: String = "res://Dialogue stuff/butcherFinalSpeak.dtl"
 
 func _ready():
 	npc_name = "Cylus"
@@ -34,6 +35,8 @@ func interact():
 			Dialogic.start(speak)
 		elif current_scene == "Village2":
 			Dialogic.start(day2)
+		elif current_scene == "finalday":
+			Dialogic.start(finalday)
 		else:
 			Dialogic.start(dialogic_timeline)  
 			

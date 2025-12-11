@@ -1,0 +1,38 @@
+Main_Char: Um...whats happening.
+[background arg="res://Assets/NPCS/Villagers/leader/leader-smile-dialogue.PNG" fade="0.0"]
+leader (smile): Something Inevitable.
+Main_Char: What?
+[background arg="res://Assets/NPCS/Villagers/isabelle/baker-smile.PNG" fade="0.0"]
+Baker (smile): We have a little task for you.
+Main_Char: What are you talking about?
+[background arg="res://Assets/NPCS/Villagers/jonah/jonah-smile.PNG" fade="0.0"]
+Garroth (Smile): We need you to get something from the caves.
+Main_Char: This doesn't make sense!
+[background arg="res://Assets/NPCS/Villagers/daniel/daniel-smile-dialogue.PNG" fade="0.0"]
+Daniel (smile): It's a rite of passage.
+Main_Char: What's a rite of passage??
+[background arg="res://Assets/NPCS/Villagers/sibling/sibling-smile-dialogue.PNG" fade="0.0"]
+sibling (smile): We've all done it, gone to the cave and brought it back.
+Main_Char: Charlotte? What do you mean!?
+Butcher (Sad): I'm so sorry...
+Main_Char: Cylus...whats happening?
+leader (smile): Come now Cylus...don't be like that.
+Main_Char: (something shifts in Cylus)
+[background arg="res://Assets/NPCS/Villagers/butcher/butcher-sad.PNG" fade="0.0"]
+Butcher (Sad): I-
+[background arg="res://Assets/NPCS/Villagers/butcher/butcher-smile.PNG" fade="0.0"]
+Butcher: I think you know what you must do
+[clear time="1.0"]
+You must do this.
+Main_Char: What? Who said that?
+You MUST do this.
+YOU MUST do this.
+Main_Char: Who are you?
+leader (smile): Ah you can hear it... how lucky.
+YOU MUST DO THIS
+This is your destiny
+Come to your fate
+be one with us
+Main_Char: (I suddenly feel a temptation overwhelming me.)
+Main_Char: (I NEED to go to that cave.)
+Main_Char: (I NEED to GO to that cave)
