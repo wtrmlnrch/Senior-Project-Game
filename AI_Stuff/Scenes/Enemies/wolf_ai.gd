@@ -3,10 +3,6 @@ extends Node2D
 @export var normal_speed = 125
 @export var direction = -1
 
-@export var y_value = 0
-@export var left_x = -300
-@export var right_x = 300
-
 var alert = false
 var alert_timer = 0.0
 var alert_duration = 2.0
@@ -15,12 +11,11 @@ var target_position = Vector2.ZERO
 var squirrel_body = null
 var growled = false
 
+@onready var left_x = $Walls/LeftWall/LW_Collision.global_position.x 
+@onready var right_x = $Walls/RightWall/RW_Collision.global_position.x 
+@onready var y_value = $Walls/RightWall/RW_Collision.global_position.y
+
 func _ready():
-	$Wolf.global_position.y = y_value
-	$Walls/LeftWall/LW_Collision.global_position.y = y_value
-	$Walls/RightWall/RW_Collision.global_position.y = y_value
-	$Walls/LeftWall/LW_Collision.global_position.x = left_x
-	$Walls/RightWall/RW_Collision.global_position.x = right_x
 	$Wolf.global_position.x = (left_x + right_x) / 2.0
 	$Wolf/AnimationPlayer.play("Left Walk")
 
@@ -85,9 +80,10 @@ func _physics_process(delta):
 
 
 func _on_listening_area_area_entered(body):
-	squirrel_body = body.get_parent()
-	squirrel_body.sound_emitted.connect(_on_squirrel_sound)
-	
+	if squirrel_body != null:
+		squirrel_body = body.get_parent()
+		squirrel_body.sound_emitted.connect(_on_squirrel_sound)
+		
 func _on_listening_area_area_exited(_body):
 	if squirrel_body != null:
 		squirrel_body.sound_emitted.disconnect(_on_squirrel_sound)

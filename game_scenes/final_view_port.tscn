@@ -1,10 +1,70 @@
-[gd_scene load_steps=2 format=3 uid="uid://caesv7euiyv05"]
+[gd_scene load_steps=8 format=3 uid="uid://caesv7euiyv05"]
 
+[ext_resource type="Script" uid="uid://byyjmb2udt6o5" path="res://game_scenes/final_view_port.gd" id="1_n4mn8"]
 [ext_resource type="Texture2D" uid="uid://6tiyaeo4brhi" path="res://Assets/cutscenes/forest-cg.PNG" id="1_xkrnj"]
+[ext_resource type="Texture2D" uid="uid://b1ue1rq4jgj2" path="res://AI_Stuff/Assets/Enemy Sprites/deerSprites.png" id="3_ju3nw"]
+[ext_resource type="AudioStream" uid="uid://sh4fvifkundp" path="res://AI_Stuff/Assets/Sounds/Dauzkobza - Phobia - Ghostly Eerie Atmosphere .mp3" id="4_q8erp"]
+
+[sub_resource type="Animation" id="Animation_ujcfx"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 3, 4, 2]
+}
+
+[sub_resource type="Animation" id="Animation_drwd1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_voqtu"]
+_data = {
+&"RESET": SubResource("Animation_drwd1"),
+&"new_animation": SubResource("Animation_ujcfx")
+}
 
 [node name="FinalViewPort" type="Node2D"]
+script = ExtResource("1_n4mn8")
 
 [node name="Forest-cg" type="Sprite2D" parent="."]
 position = Vector2(583.5, 334.5)
 scale = Vector2(2.04167, 1.7075)
 texture = ExtResource("1_xkrnj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_q8erp")
+parameters/looping = true
+
+[node name="Deer" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Deer"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+&"": SubResource("AnimationLibrary_voqtu")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="Deer"]
+position = Vector2(692, 342)
+scale = Vector2(4, 4)
+texture = ExtResource("3_ju3nw")
+hframes = 3
+vframes = 2
