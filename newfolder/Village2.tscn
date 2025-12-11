@@ -1,9 +1,8 @@
-[gd_scene load_steps=39 format=4 uid="uid://du7kaqt8aqwhp"]
+[gd_scene load_steps=38 format=4 uid="uid://dqf1n2yjou2h7"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
-[ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="2_gvfp2"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]
 [ext_resource type="Texture2D" uid="uid://chkqj235w1b1a" path="res://Assets/Texture/TX Props.png" id="4_xygwp"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
@@ -11,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="10_vcg3l"]
-[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
+[ext_resource type="PackedScene" uid="uid://dqa2p1ubdx7w5" path="res://game_scenes/characters/daniel.tscn" id="11_pqbve"]
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="12_7q3ar"]
 [ext_resource type="AudioStream" uid="uid://cha6rt6dlmlv" path="res://Assets/game music.wav" id="14_4yj3c"]
 
@@ -5680,9 +5679,6 @@ size = Vector2(27, 36)
 [node name="Village2" type="Node2D"]
 script = ExtResource("1_u7pt4")
 
-[node name="UI" parent="." instance=ExtResource("2_gvfp2")]
-layer = 2
-
 [node name="tilesets" type="Node" parent="."]
 
 [node name="ground" type="TileMapLayer" parent="tilesets"]
@@ -5728,6 +5724,7 @@ collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/talkbutcher.dtl"
 speak = "res://Dialogue stuff/butchernight1.dtl"
 day2 = "res://Dialogue stuff/Butchertalkday2.dtl"
+finalday = "res://Dialogue stuff/butcherFinalSpeak.dtl"
 
 [node name="Viewpoints" type="Node" parent="."]
 
@@ -5888,6 +5885,7 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 2
 dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
 day2 = "res://Dialogue stuff/leadertalkday2.dtl"
+final = "res://Dialogue stuff/finalspeak.dtl"
 
 [node name="Robert" parent="." instance=ExtResource("11_pqbve")]
 z_index = 1

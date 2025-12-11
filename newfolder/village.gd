@@ -14,7 +14,7 @@ func _ready():
 	var cell_size = tilemap.tile_set.tile_size
 	area = [false, false, false, false, false, false]
 	scenes = [
-		load("res://game_scenes/interiors/clinic.tscn"),
+		load("res://game_scenes/interiors/clinic_2.tscn"),
 		load("res://game_scenes/interiors/robert_house.tscn"),
 		load("res://game_scenes/interiors/baker_house.tscn"),
 		load("res://game_scenes/interiors/garroth_house.tscn"),
