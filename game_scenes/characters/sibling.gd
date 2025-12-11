@@ -3,7 +3,10 @@ var player_in_range = false
 @export var dialogic_timeline: String = "res://Dialogue stuff/siblingtalk.dtl"
 @export var speak: String = "res://Dialogue stuff/siblingtalk2.dtl"
 
+
+
 func _ready():
+	task_item = "blueberry"
 	npc_name = "Charlotte"
 	$"talk-area".body_entered.connect(_on_area_entered)
 	$"talk-area".body_exited.connect(_on_area_exited)
@@ -36,4 +39,4 @@ func interact():
 		special_talk_function()
 		
 func special_talk_function():
-	pass
+	take_item()

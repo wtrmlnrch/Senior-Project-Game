@@ -9,9 +9,7 @@ class_name npc
 var globals_keys = [
 	"inventory1item",
 	"inventory2item",
-	"inventory3item",
-	"inventory4item",
-	"inventory5item"
+	"inventory3item"
 ]
 
 @export var max_speed: int = 100
@@ -19,6 +17,7 @@ var speed: int
 var is_moving: bool = true
 var npc_name = "npc"
 var player_near = false
+var task_item = ""
 
 func ready():
 	speed = max_speed
@@ -89,3 +88,12 @@ func pick_inventory_slot(item: String) -> void:
 	if (item_added == false):
 		Globals.inventory_full = true
 		print('inventory is full')
+
+func take_item() -> void:
+	var item_taken = false
+	for i in range(globals_keys.size()):
+		if (Globals.get(globals_keys[i]) == task_item):
+			Globals.set(globals_keys[i], "")
+			item_taken = true
+			Globals.inventory_full = false
+			break

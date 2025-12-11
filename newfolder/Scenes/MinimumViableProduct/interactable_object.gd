@@ -4,9 +4,7 @@ class_name InteractableObject
 var globals_keys = [
 	"inventory1item",
 	"inventory2item",
-	"inventory3item",
-	"inventory4item",
-	"inventory5item"
+	"inventory3item"
 ]
 
 var is_near: bool = false
@@ -43,3 +41,4 @@ func pick_inventory_slot(item: String) -> void:
 	if (item_added == false):
 		Globals.inventory_full = true
 		print('inventory is full')
+		

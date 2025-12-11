@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://sfabo2bukdli"]
+[gd_scene load_steps=18 format=3 uid="uid://ctuohewi60foc"]
 
 [ext_resource type="PackedScene" uid="uid://dn8yg13b2cubb" path="res://game_scenes/characters/npc.tscn" id="1_25gq6"]
 [ext_resource type="Script" uid="uid://byskd8fhmdcrg" path="res://game_scenes/characters/doctor.gd" id="2_07uux"]
@@ -96,6 +96,8 @@ radius = 17.0
 [node name="Doctor" instance=ExtResource("1_25gq6")]
 script = ExtResource("2_07uux")
 dialogic_timeline = "res://Dialogue stuff/doctalk.dtl"
+speak = "res://Dialogue stuff/morningrise.dtl"
+night1 = "res://Dialogue stuff/nightdoc.dtl"
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_tqxbb")
