@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://l2pwysbep7hv"]
+[gd_scene load_steps=35 format=4 uid="uid://l2pwysbep7hv"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
 [ext_resource type="PackedScene" uid="uid://b2am22nx0lga2" path="res://game_scenes/characters/garroth.tscn" id="11_4oa5m"]
 [ext_resource type="AudioStream" uid="uid://y1bp34c01a2p" path="res://Assets/game musicreverse.mp3" id="11_jt6bg"]
-[ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="13_oximf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
 texture = ExtResource("1_o7pqe")
@@ -5866,8 +5865,6 @@ day2 = "res://Dialogue stuff/Butchertalkday2.dtl"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.334359, 0.270973, 0.479658, 1)
-
-[node name="UI" parent="." instance=ExtResource("13_oximf")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_jt6bg")
