@@ -5,6 +5,8 @@ extends Node2D
 @onready var camera = $MainCharacter/PlayerCamera
 @onready var player = $MainCharacter
 var scene = load("res://newfolder/village.tscn")
+var forest_scene = load("res://newfolder/forest.tscn")
+var forest_area = false
 # Comment to let me merge
 
 	
@@ -34,3 +36,12 @@ func _ready():
 func _on_area_2d_body_entered(body):
 	if body == player:
 		get_tree().change_scene_to_packed(scene)
+
+
+func _on_forestentrance_body_entered(body: Node2D) -> void:
+	if body == player:
+		get_tree().change_scene_to_packed(forest_scene)
+
+
+func _on_forestentrance_body_exited(body: Node2D) -> void:
+	forest_area = false
