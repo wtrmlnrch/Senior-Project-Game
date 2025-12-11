@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bfckg1p1f3tk"]
+[gd_scene load_steps=36 format=4 uid="uid://bfckg1p1f3tk"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="5_fpftl"]
 [ext_resource type="PackedScene" uid="uid://cxjmtyqoxtepi" path="res://game_scenes/interiors/house.tscn" id="7_v7po3"]
 [ext_resource type="PackedScene" uid="uid://4ade78jk7tsx" path="res://game_scenes/characters/butcher.tscn" id="9_cmj78"]
+[ext_resource type="Texture2D" uid="uid://dwwn6muqtyt04" path="res://ddeer.png" id="11_po3u4"]
 [ext_resource type="AudioStream" uid="uid://cha6rt6dlmlv" path="res://Assets/game music.wav" id="14_4yj3c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
@@ -5873,6 +5874,12 @@ shape = SubResource("RectangleShape2D_4yj3c")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_4yj3c")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(647, 43)
+scale = Vector2(0.622222, 0.5)
+texture = ExtResource("11_po3u4")
 
 [connection signal="body_entered" from="Viewpoints/Forest" to="." method="_on_forest_body_entered"]
 [connection signal="body_exited" from="Viewpoints/Forest" to="." method="_on_forest_body_exited"]

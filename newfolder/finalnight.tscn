@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://d0cnsxiqhsrua"]
+[gd_scene load_steps=41 format=4 uid="uid://d0cnsxiqhsrua"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
 [ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="13_oximf"]
 [ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="14_uxp81"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="15_jsed8"]
+[ext_resource type="Texture2D" uid="uid://dwwn6muqtyt04" path="res://ddeer.png" id="16_50ks4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31sbu"]
 texture = ExtResource("1_o7pqe")
@@ -5882,8 +5883,6 @@ autoplay = true
 z_index = 1
 position = Vector2(803, 283)
 scale = Vector2(0.5, 0.5)
-dialogic_timeline = "res://Dialogue stuff/siblingtalk.dtl"
-speak = "res://Dialogue stuff/siblingtalk2.dtl"
 
 [node name="baker" parent="." instance=ExtResource("12_50ks4")]
 z_index = 1
@@ -5911,6 +5910,12 @@ scale = Vector2(0.5, 0.5)
 dialogic_timeline = "res://Dialogue stuff/leadertalk.dtl"
 day2 = "res://Dialogue stuff/leadertalkday2.dtl"
 final = "res://Dialogue stuff/finalspeak.dtl"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(502, 432)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_50ks4")
 
 [connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
 [connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]

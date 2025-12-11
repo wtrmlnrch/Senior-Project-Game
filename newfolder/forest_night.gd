@@ -6,6 +6,7 @@ extends Node2D
 @onready var camera = $MainCharacter/PlayerCamera
 
 func _ready():
+	Dialogic.start("res://Dialogue stuff/moredeer.dtl")
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
 	

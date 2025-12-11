@@ -7,6 +7,7 @@ extends Node2D
 var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Snow.tscn")
 
 func _ready():
+	Dialogic.start("res://Dialogue stuff/deerr.dtl")
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
 	
