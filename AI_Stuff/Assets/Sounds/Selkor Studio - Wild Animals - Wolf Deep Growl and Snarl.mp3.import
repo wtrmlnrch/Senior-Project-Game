@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://im7qoy1a7w7d"
+path="res://.godot/imported/Selkor Studio - Wild Animals - Wolf Deep Growl and Snarl.mp3-975032a9761b1f02910b1147bdc0aeb9.mp3str"
+
+[deps]
+
+source_file="res://AI_Stuff/Assets/Sounds/Selkor Studio - Wild Animals - Wolf Deep Growl and Snarl.mp3"
+dest_files=["res://.godot/imported/Selkor Studio - Wild Animals - Wolf Deep Growl and Snarl.mp3-975032a9761b1f02910b1147bdc0aeb9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
