@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4nf1kc67yk3g"]
+
+[ext_resource type="PackedScene" uid="uid://ck2t3xy1uscuy" path="res://game_scenes/path_cg_1.tscn" id="1_hlrmo"]
+[ext_resource type="Texture2D" uid="uid://cvk7lt1sjov5a" path="res://Assets/othr/who-tf.png" id="2_5re78"]
+
+[node name="path-cg-3" instance=ExtResource("1_hlrmo")]
+
+[node name="Who-tf" type="Sprite2D" parent="." index="2"]
+position = Vector2(500, 339)
+scale = Vector2(1.18703, 0.852327)
+texture = ExtResource("2_5re78")

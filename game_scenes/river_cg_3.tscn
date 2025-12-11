@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://tjjjnqlrdru8"]
+
+[ext_resource type="PackedScene" uid="uid://cuix06r0rsb27" path="res://game_scenes/river_cg_1.tscn" id="1_xftn7"]
+[ext_resource type="Texture2D" uid="uid://qwjb7gxg0lbw" path="res://Assets/othr/creepy-person.webp" id="2_0fp7t"]
+
+[node name="river_cg_3" instance=ExtResource("1_xftn7")]
+
+[node name="Sprite2D" parent="." index="0"]
+metadata/_edit_lock_ = true
+
+[node name="Creepy-person" type="Sprite2D" parent="." index="1"]
+modulate = Color(0.39152, 0.556595, 0.562398, 1)
+position = Vector2(629, 347)
+scale = Vector2(0.472, 0.378889)
+texture = ExtResource("2_0fp7t")

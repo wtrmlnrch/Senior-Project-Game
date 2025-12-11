@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciaa4v77fmmp8"]
+
+[ext_resource type="Script" uid="uid://eqpe1y06nkfe" path="res://viewport.gd" id="1_yjfbx"]
+
+[node name="Viewport" type="Node2D"]
+script = ExtResource("1_yjfbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 2.0
+offset_top = 510.0
+offset_right = 529.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 50
+text = "Press E to look away"
+editable = false

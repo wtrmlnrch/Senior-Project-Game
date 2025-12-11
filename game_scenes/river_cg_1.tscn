@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuix06r0rsb27"]
+
+[ext_resource type="PackedScene" uid="uid://ciaa4v77fmmp8" path="res://game_scenes/viewport.tscn" id="1_0oodi"]
+[ext_resource type="Texture2D" uid="uid://dc66cygvbwuuv" path="res://Assets/cutscenes/River-cg.PNG" id="2_v83ax"]
+
+[node name="river_cg_1" instance=ExtResource("1_0oodi")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(580, 312)
+scale = Vector2(2.00333, 1.755)
+texture = ExtResource("2_v83ax")
