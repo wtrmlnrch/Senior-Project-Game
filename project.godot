@@ -53,6 +53,7 @@ directories/dtl_directory={
 "miniforest": "res://Dialogue stuff/miniforest.dtl",
 "moredeer": "res://Dialogue stuff/moredeer.dtl",
 "morningrise": "res://Dialogue stuff/morningrise.dtl",
+"night2": "res://Dialogue stuff/night2.dtl",
 "nightdoc": "res://Dialogue stuff/nightdoc.dtl",
 "opening": "res://Dialogue stuff/opening.dtl",
 "siblingtalk": "res://Dialogue stuff/siblingtalk.dtl",
