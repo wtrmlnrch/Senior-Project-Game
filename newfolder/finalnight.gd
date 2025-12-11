@@ -5,7 +5,7 @@ extends Node2D
 
 var area
 var scenes 
-var scene = load("res://newfolder/Scenes/MinimumViableProduct/final_level_0.gd")
+var scene = load("res://newfolder/Scenes/MinimumViableProduct/finalLevel0.tscn")
 var forest = load("res://game_scenes/path_cg_3.tscn")
 var river = load("res://game_scenes/river_cg_3.tscn")
 

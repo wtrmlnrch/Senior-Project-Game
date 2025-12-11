@@ -1,14 +1,13 @@
 extends Node2D
 
-
 @onready var tilemap = $ground
 @onready var player = $MainCharacter
 @onready var camera = $MainCharacter/PlayerCamera
 
-var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0_Night.tscn")
+var scene = load("res://newfolder/Scenes/MinimumViableProduct/level0day2.tscn")
 
 func _ready():
-	Dialogic.start("res://Dialogue stuff/moredeer.dtl")
+	Dialogic.start("res://Dialogue stuff/deerday2.dtl")
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size
 	
@@ -22,6 +21,6 @@ func _ready():
 	camera.zoom = Vector2(2.50, 2.50)
 
 
-func _on_path_body_entered(body):
+func _on_level_0_body_entered(body: Node2D) -> void:
 	if body == player:
 		get_tree().change_scene_to_packed(scene)
