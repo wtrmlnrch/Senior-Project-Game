@@ -80,7 +80,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../RayCast2D:target_position")
+tracks/6/path = NodePath("RayCast2D:target_position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -92,14 +92,14 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../RayCast2D:scale")
+tracks/7/path = NodePath("RayCast2D:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(3, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_f2wbu"]
@@ -156,7 +156,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../RayCast2D:target_position")
+tracks/4/path = NodePath("RayCast2D:target_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -168,7 +168,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../RayCast2D:scale")
+tracks/5/path = NodePath("RayCast2D:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -256,7 +256,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../RayCast2D:target_position")
+tracks/6/path = NodePath("RayCast2D:target_position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -268,7 +268,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../RayCast2D:scale")
+tracks/7/path = NodePath("RayCast2D:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -356,7 +356,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../RayCast2D:target_position")
+tracks/6/path = NodePath("RayCast2D:target_position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -368,7 +368,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../RayCast2D:scale")
+tracks/7/path = NodePath("RayCast2D:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -432,7 +432,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../RayCast2D:target_position")
+tracks/4/path = NodePath("RayCast2D:target_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -444,7 +444,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../RayCast2D:scale")
+tracks/5/path = NodePath("RayCast2D:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -471,31 +471,30 @@ size = Vector2(106, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yoy0"]
 
-[node name="Evil Wolf" type="Node2D"]
+[node name="Evil Wolf" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_6yoy0")
 
-[node name="Evil Wolf" type="CharacterBody2D" parent="."]
-position = Vector2(0, -15)
-
-[node name="Sprite2D" type="Sprite2D" parent="Evil Wolf"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6yoy0")
 hframes = 6
 vframes = 2
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Evil Wolf"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_6yoy0")
 }
 
-[node name="Forward_Backward" type="CollisionShape2D" parent="Evil Wolf"]
-position = Vector2(0, 20.5)
+[node name="Forward_Backward" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_o1tnq")
 
-[node name="Side" type="CollisionShape2D" parent="Evil Wolf"]
+[node name="Side" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 7)
 shape = SubResource("RectangleShape2D_f2wbu")
 
 [node name="RayCast2D" type="ShapeCast2D" parent="."]
+scale = Vector2(3, 1)
 shape = SubResource("RectangleShape2D_6yoy0")
 target_position = Vector2(0, 200)

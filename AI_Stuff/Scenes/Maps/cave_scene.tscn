@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc13vnjyh440w"]
+
+[ext_resource type="PackedScene" uid="uid://bx5lc4py85ape" path="res://AI_Stuff/Scenes/Enemies/evil_wolf_manager.tscn" id="1_rh6oy"]
+[ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_3yne0"]
+
+[node name="CaveScene" type="Node2D"]
+
+[node name="Evil Wolf AI" parent="." instance=ExtResource("1_rh6oy")]
+
+[node name="MainCharacter" parent="." instance=ExtResource("2_3yne0")]
+position = Vector2(28, 367)

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnekeiuqiqtuc"]
+
+[ext_resource type="Texture2D" uid="uid://b1ue1rq4jgj2" path="res://AI_Stuff/Assets/Enemy Sprites/deerSprites.png" id="1_jjqo7"]
+
+[node name="EvilDeer" type="Node2D"]
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Body" type="Sprite2D" parent="Sprite"]
+texture = ExtResource("1_jjqo7")
+hframes = 3
+vframes = 2

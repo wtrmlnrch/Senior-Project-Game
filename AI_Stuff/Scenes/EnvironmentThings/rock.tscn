@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://degof43oo3rfh"]
+
+[ext_resource type="PackedScene" uid="uid://b1eudu7py5fmo" path="res://AI_Stuff/Scenes/EnvironmentThings/bush.tscn" id="1_ab7sc"]
+[ext_resource type="Texture2D" uid="uid://cp80rp2fsxl3y" path="res://AI_Stuff/Assets/Environment/Rock.png" id="2_8amg3"]
+
+[node name="Rock" type="Node2D"]
+
+[node name="Rock" parent="." instance=ExtResource("1_ab7sc")]
+
+[node name="Sprite2D" parent="Rock" index="1"]
+texture = ExtResource("2_8amg3")
+
+[editable path="Rock"]

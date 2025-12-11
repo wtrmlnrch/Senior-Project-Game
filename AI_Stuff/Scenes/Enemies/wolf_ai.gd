@@ -12,7 +12,6 @@ var alert_timer = 0.0
 var alert_duration = 2.0
 
 var target_position = Vector2.ZERO
-
 var squirrel_body = null
 
 func _ready():
@@ -69,7 +68,7 @@ func _physics_process(delta):
 
 	
 	if $Wolf.get_slide_collision_count() > 0 and $Wolf.get_last_slide_collision().get_collider().is_class("CharacterBody2D"):
-		get_tree().change_scene_to_file("res://newfolder/Scenes/MinimumViableProduct/death_screen.tscn")
+		get_tree().reload_current_scene()
 	else:
 		$Wolf.velocity.x = direction * speed
 		if $Wolf.velocity.y != 0:
