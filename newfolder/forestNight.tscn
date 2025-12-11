@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://ifxwfd6iox6i"]
+[gd_scene load_steps=17 format=4 uid="uid://bx0bpy23f5gek"]
 
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_fqx2k"]
 [ext_resource type="Script" uid="uid://baf4uv6rrxsmm" path="res://newfolder/forest_night.gd" id="1_ljn3v"]

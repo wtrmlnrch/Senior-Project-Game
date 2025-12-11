@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://vkd6jv4oa4aj"]
+[gd_scene load_steps=33 format=4 uid="uid://olyts8uk37sq"]
 
 [ext_resource type="Script" uid="uid://drbjq2ikhehhb" path="res://newfolder/village_night_2.gd" id="1_7k1py"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
@@ -5860,6 +5860,8 @@ color = Color(0.334359, 0.270973, 0.479658, 1)
 stream = ExtResource("11_jt6bg")
 autoplay = true
 
+[connection signal="body_entered" from="Viewpoints/Forest" to="." method="_on_forest_body_entered"]
+[connection signal="body_entered" from="Viewpoints/River" to="." method="_on_river_body_entered"]
 [connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
 [connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]

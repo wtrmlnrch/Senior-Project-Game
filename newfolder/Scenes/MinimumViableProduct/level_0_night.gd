@@ -19,12 +19,12 @@ func _input(event: InputEvent):
 	
 		
 func _ready():
-	if Globals.day == 1:
-		scene = load("res://newfolder/village.tscn")
-	elif Globals.day == 2:
-		scene = load("res://newfolder/Village2.tscn")
+	if Globals.night == 1:
+		scene = load("res://newfolder/villageNight.tscn")
+	elif Globals.night == 2:
+		scene = load("res://newfolder/villageNight2.tscn")
 	else:
-		scene = load("res://newfolder/villagefinalday.tscn")
+		scene = load("res://newfolder/finalnight.tscn")
 	Dialogic.start("res://Dialogue stuff/miniforest.dtl")
 	var used_rect = tilemap.get_used_rect()
 	var cell_size = tilemap.tile_set.tile_size

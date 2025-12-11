@@ -2,7 +2,6 @@ extends Node2D
 @onready var camera = $MainCharacter/PlayerCamera
 @onready var tilemap = $tilesets/ground
 @onready var player = $MainCharacter
-@onready var ui = $UI
 
 var area
 var scenes 
@@ -14,7 +13,7 @@ func _ready():
 	var cell_size = tilemap.tile_set.tile_size
 	area = [false, false, false, false, false, false]
 	scenes = [
-		load("res://game_scenes/interiors/clinic_2.tscn"),
+		load("res://game_scenes/interiors/clinic2.tscn"),
 		load("res://game_scenes/interiors/robert_house.tscn"),
 		load("res://game_scenes/interiors/baker_house.tscn"),
 		load("res://game_scenes/interiors/garroth_house.tscn"),
@@ -44,72 +43,51 @@ func _process(float) -> void:
 
 func _on_clinicentrance_body_entered(body: Node2D) -> void:
 	area[0] = true
-	$UI/corner/to_enter.visible = true
 
 
 func _on_clinicentrance_body_exited(body: Node2D) -> void:
 	area[0] = false
-	$UI/corner/to_enter.visible = false
 
 
 func _on_robertentrance_body_entered(body: Node2D) -> void:
 	area[1] = true
-	$UI/corner/to_enter.visible = true
 
 
 func _on_robertentrance_body_exited(body: Node2D) -> void:
 	area[1] = false
-	$UI/corner/to_enter.visible = false
 
 
 func _on_bakerentrance_body_entered(body: Node2D) -> void:
 	area[2] = true
-	$UI/corner/to_enter.visible = true
 
 
 func _on_bakerentrance_body_exited(body: Node2D) -> void:
 	area[2] = false
-	$UI/corner/to_enter.visible = false
 
 
 func _on_garrothentrance_body_entered(body: Node2D) -> void:
 	area[3] = true
-	$UI/corner/to_enter.visible = true
-
 
 func _on_garrothentrance_body_exited(body: Node2D) -> void:
 	area[3] = false
-	$UI/corner/to_enter.visible = false
 
 
 func _on_leaderentrance_body_entered(body: Node2D) -> void:
 	area[4] = true
-	$UI/corner/to_enter.visible = true
 
 
 func _on_leaderentrance_body_exited(body: Node2D) -> void:
 	area[4] = false
-	$UI/corner/to_enter.visible = false
 
 
 func _on_butcherentrance_body_entered(body: Node2D) -> void:
 	area[5] = true
-	$UI/corner/to_enter.visible = true
 
 
 func _on_butcherentrance_body_exited(body: Node2D) -> void:
 	area[5] = false
-	$UI/corner/to_enter.visible = false
 
 
 func _on_path_body_entered(body):
 	if body == player:
 		get_tree().change_scene_to_packed(scene)
-
-
-func _on_forest_body_entered(body: Node2D) -> void:
-	pass
-
-
-func _on_forest_body_exited(body: Node2D) -> void:
-	in_forest = false

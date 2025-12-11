@@ -1,7 +1,7 @@
-[gd_scene load_steps=23 format=4 uid="uid://v43dgle625fu"]
+[gd_scene load_steps=23 format=4 uid="uid://bysud6q214o4e"]
 
+[ext_resource type="Script" uid="uid://boeumfvudus6m" path="res://newfolder/Scenes/MinimumViableProduct/level_0_night.gd" id="1_qgqn4"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_sy7jo"]
-[ext_resource type="Script" uid="uid://c8w3261ft0iwy" path="res://newfolder/Scenes/MinimumViableProduct/level_0_snow.gd" id="1_t2y2r"]
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="2_t2y2r"]
 [ext_resource type="Texture2D" uid="uid://0dft7bs21alh" path="res://newfolder/Graphics/UI/healthbarUnder.png" id="4_lcryt"]
 [ext_resource type="Texture2D" uid="uid://dpxsnwlbjfkce" path="res://newfolder/Graphics/UI/healthbarProgress.png" id="5_21ef1"]
@@ -4601,7 +4601,7 @@ size = Vector2(600, 91)
 size = Vector2(497, 92)
 
 [node name="Level0Snow" type="Node2D"]
-script = ExtResource("1_t2y2r")
+script = ExtResource("1_qgqn4")
 
 [node name="FloorLayer" type="TileMapLayer" parent="."]
 z_index = -2

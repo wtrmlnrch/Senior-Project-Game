@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp8t0amhgmm7p"]
+[gd_scene load_steps=4 format=3 uid="uid://dp8t0amhgmm7p"]
 
 [ext_resource type="PackedScene" uid="uid://ck2t3xy1uscuy" path="res://game_scenes/path_cg_1.tscn" id="1_hncjh"]
+[ext_resource type="Script" uid="uid://brkpne5vkdc7e" path="res://game_scenes/path_cg_2.gd" id="2_60gcu"]
 [ext_resource type="Texture2D" uid="uid://bmi06wb3r4wpp" path="res://Assets/othr/eyeball.jpg" id="2_081wf"]
 
 [node name="path-cg-2" instance=ExtResource("1_hncjh")]
+script = ExtResource("2_60gcu")
 
 [node name="Eyeball" type="Sprite2D" parent="." index="2"]
 modulate = Color(0.264615, 0.47115, 0.408899, 1)

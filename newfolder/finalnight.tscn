@@ -1,7 +1,7 @@
-[gd_scene load_steps=41 format=4 uid="uid://d0cnsxiqhsrua"]
+[gd_scene load_steps=40 format=4 uid="uid://c80eiy7wgs35u"]
 
+[ext_resource type="Script" uid="uid://cg804vuo5n08s" path="res://newfolder/finalnight.gd" id="1_bx512"]
 [ext_resource type="Texture2D" uid="uid://de4x8frm8xsfn" path="res://Assets/Texture/20240303tilesetGreenWilderness00.png" id="1_o7pqe"]
-[ext_resource type="Script" uid="uid://dwlo1o20ustv5" path="res://newfolder/village.gd" id="1_u7pt4"]
 [ext_resource type="Texture2D" uid="uid://cpdu6py0q8luh" path="res://Assets/Texture/AllSet.png" id="2_31sbu"]
 [ext_resource type="Texture2D" uid="uid://cp010jmxgopro" path="res://Assets/Texture/TX Tileset Wall.png" id="3_ttl52"]
 [ext_resource type="Texture2D" uid="uid://chkqj235w1b1a" path="res://Assets/Texture/TX Props.png" id="4_xygwp"]
@@ -12,8 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bj5kb4jl0jijv" path="res://game_scenes/characters/sibling.tscn" id="11_bx512"]
 [ext_resource type="AudioStream" uid="uid://y1bp34c01a2p" path="res://Assets/game musicreverse.mp3" id="11_jt6bg"]
 [ext_resource type="PackedScene" uid="uid://c0oojjuka8x58" path="res://game_scenes/characters/baker.tscn" id="12_50ks4"]
-[ext_resource type="PackedScene" uid="uid://6quxro4oxicl" path="res://game_scenes/ui.tscn" id="13_oximf"]
-[ext_resource type="PackedScene" uid="uid://drer0w854l0m1" path="res://game_scenes/characters/daniel.tscn" id="14_uxp81"]
+[ext_resource type="PackedScene" uid="uid://dqa2p1ubdx7w5" path="res://game_scenes/characters/daniel.tscn" id="14_uxp81"]
 [ext_resource type="PackedScene" uid="uid://84g1haa68ac1" path="res://game_scenes/characters/leader.tscn" id="15_jsed8"]
 [ext_resource type="Texture2D" uid="uid://dwwn6muqtyt04" path="res://ddeer.png" id="16_50ks4"]
 
@@ -5668,7 +5667,7 @@ size = Vector2(63.5, 623)
 size = Vector2(1027, 43.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28mq4"]
-size = Vector2(106, 634)
+size = Vector2(342, 634)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpftl"]
 size = Vector2(123.5, 251.5)
@@ -5680,7 +5679,7 @@ size = Vector2(119, 323)
 size = Vector2(27, 36)
 
 [node name="finalnight" type="Node2D"]
-script = ExtResource("1_u7pt4")
+script = ExtResource("1_bx512")
 
 [node name="tilesets" type="Node" parent="."]
 
@@ -5718,7 +5717,7 @@ collision_layer = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Viewpoints/Forest"]
 z_index = 1
-position = Vector2(948.75, 317.75)
+position = Vector2(775, 315)
 shape = SubResource("RectangleShape2D_v7po3")
 
 [node name="River" type="Area2D" parent="Viewpoints"]
@@ -5740,6 +5739,7 @@ shape = SubResource("RectangleShape2D_cmj78")
 [node name="map-border" type="StaticBody2D" parent="."]
 collision_layer = 16
 collision_mask = 7
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="map-border"]
 position = Vector2(482.5, 6.5)
@@ -5754,7 +5754,7 @@ position = Vector2(479.5, 676.75)
 shape = SubResource("RectangleShape2D_7q3ar")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="map-border"]
-position = Vector2(1043, 348)
+position = Vector2(932, 374)
 shape = SubResource("RectangleShape2D_28mq4")
 
 [node name="MainCharacter" parent="." instance=ExtResource("5_fpftl")]
@@ -5873,8 +5873,6 @@ finalday = "res://Dialogue stuff/butcherFinalSpeak.dtl"
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.334359, 0.270973, 0.479658, 1)
 
-[node name="UI" parent="." instance=ExtResource("13_oximf")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_jt6bg")
 autoplay = true
@@ -5917,6 +5915,8 @@ position = Vector2(502, 432)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("16_50ks4")
 
+[connection signal="body_entered" from="Viewpoints/Forest" to="." method="_on_forest_body_entered"]
+[connection signal="body_entered" from="Viewpoints/River" to="." method="_on_river_body_entered"]
 [connection signal="area_entered" from="Viewpoints/Path" to="." method="_on_path_area_entered"]
 [connection signal="body_entered" from="Viewpoints/Path" to="." method="_on_path_body_entered"]
 [connection signal="body_entered" from="house-entrances/clinic-entrance" to="." method="_on_clinicentrance_body_entered"]

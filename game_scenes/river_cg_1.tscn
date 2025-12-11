@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuix06r0rsb27"]
+[gd_scene load_steps=4 format=3 uid="uid://cuix06r0rsb27"]
 
 [ext_resource type="PackedScene" uid="uid://ciaa4v77fmmp8" path="res://game_scenes/viewport.tscn" id="1_0oodi"]
+[ext_resource type="Script" uid="uid://cdw6ehru5hes7" path="res://game_scenes/river_cg_1.gd" id="2_555dd"]
 [ext_resource type="Texture2D" uid="uid://dc66cygvbwuuv" path="res://Assets/cutscenes/River-cg.PNG" id="2_v83ax"]
 
 [node name="river_cg_1" instance=ExtResource("1_0oodi")]
+script = ExtResource("2_555dd")
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(580, 312)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://320v4y64gqu4"]
+[gd_scene load_steps=28 format=3 uid="uid://bn1ifrxvgmg6g"]
 
 [ext_resource type="Script" uid="uid://clwsmd20uanha" path="res://game_scenes/interiors/clinic_night.gd" id="1_klxt6"]
 [ext_resource type="Texture2D" uid="uid://crn0bwpel81ma" path="res://Assets/Interiors/TopDownHouse_FloorsAndWalls.png" id="1_y5f0y"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dbvb0tv5xe1aq" path="res://newfolder/Scenes/CharacterSprites/MainCharacter.tscn" id="6_6m1p4"]
 [ext_resource type="Texture2D" uid="uid://dmj0pw0uk3qy1" path="res://Assets/Interiors/TopDownHouse_SmallItems.png" id="6_l4ylf"]
 [ext_resource type="PackedScene" uid="uid://llqhuogioxy8" path="res://game_scenes/interiors/bed.tscn" id="7_pdftk"]
-[ext_resource type="PackedScene" uid="uid://sfabo2bukdli" path="res://game_scenes/characters/doctor.tscn" id="9_xb3uh"]
+[ext_resource type="PackedScene" uid="uid://ctuohewi60foc" path="res://game_scenes/characters/doctor.tscn" id="9_xb3uh"]
 [ext_resource type="Texture2D" uid="uid://b8blbantwne0i" path="res://Assets/Interiors/black-bg.png" id="10_ds78w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15ep2"]
@@ -989,8 +989,6 @@ position = Vector2(158, 123)
 [node name="Doctor" parent="." instance=ExtResource("9_xb3uh")]
 z_index = 1
 position = Vector2(627, 210)
-speak = "res://Dialogue stuff/morningrise.dtl"
-night1 = "res://Dialogue stuff/nightdoc.dtl"
 
 [node name="Bed" parent="." instance=ExtResource("7_pdftk")]
 position = Vector2(159, 118)
@@ -1046,4 +1044,5 @@ metadata/_edit_lock_ = true
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.333333, 0.270588, 0.478431, 1)
 
+[connection signal="slept" from="Bed" to="." method="_on_bed_slept"]
 [connection signal="body_entered" from="Exit" to="." method="_on_exit_body_entered"]

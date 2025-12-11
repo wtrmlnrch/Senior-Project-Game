@@ -1,12 +1,16 @@
 extends Node2D
 
 var in_bed = false
+signal slept
+
 
 func _process(delta):
 	if in_bed == true && Input.is_action_just_pressed("Interact"):
 		sleep()
 
 func sleep():
+	emit_signal("slept")
+	
 	if Globals.is_night == true:
 		Globals.day += 1
 		Globals.npcs_talked_to_today = [false, false, false, false, false, false, false, false]

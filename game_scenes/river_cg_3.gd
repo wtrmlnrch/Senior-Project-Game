@@ -1,6 +1,6 @@
 extends Node2D
 
-var scene = load("res://newfolder/villageNight.tscn")
+var scene = load("res://newfolder/finalnight.tscn")
 
 func _process(delta):
 	if Input.is_action_just_pressed("Interact"):

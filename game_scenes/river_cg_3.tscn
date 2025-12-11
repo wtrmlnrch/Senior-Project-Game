@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://tjjjnqlrdru8"]
+[gd_scene load_steps=4 format=3 uid="uid://tjjjnqlrdru8"]
 
 [ext_resource type="PackedScene" uid="uid://cuix06r0rsb27" path="res://game_scenes/river_cg_1.tscn" id="1_xftn7"]
 [ext_resource type="Texture2D" uid="uid://qwjb7gxg0lbw" path="res://Assets/othr/creepy-person.webp" id="2_0fp7t"]
+[ext_resource type="Script" uid="uid://dv5ovjjuh675f" path="res://game_scenes/river_cg_3.gd" id="2_bbr3e"]
 
 [node name="river_cg_3" instance=ExtResource("1_xftn7")]
+script = ExtResource("2_bbr3e")
 
 [node name="Sprite2D" parent="." index="0"]
 metadata/_edit_lock_ = true
